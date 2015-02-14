@@ -27,6 +27,7 @@
                     {%block navigation%}
                         <ul class='nav navbar-nav navbar-left'>
                             <li><a href={%url 'home'%}>Home</a></li>
+                            <li><a href={%url 'about'%}>About Us</a></li>
                             <li><a href={%url 'contact'%}>Contact</a></li>
                         </ul>
                     {%endblock%}
@@ -43,7 +44,17 @@
             <div class='container'>
             {%block body%}
             <!--Main homepage -->
-            <div class='container'>
+            <div class='container text-center'>
+                <h1>Cybercept 2015</h1>
+                <ul class='list list-unstyled'>
+                        <a href={%url 'orfik:home'%} ><li>Orfik</li></a>
+                        <a href={%url 'orfik:home'%} ><li>Logo Making</li></a>
+                        <a href={%url 'orfik:home'%} ><li>Programming</li></a>
+                        <a href={%url 'orfik:home'%} ><li>Cryptactic</li></a>
+                        <a href={%url 'orfik:home'%} ><li>Tech Quiz</li></a>
+                        <a href={%url 'orfik:home'%} ><li>TechHunt</li></a>
+                </ul>
+                <hr>
             </div>
             <!--End of main homepage-->
             {%endblock%}

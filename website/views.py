@@ -1,5 +1,6 @@
 from django.shortcuts import render,redirect
 from django.contrib.auth.forms import UserCreationForm as NewUser
+from website import models
 def home(request):
     """Site homepage for compsoc
     """
@@ -8,9 +9,13 @@ def home(request):
     return render(request,template,data)
 def contact(request):
     """Contact page"""
+    return render(request,'contact.html')
+def about(request):
+    "About us"
     data={}
-    template='contact.html'
-    return render(request,template,data)
+    data['current']=models.CompMember.objects.filter(alumni=False)
+    data['alumni']=models.CompMember.objects.filter(alumni=True)
+    return render(request,'about.html',data)
 def register(request):
     "Register a user account"
     data={}

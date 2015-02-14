@@ -1,6 +1,6 @@
 {%extends 'base.html'%}
 {%block body%}
-    <form role='form'  class='container text-center' action={%url 'register'%} method='post'>
+    <form role='form'  class='container-fluid' action={%url 'register'%} method='post'>
         {%csrf_token%}
         {%load crispy_forms_tags%}
         {{register_form|crispy}}

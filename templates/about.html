@@ -1,0 +1,15 @@
+{%extends 'base.html'%}
+{%block body%}
+<h1>Current members</h1>
+<ul>
+    {%for mem in current%}
+    <li><a href={{mem.get_absolute_url}}>{{mem.name}},{{mem.role}}</a></li>
+    {%endfor%}
+</ul>
+<h1>Alumni</h1>
+<ul>
+    {%for mem in alumni%}
+    <li><a href={{mem.get_absolute_url}}>{{mem.name}},{{mem.role}}</a></li>
+    {%endfor%}
+</ul>
+{%endblock%}
