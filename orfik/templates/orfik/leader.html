@@ -1,0 +1,24 @@
+{%extends 'orfik/home.html'%}
+{%block body%}
+    <div class='container-fluid text-center'>
+        <h2>LeaderBoard</h2>
+        <div class='table-responsive'>
+            <table class='table table-hover'>
+                <thead>
+                    <tr>
+                    <th>Name</th>
+                    <th>Current level</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {%for player in players%}
+                        <tr>
+                            <td>{{player.nickname}}</td>
+                            <td>{{player.max_level}}</td>
+                        </tr>
+                    {%endfor%}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{%endblock%}
