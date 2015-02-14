@@ -39,10 +39,10 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     #---
     'crispy_forms',
-    'allauth',
-    'allauth.account',
-    'allauth.socialaccount',
-    'allauth.socialaccount.providers.facebook',
+    #'allauth',
+    #'allauth.account',
+    #'allauth.socialaccount',
+    #'allauth.socialaccount.providers.facebook',
     'orfik',
 )
 
@@ -104,17 +104,17 @@ AUTHENTICATION_BACKENDS = (
     # Needed to login by username in Django admin, regardless of `allauth`
     "django.contrib.auth.backends.ModelBackend",
     # `allauth` specific authentication methods, such as login by e-mail
-    "allauth.account.auth_backends.AuthenticationBackend",
+    #"allauth.account.auth_backends.AuthenticationBackend",
 )
 TEMPLATE_CONTEXT_PROCESSORS = (
-    'django.contrib.auth.context_processors.auth',
+    #'django.contrib.auth.context_processors.auth',
     # Required by allauth template tags
-    "django.core.context_processors.request",
+    #"django.core.context_processors.request",
     # allauth specific context processors
-    "allauth.account.context_processors.account",
-    "allauth.socialaccount.context_processors.socialaccount",
+    #"allauth.account.context_processors.account",
+    #"allauth.socialaccount.context_processors.socialaccount",
 )
 #---------------------Allauth settings
-ACCOUNT_EMAIL_REQUIRED=True
-ACCOUNT_USERNAME_REQUIRED =True
+#ACCOUNT_EMAIL_REQUIRED=True
+#ACCOUNT_USERNAME_REQUIRED =True
 
