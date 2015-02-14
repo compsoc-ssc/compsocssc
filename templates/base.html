@@ -6,7 +6,7 @@
         <meta name='viewport' content='width=device-width, initial-scale=1.0'>
         <title>The CompSoc – SSC</title>
         <!-- Favicon and Foreign links-->
-        <link async rel='icon' type='image/png' href="{% static 'orfik/favicon.png' %}">
+        <!-- <link async rel='icon' type='image/png' href="{% static 'orfik/favicon.png' %}"> -->
         <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
         <!-- Fonts -->
         <link async rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
@@ -23,7 +23,7 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="{% url 'home' %}">CompSoc SSC</a>
+                        <!-- <a class="navbar-brand" href=""></a> -->
                     </div>
                     <div id="navbar" class="collapse navbar-collapse">
                         {% block navigation %}
@@ -36,7 +36,7 @@
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Events<span class="caret"></span></a>
                                 <ul class="dropdown-menu" role="menu">
-                                    <li><a href="{% url 'orfik:home' %}">Orfik</a></li>
+                                    <li><a href="{% url 'orfik:home' %}">Orfik 2015</a></li>
                                     <li><a href="{% url 'logo:home' %}">Logo Designing</a></li>
                                 </ul>
                             </li>
@@ -46,7 +46,7 @@
                                 <li><a href="{% url 'login' %}">Login/Register</a></li>
                             {% endif %}
                         </ul>
-                    </div><!--/.nav-collapse -->
+                    </div>
                 </div>
             </nav>
 
