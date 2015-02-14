@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
     <head>
@@ -33,36 +34,21 @@
                         <a class='navbar-brand' href={%url 'orfik:home'%}>Orfik</a>
                     </div>
                     <div class='navbar-collapse collapse' id='navbar'>
+=======
+{%extends 'base.html'%}
+                {%block navigation%}
+>>>>>>> cbd04e997701e4a977147c90fe897ed864cd7c46
                         <ul class='nav navbar-nav navbar-left'>
                             <li><a href={%url 'orfik:home'%}>Home</a></li>
                             <li><a href={%url 'orfik:leader'%}>Leaderboard</a></li>
                             <li><a href={%url 'orfik:instructions'%}>Instructions</a></li>
                         </ul>
-                        {%if request.user.is_authenticated%}
-                        <p class='nav navbar-right'>
-                        Logged in as {{user_display }}
-                        </p>
-                        {%endif%}
-                    </div>
-                </nav>
-            </div>
-            <div class='container'>
-            {%block body%}
-            {%if not request.user.is_authenticated%}
-                {%load socialaccount%}
-                <a href={%provider_login_url "facebook" method='oauth2' %}>
-                    <button class='btn btn-primary btn-lg btn-block btn-fb'>Facebook<i class='fa fa-facebook-square'></i></button><br></a>
+                {%endblock%}
+        {%block body%}
+            {%if not user.is_authenticated%}
+                Login somehow
             {%else%}
                 <div class='lead text-left'>
-                    {%if neq_nick_form%}
-                        <form role='form' action={%url 'orfik:home'%} method='post'>
-                            {%csrf_token%}
-                            {%load crispy_forms_tags%}
-                            {{new_nick_form|crispy}}
-                            <input type='submit' class='btn btn-success' value='Set nickname'></input>
-                        </form>
-                        <hr>
-                    {%endif%}
                     A list of the questions you can attempt.
                     <ul class='list-unstyled'>
                         {%for question in questions%}
@@ -71,10 +57,4 @@
                     </ul>>
                 </div>
             {%endif%}
-            {%endblock%}
-            </div>
-            <!-- Javascript -->
-            <script async defered src='//code.jquery.com/jquery-1.11.0.min.js'></script>
-            <script async defered src='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js'></script>
-            </body>
-        </html>
+        {%endblock%}

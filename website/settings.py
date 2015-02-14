@@ -10,7 +10,7 @@ https://docs.djangoproject.com/en/1.7/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
+BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 
 # Quick-start development settings - unsuitable for production
@@ -39,10 +39,10 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     #---
     'crispy_forms',
-    'allauth',
-    'allauth.account',
-    'allauth.socialaccount',
-    'allauth.socialaccount.providers.facebook',
+    #'allauth',
+    #'allauth.account',
+    #'allauth.socialaccount',
+    #'allauth.socialaccount.providers.facebook',
     'orfik',
     'logo',
 )
@@ -101,20 +101,24 @@ LOGIN_REDIRECT_URL='/'
 LOGIN_URL='/'
 SITE_ID=1
 #------------------
-AUTHENTICATION_BACKENDS = (
-    # Needed to login by username in Django admin, regardless of `allauth`
-    "django.contrib.auth.backends.ModelBackend",
-    # `allauth` specific authentication methods, such as login by e-mail
-    "allauth.account.auth_backends.AuthenticationBackend",
-)
-TEMPLATE_CONTEXT_PROCESSORS = (
-    'django.contrib.auth.context_processors.auth',
-    # Required by allauth template tags
-    "django.core.context_processors.request",
-    # allauth specific context processors
-    "allauth.account.context_processors.account",
-    "allauth.socialaccount.context_processors.socialaccount",
-)
+#AUTHENTICATION_BACKENDS = (
+#    # Needed to login by username in Django admin, regardless of `allauth`
+#    "django.contrib.auth.backends.ModelBackend",
+#    # `allauth` specific authentication methods, such as login by e-mail
+#    #"allauth.account.auth_backends.AuthenticationBackend",
+#)
+##TEMPLATE_CONTEXT_PROCESSORS = (
+#    #'django.contrib.auth.context_processors.auth',
+#    # Required by allauth template tags
+#    #"django.core.context_processors.request",
+#    # allauth specific context processors
+#    #"allauth.account.context_processors.account",
+#    #"allauth.socialaccount.context_processors.socialaccount",
+#)
 #---------------------Allauth settings
+
 ACCOUNT_EMAIL_REQUIRED=True
 ACCOUNT_USERNAME_REQUIRED =True
+
+#ACCOUNT_EMAIL_REQUIRED=True
+#ACCOUNT_USERNAME_REQUIRED =True

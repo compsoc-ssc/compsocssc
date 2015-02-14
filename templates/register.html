@@ -1,0 +1,9 @@
+{%extends 'base.html'%}
+{%block body%}
+    <form role='form'  class='container text-center' action={%url 'register'%} method='post'>
+        {%csrf_token%}
+        {%load crispy_forms_tags%}
+        {{register_form|crispy}}
+        <input type='submit' class='btn btn-success' value='Register'></input>
+    </form>
+{%endblock%}
