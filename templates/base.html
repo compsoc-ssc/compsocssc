@@ -41,7 +41,7 @@
                                 </ul>
                             </li>
                             {% if user.is_authenticated %}
-                                <li><a href="{% url 'logout' %}">{{ user|title }} | Logout</a></li>
+                                <li><a href="{% url 'logout' %}">Logout</a></li>
                             {% else %}
                                 <li><a href="{% url 'login' %}">Login/Register</a></li>
                             {% endif %}
