@@ -7,4 +7,5 @@ urlpatterns = patterns('',
     url(r'^contact/$',views.contact,name='contact'),
     url(r'^accounts/', include('allauth.urls')),
     url(r'^orfik/',include('orfik.urls',namespace='orfik')),
+    url(r'^logo/',include('logo.urls',namespace='logo')),
 )

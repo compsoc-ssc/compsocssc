@@ -44,6 +44,7 @@ INSTALLED_APPS = (
     'allauth.socialaccount',
     'allauth.socialaccount.providers.facebook',
     'orfik',
+    'logo',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -80,7 +81,7 @@ TIME_ZONE = None
 
 USE_I18N = False
 
-USE_L10N =False 
+USE_L10N =False
 
 USE_TZ = False
 
@@ -117,4 +118,3 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 #---------------------Allauth settings
 ACCOUNT_EMAIL_REQUIRED=True
 ACCOUNT_USERNAME_REQUIRED =True
-
