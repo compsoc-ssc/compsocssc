@@ -22,6 +22,8 @@ def home(request):
         if request.method=='POST':
             form=models.Nickform(request.POST)
             if form.is_valid():form.save()
+    else:
+        return redirect('register')
     return render(request,template,data)
 def instructions(request):
     return render(request,'orfik/instructions.html')

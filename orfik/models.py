@@ -10,6 +10,7 @@ class Player(models.Model):
     user=models.OneToOneField(settings.AUTH_USER_MODEL)
     max_level=models.SmallIntegerField(default=0)
     last_solve=models.DateTimeField(default=timezone.now())
+
 class Question(models.Model):
     def __str__(self):return str(self.number)+':'+self.text[:15]+' ...'
     number=models.SmallIntegerField()
