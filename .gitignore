@@ -54,3 +54,9 @@ docs/_build/
 
 # PyBuilder
 target/
+
+# Mac stuff
+*.DS_Store
+
+# Virtualenv
+django/
