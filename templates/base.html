@@ -4,7 +4,7 @@
         {%load staticfiles%}
         <meta charset="UTF-8">
         <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-        <title>CompSocSSC</title>
+        <title>The CompSoc – SSC</title>
         <!-- Favicon and Foreign links-->
         <link async rel='icon' type='image/png' href="{% static 'orfik/favicon.png' %}">
         <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
@@ -12,7 +12,7 @@
         {%endblock%}
         </head>
         <body>
-            <nav class="navbar navbar-inverse navbar-fixed-top">
+            <nav class="navbar navbar-inverse navbar-static-top">
                 <div class="container">
                     <div class="navbar-header">
                         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -39,7 +39,7 @@
                                 </ul>
                             </li>
                             {% if user.is_authenticated %}
-                                <li><a href="{% url 'logout' %}">{{ user }} | Logout</a></li>
+                                <li><a href="{% url 'logout' %}">{{ user|title }} | Logout</a></li>
                             {% else %}
                                 <li><a href="{% url 'login' %}">Login/Register</a></li>
                             {% endif %}

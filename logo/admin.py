@@ -1,3 +1,6 @@
 from django.contrib import admin
+from logo.models import Submission
 
-# Register your models here.
+class SubmissionAdmin(admin.ModelAdmin):
+    pass
+admin.site.register(Submission, SubmissionAdmin)

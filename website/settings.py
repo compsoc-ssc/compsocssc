@@ -45,6 +45,7 @@ INSTALLED_APPS = (
     #'allauth.socialaccount.providers.facebook',
     'orfik',
     'logo',
+    'bootstrapform',
 )
 
 MIDDLEWARE_CLASSES = (

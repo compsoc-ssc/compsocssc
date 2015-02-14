@@ -48,6 +48,7 @@ coverage.xml
 *.log
 db.sqlite3
 local.py
+logo/migrations/
 
 # Sphinx documentation
 docs/_build/

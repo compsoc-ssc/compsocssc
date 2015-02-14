@@ -1,8 +1,23 @@
 {% extends 'base.html' %}
 
+{% block head %}
+    {% load bootstrap %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'logo/css/home.css' %}"</link>
+{% endblock %}
+
 {% block navigation %}
     <ul class='nav navbar-nav navbar-left'>
-        <li><a href="">Submit Design</a></li>
+        <li><a href="{% url 'logo:home' %}">Submit Design</a></li>
         <li><a href="">Instructions</a></li>
     </ul>
+{% endblock %}
+
+{% block body %}
+    <h3 class='form-guide'>Please fill the form below to submit an entry</h3>
+    <form role='form' class='submit-form' action='{% url "logo:home" %}' method='POST' enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form | bootstrap }}
+        <button type='submit' class='btn btn-success pull-right'>Submit</button>
+    </form>
 {% endblock %}
