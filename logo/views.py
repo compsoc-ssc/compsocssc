@@ -4,8 +4,13 @@ from .forms import SubmissionForm
 
 
 def home(request):
-    data = {}
     template = 'logo/home.html'
+    return render(request, template)
+
+
+def submission(request):
+    data = {}
+    template = 'logo/submission.html'
     if request.method == 'POST':
         form = SubmissionForm(request.POST, request.FILES)
         if form.is_valid():

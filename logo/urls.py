@@ -4,6 +4,7 @@ from logo import views
 
 urlpatterns=patterns('',
     url(r'^$', views.home, name='home'),
+    url(r'^submission/$', views.submission, name='submission'),
     url(r'^success/$', views.success, name='success'),
     # url(r'^instructions/$', views.instructions, name='instructions'),
 )

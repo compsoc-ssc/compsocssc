@@ -1,10 +1,19 @@
-.form-guide {
+.logo-title {
     text-align: center;
-    margin: 40px 0;
+    font-size: 3.35em;
+    color: steelblue;
 }
 
-.submit-form {
-    max-width: 700px;
-    margin: 0 auto 100px;
-    padding: 20px;
+.logo-subtitle {
+    margin: 20px 0 30px;
+}
+
+.sec-submit {
+    margin: 40px auto 60px;
+}
+
+@media (min-width: 768px) {
+    .logo-title {
+        font-size: 4.5em;
+    }
 }

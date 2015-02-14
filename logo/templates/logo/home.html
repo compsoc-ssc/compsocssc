@@ -1,23 +1,26 @@
 {% extends 'base.html' %}
 
+
 {% block head %}
     {% load bootstrap %}
     {% load static %}
     <link rel="stylesheet" href="{% static 'logo/css/home.css' %}"</link>
 {% endblock %}
 
-{% block navigation %}
-    <ul class='nav navbar-nav navbar-left'>
-        <li><a href="{% url 'logo:home' %}">Submit Design</a></li>
-        <li><a href="">Instructions</a></li>
-    </ul>
-{% endblock %}
-
 {% block body %}
-    <h3 class='form-guide'>Please fill the form below to submit an entry</h3>
-    <form role='form' class='submit-form' action='{% url "logo:home" %}' method='POST' enctype="multipart/form-data">
-        {% csrf_token %}
-        {{ form | bootstrap }}
-        <button type='submit' class='btn btn-success pull-right'>Submit</button>
-    </form>
+    <h1 class="logo-title">Logo Designing</h1>
+    <hr>
+    <h3 class="logo-subtitle">Welcome Logo Designers!</h3>
+    <p class="lead">CompSoc has an opportunity for you to contribute your designing skills for our Annual Tech Fest- Cybercept'15. We are accepting entries for Logo of our Annual Tech Fest- Cybercept.</p>
+    <p class="lead">Cybercept is our Annually organized Tech Fest with events like Tech Hunt, Orfik - online treasure hunt, Cryptactic, Programming and X- Centricity Tech Quiz competitions. We are looking forward to have logo for our Fest, the best logo shall be used for all the publicity posters of the Fest.</p>
+    <p class="lead">It will be best if you design your logo according to the given information.</p>
+    <p class="lead">Competition is open from 17th to 25th February 2015.</p>
+    <p class="lead">To participate, kindly adhere to the following instructions:</p>
+    <ol class="lead">
+        <li>Fill up the form and all the required details.</li>
+        <li>Upload your designed logo, themed on our Annual Tech Fest "Cybercept".</li>
+    </ol>
+    <div class="sec-submit">
+        <a href='{% url "logo:submission" %}'><button class="btn btn-primary btn-lg">Head to the submission form</button></a>
+    </div>
 {% endblock %}
