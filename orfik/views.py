@@ -23,7 +23,7 @@ def home(request):
             form=models.Nickform(request.POST)
             if form.is_valid():form.save()
     else:
-        return redirect('register')
+        return redirect('login')
     return render(request,template,data)
 def instructions(request):
     return render(request,'orfik/instructions.html')
