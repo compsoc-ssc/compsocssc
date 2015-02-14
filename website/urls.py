@@ -5,4 +5,6 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$',views.home,name='home'),
     url(r'^contact/$',views.contact,name='contact'),
+    url(r'^accounts/', include('allauth.urls')),
+    url(r'^orfik/',include('orfik.urls',namespace='orfik')),
 )

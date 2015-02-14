@@ -1,0 +1,21 @@
+{%extends 'orfik/home.html'%}
+{%block body%}
+    <div class='text-center'><!--question-->
+        <h2>Question {{question.number}}</h2>
+        <hr>
+        {%if question.text%}
+        {{question.text}}
+        <hr>
+        {%endif%}
+        {%if question.image%}
+        <img class='img-responsive' alt='hint image' src={{question.image.url}} />
+        <hr>
+        {%endif%}
+        <!--Form for the answer-->
+        <form role='form' action={%url 'orfik:question' question.number%} method='post'>
+        {%csrf_token%}
+        {%load crispy_forms_tags%}
+        {{form|crispy}}
+        <input type='submit' class='btn btn-success' value='Submit'></input>
+    </div>
+{%endblock%}

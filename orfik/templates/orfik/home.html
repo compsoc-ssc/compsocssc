@@ -5,7 +5,7 @@
         {%load account%}
         <meta charset="UTF-8">
         <meta name='viewport' content='width=device-width,initial-scale=1.0'>
-        <title>CompSocSSC</title>
+        <title>Orfik</title>
         <!-- favicon and foreign links-->
         <link async rel='icon' type='image/png' href={%static 'orfik/favicon.png'%}>
         <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
@@ -34,9 +34,15 @@
                     </div>
                     <div class='navbar-collapse collapse' id='navbar'>
                         <ul class='nav navbar-nav navbar-left'>
-                            <li><a href={%url 'home'%}>Home</a></li>
-                            <li><a href={%url 'contact'%}>Leaderboard</a></li>
+                            <li><a href={%url 'orfik:home'%}>Home</a></li>
+                            <li><a href={%url 'orfik:leader'%}>Leaderboard</a></li>
+                            <li><a href={%url 'orfik:instructions'%}>Instructions</a></li>
                         </ul>
+                        {%if request.user.is_authenticated%}
+                        <p class='nav navbar-right'>
+                        Logged in as {{user_display }}
+                        </p>
+                        {%endif%}
                     </div>
                 </nav>
             </div>
