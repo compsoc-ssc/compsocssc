@@ -1,9 +1,16 @@
-{%extends 'base.html'%}
-{%block body%}
-    <form role='form'  class='container-fluid' action={%url 'register'%} method='post'>
-        {%csrf_token%}
-        {%load crispy_forms_tags%}
-        {{register_form|crispy}}
-        <input type='submit' class='btn btn-success' value='Register'></input>
+{% extends 'base.html' %}
+
+{% block head %}
+    {% load bootstrap %}
+    {% load static %}
+    <link rel='stylesheet' href='{% static "auth.css" %}'>
+{% endblock %}
+
+{% block body %}
+    <form role='form' class='form form-register' action="{%url 'register'%}" method='POST'>
+        {% csrf_token %}
+        <h2 class="form-heading">Please Register</h2>
+        {{ register_form | bootstrap }}
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
     </form>
-{%endblock%}
+{% endblock %}
