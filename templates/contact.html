@@ -1,5 +1,25 @@
-{%extends 'base.html'%}
+{% extends 'base.html' %}
+
+{% block head %}
+    <style>
+            .contact-list{
+                list-style: none;
+                text-align: center;
+            }
+            .contact-list li {
+                display: inline-block;
+                font-size: 5em;
+                margin: 0 40px;
+            }
+    </style>
+{% endblock %}
+
 {%block body%}
-    computer.society.ssc@gmail.com
-    compsocssc.pythonanywhere.com
+    <h1 style="text-align: center;">Contact Us</h1>
+    <hr>
+    <p class="lead" style="text-align: center;">The best way to get in touch with us is by one of the following methods:</p>
+    <ul class='contact-list'>
+        <li><a href='mailto:computer.society.ssc@gmail.com'><i class="fa fa-envelope-o"></i></li>
+        <li><a href='https://www.facebook.com/TheComputerScienceSocietyStStephensCollege' target='_blank'><i class="fa fa-facebook-official"></i></a></li>
+    <ul>
 {%endblock%}
