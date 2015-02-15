@@ -4,18 +4,20 @@
         {%load staticfiles%}
         <meta charset="UTF-8">
         <meta name='viewport' content='width=device-width,initial-scale=1.0'>
-        <title>CompSoc-SSC</title>
+        <title>CompSoc - SSC</title>
         <!-- favicon and foreign links-->
         <link async rel='icon' type='image/png' href={%static 'favicon.png'%}>
         <meta name='viewport' content='width=device-width, initial-scale=1.0'>
         <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
         <link async rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-        {%block head%}
-        {%endblock%}
+        <link async href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href='{% static "base.css" %}'></link>
+        {% block head %}
+        {% endblock %}
         </head>
         <body>
-            <nav class="navbar navbar-inverse navbar-static-top">
-                <div class="container">
+            <nav class="navbar navbar-inverse navbar-static-top topnav">
+                <div class="container topnav">
                     <div class="navbar-header">
                         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                             <span class="sr-only">Toggle navigation</span>
@@ -23,52 +25,60 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <!-- <a class="navbar-brand" href=""></a> -->
                     </div>
                     <div class='navbar-collapse collapse' id='navbar'>
                     {%block navigation%}
                         <ul class='nav navbar-nav navbar-left'>
                             <li><a href={%url 'home'%}>Home</a></li>
-                            <li><a href={%url 'about'%}>About Us</a></li>
                             <li><a href={%url 'contact'%}>Contact</a></li>
+                            <li><a href={%url 'about'%}>About Us</a></li>
                         </ul>
                     {%endblock%}
                         <ul class='nav navbar-nav navbar-right'>
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Events<span class="caret"></span></a>
+                                <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Cybercept Events<span class="caret"></span></a>
                                 <ul class="dropdown-menu" role="menu">
                                     <li><a href="{% url 'orfik:home' %}">Orfik 2015</a></li>
                                     <li><a href="{% url 'logo:home' %}">Logo Designing</a></li>
+                                    <li><a href="#">TechHunt</a></li>
+                                    <li><a href="#">X-Centricity</a></li>
+                                    <li><a href="#">Programming</a></li>
                                 </ul>
                             </li>
                             {% if user.is_authenticated %}
                                 <li><a href="{% url 'logout' %}">Logout</a></li>
                             {% else %}
-                                <li><a href="{% url 'login' %}">Login/Register</a></li>
+                                <li><a href="{% url 'login' %}">Login</a></li>
                             {% endif %}
                         </ul>
                     </div>
                 </div>
             </nav>
 
-            <div class='container'>
-            {%block body%}
-            <!--Main homepage -->
-            <div class='container text-center'>
-                <h1>Cybercept 2015</h1>
-                <ul class='list list-unstyled'>
-                        <a href={%url 'orfik:home'%} ><li>Orfik</li></a>
-                        <a href={%url 'orfik:home'%} ><li>Logo Making</li></a>
-                        <a href={%url 'orfik:home'%} ><li>Programming</li></a>
-                        <a href={%url 'orfik:home'%} ><li>Cryptactic</li></a>
-                        <a href={%url 'orfik:home'%} ><li>Tech Quiz</li></a>
-                        <a href={%url 'orfik:home'%} ><li>TechHunt</li></a>
-                </ul>
-                <hr>
+            <div class="container">
+                {% block body %}
+                    <div class="header">
+                        <h1><i class="fa fa-desktop" style="margin-right: 40px;"></i>The CompSoc</h1>
+                        <hr>
+                    </div>
+                    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                {% endblock %}
             </div>
-            <!--End of main homepage-->
-            {%endblock%}
-            </div>
+
+            <!-- Footer -->
+            <footer>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <span class='love-text text-muted'>Made with <i class='fa fa-heart'></i> by CompSoc, SSC</span>
+                            <span class='love-text text-muted'>This website is open-sourced on <a href='http://www.github.com/theSage21/compsocssc.git' target='_blank'>GitHub.</a></span>
+                        </div>
+                    </div>
+                </div>
+            </footer>
 
             <!-- Javascript -->
             <script async defered src='//code.jquery.com/jquery-1.11.0.min.js'></script>
