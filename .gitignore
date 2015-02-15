@@ -48,9 +48,18 @@ coverage.xml
 *.log
 db.sqlite3
 local.py
+logo/migrations/
+media_files/
+static_files/
 
 # Sphinx documentation
 docs/_build/
 
 # PyBuilder
 target/
+
+# Mac stuff
+*.DS_Store
+
+# Virtualenv
+django/

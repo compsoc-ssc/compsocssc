@@ -1,0 +1,19 @@
+.logo-title {
+    text-align: center;
+    font-size: 3.35em;
+    color: steelblue;
+}
+
+.logo-subtitle {
+    margin: 20px 0 20px;
+}
+
+.sec-submit {
+    margin: 40px auto 60px;
+}
+
+@media (min-width: 768px) {
+    .logo-title {
+        font-size: 4.5em;
+    }
+}
