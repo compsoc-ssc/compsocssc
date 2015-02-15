@@ -9,9 +9,16 @@ class Submission(models.Model):
     college_name = models.CharField(max_length=100)
     email = models.EmailField(max_length=100)
     phone = models.CharField(max_length=15)
-    logo = models.ImageField(upload_to=settings.MEDIA_ROOT+'/logo_submissions')
+    logo = models.ImageField(upload_to='logo_submissions')
     tagline = models.CharField(max_length=100)
-
-
-    def __str__(self):
-        return ('{} from {}'.format(self.name, self.college_name))
+    def __str__(self):return self.name
+    def thumbnail(self):
+        if self.picture:
+            addr=self.picture.url
+            addr.strip('/')
+            return u'<img src="'+addr+'" width=60 height=60 />'
+        else:
+            return u'No image file found'
+    thumbnail.short_description ='Thumbnail'
+    thumbnail.allow_tags=True
+        

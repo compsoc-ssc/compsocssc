@@ -3,19 +3,12 @@
     <head>
         {%load staticfiles%}
         <meta charset="UTF-8">
-<<<<<<< HEAD
         <meta name='viewport' content='width=device-width,initial-scale=1.0'>
-        <title>CompSocSSC</title>
+        <title>CompSoc-SSC</title>
         <!-- favicon and foreign links-->
         <link async rel='icon' type='image/png' href={%static 'favicon.png'%}>
-=======
         <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-        <title>The CompSoc – SSC</title>
-        <!-- Favicon and Foreign links-->
-        <!-- <link async rel='icon' type='image/png' href="{% static 'orfik/favicon.png' %}"> -->
->>>>>>> f73c3eca464f69377569bd2a5a8c453685b9dcdc
         <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
-        <!-- Fonts -->
         <link async rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
         {%block head%}
         {%endblock%}
@@ -32,7 +25,6 @@
                         </button>
                         <!-- <a class="navbar-brand" href=""></a> -->
                     </div>
-<<<<<<< HEAD
                     <div class='navbar-collapse collapse' id='navbar'>
                     {%block navigation%}
                         <ul class='nav navbar-nav navbar-left'>
@@ -41,15 +33,6 @@
                             <li><a href={%url 'contact'%}>Contact</a></li>
                         </ul>
                     {%endblock%}
-=======
-                    <div id="navbar" class="collapse navbar-collapse">
-                        {% block navigation %}
-                            <ul class='nav navbar-nav navbar-left'>
-                                <li><a href="{% url 'home' %}">Home</a></li>
-                                <li><a href="{% url 'contact' %}">Contact</a></li>
-                            </ul>
-                        {% endblock %}
->>>>>>> f73c3eca464f69377569bd2a5a8c453685b9dcdc
                         <ul class='nav navbar-nav navbar-right'>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Events<span class="caret"></span></a>
@@ -69,7 +52,6 @@
             </nav>
 
             <div class='container'>
-<<<<<<< HEAD
             {%block body%}
             <!--Main homepage -->
             <div class='container text-center'>
@@ -86,10 +68,6 @@
             </div>
             <!--End of main homepage-->
             {%endblock%}
-=======
-                {% block body %}
-                {% endblock %}
->>>>>>> f73c3eca464f69377569bd2a5a8c453685b9dcdc
             </div>
 
             <!-- Javascript -->

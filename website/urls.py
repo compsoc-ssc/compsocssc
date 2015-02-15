@@ -18,11 +18,8 @@ urlpatterns = patterns('',
     #url(r'^change/$','django.contrib.auth.views.password_change',{'template_name':'pwd_reset.html'},name='password_change'),
     #---------apps
     url(r'^orfik/',include('orfik.urls',namespace='orfik')),
-<<<<<<< HEAD
+    url(r'^logo/',include('logo.urls',namespace='logo')),
     #---------event flatpages
     url(r'^/', include('django.contrib.flatpages.urls')),
-=======
-    url(r'^logo/',include('logo.urls',namespace='logo')),
 
->>>>>>> f73c3eca464f69377569bd2a5a8c453685b9dcdc
 )
