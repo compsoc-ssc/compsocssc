@@ -3,7 +3,6 @@
     <head>
         {%load staticfiles%}
         <meta charset="UTF-8">
-        <meta name='viewport' content='width=device-width,initial-scale=1.0'>
         <title>CompSoc - SSC</title>
         <!-- favicon and foreign links-->
         <link async rel='icon' type='image/png' href={%static 'favicon.png'%}>
@@ -40,9 +39,11 @@
                                 <ul class="dropdown-menu" role="menu">
                                     <li><a href="{% url 'orfik:home' %}">Orfik 2015</a></li>
                                     <li><a href="{% url 'logo:home' %}">Logo Designing</a></li>
-                                    <li><a href="#">TechHunt</a></li>
-                                    <li><a href="#">X-Centricity</a></li>
-                                    <li><a href="#">Programming</a></li>
+                                    {% load flatpages %}
+                                    {% get_flatpages as flatpages %}
+                                    {% for page in flatpages %}
+                                            <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+                                    {% endfor %}
                                 </ul>
                             </li>
                             {% if user.is_authenticated %}
