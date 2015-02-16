@@ -1,4 +1,5 @@
 from django.db import models
+from django.conf import settings
 import requests
 
 class CompMember(models.Model):
@@ -22,3 +23,10 @@ class CompMember(models.Model):
 class Variable(models.Model):
     name=models.CharField(max_length=100)
     time=models.DateTimeField()
+class Track(models.Model):
+    def __str__(self):return self.ip
+    ip=models.CharField(max_length=100)
+    user=models.ForeignKey(settings.AUTH_USER_MODEL,related_name='track',null=True)
+    url=models.CharField(max_length=200,default='unknown')
+    agent=models.CharField(max_length=200,default='unknown')
+    time=models.DateTimeField(auto_now_add=True)
