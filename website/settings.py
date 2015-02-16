@@ -75,7 +75,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+        'CONN_MAX_AGE':None,
+    },
+
 }
 
 # Internationalization
@@ -91,6 +93,8 @@ USE_L10N =False
 
 USE_TZ = False
 
+USE_ETAGS=True
+CONN_MAX_AGE=None
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.7/howto/static-files/

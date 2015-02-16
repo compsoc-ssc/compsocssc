@@ -13,6 +13,7 @@
                 <h2>The hunt begins in</h2>
                 <h1>{{starttime.time|timeuntil}}</h1>
                 <a href={%url 'register'%} class='btn btn-success'>Register</a>
+                <a href="{%url 'login'%}?next={%url 'orfik:home'%}" class='btn btn-warning'>Login</a>
                 </div>
                 <script>
                     setTimeout('window.location.reload();',30000);

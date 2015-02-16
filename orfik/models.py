@@ -29,7 +29,7 @@ class Attempt(models.Model):
     value=models.CharField(max_length=100)
     correct=models.NullBooleanField(default=None)
     def is_correct(self):
-        if self.corect!=None:return self.correct
+        if self.correct!=None:return self.correct
         if self.question.answer==self.value:self.correct=True
         else:self.correct=False
         return self.correct

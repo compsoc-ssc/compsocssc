@@ -1,5 +1,6 @@
 #! /bin/bash
-rm db.sqlite3
+python manage.py test
 python manage.py makemigrations
 python manage.py migrate
-python manage.py createsuperuser
+rm -rf static_files
+python manage.py collectstatic --noinput --link

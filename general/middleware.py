@@ -8,7 +8,8 @@ def get_client_ip(request):
     return ip
 class TrackMiddleware:
     def process_request(self,request):
-        """process this and let it fall through"""
+        """process this and let it fall through.
+        Requires the presence of auth beforehand"""
         rq=models.Track()
         rq.ip=get_client_ip(request)
         rq.url=request.path

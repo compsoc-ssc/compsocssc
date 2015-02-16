@@ -9,6 +9,7 @@ class CompMember(models.Model):
     name=models.CharField(max_length=20)
     alumni=models.BooleanField(default=False)
     role=models.CharField(max_length=100)#what role do they have in compsoc
+    batch_of=models.CharField(max_length=4,default='2015')
     def get_absolute_url(self):
         return "https://fb.com/profile.php?id="+self.fb_id
     def get_picture(self):
