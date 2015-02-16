@@ -8,8 +8,13 @@
             }
             .contact-list li {
                 display: inline-block;
-                font-size: 5em;
-                margin: 0 40px;
+                font-size: 3em;
+                margin: 0 20px;
+            }
+            @media (min-width: 768px) {
+                .contact-list li {
+                    font-size: 5em;
+                }
             }
     </style>
 {% endblock %}
@@ -21,5 +26,6 @@
     <ul class='contact-list'>
         <li><a href='mailto:computer.society.ssc@gmail.com'><i class="fa fa-envelope-o"></i></li>
         <li><a href='https://www.facebook.com/TheComputerScienceSocietyStStephensCollege' target='_blank'><i class="fa fa-facebook-official"></i></a></li>
+        <li><a href='#'><i class="fa"></i></li>
     <ul>
 {%endblock%}

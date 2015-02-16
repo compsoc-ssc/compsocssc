@@ -2,14 +2,20 @@
 
 {% block body %}
 
+    <h1 style="text-align: center;">About Us</h1>
+
+    <hr>
+
     <p class="lead">The Computer Science Society is one of the most active student branch of St. Stephen's College. We are a group of individuals from a variety of academic backgrounds with a love for computer science. Computers are a huge part of out lives now and using them efficiently is a skill highly in demand. Unlike most societies/student groups focussed on organizing events; our primary goal is to learn new things together as a group. We organize more workshops in college than actual events and we're proud of this very fact. The CompSoc is a place for anyone with a desire and drive to learn to seek the same.</p>
+
+    <p class="lead">2014 has been an amazing year for us. With our goal to develop interest and increase college participation in technology trends, we conducted workshops on Photoshop, Web Development and organized events like TechHunt 1.0, GameFace and a Programming event.</p>
 
     <hr>
 
     <h1>Current members</h1>
     <ul class='list-unstyled'>
         {% for mem in current %}
-        <li><a href={{mem.get_absolute_url}}>{{mem.name}},{{mem.role}}</a></li>
+            <li><a href={{mem.get_absolute_url}}>{{ mem.name }}, {{ mem.role }}</a></li>
         {% endfor %}
     </ul>
 
@@ -18,7 +24,7 @@
     <h1>Alumni</h1>
     <ul class='list-unstyled'>
         {% for mem in alumni %}
-        <li><a href={{mem.get_absolute_url}}>{{mem.name}},{{mem.role}}</a></li>
+            <li><a href={{mem.get_absolute_url}}>{{mem.name}}, {{mem.role}}</a></li>
         {% endfor %}
     </ul>
 
