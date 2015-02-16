@@ -1,22 +1,35 @@
 {%extends 'base.html'%}
                 {%block navigation%}
                         <ul class='nav navbar-nav navbar-left'>
-                            <li><a href={%url 'orfik:home'%}>Home</a></li>
+                            <li><a href={%url 'orfik:home'%}>Hunt</a></li>
                             <li><a href={%url 'orfik:leader'%}>Leaderboard</a></li>
                             <li><a href={%url 'orfik:instructions'%}>Instructions</a></li>
+                            <li><a href="https://www.facebook.com/TheComputerScienceSocietyStStephensCollege">Forum</a></li>
                         </ul>
                 {%endblock%}
         {%block body%}
             {%if not user.is_authenticated%}
-                Login somehow
+                <div class='lead text-center'>
+                <h2>The hunt begins in</h2>
+                <h1>{{starttime.time|timeuntil}}</h1>
+                <a href={%url 'register'%} class='btn btn-success'>Register</a>
+                </div>
+                <script>
+                    setTimeout('window.location.reload();',30000);
+                </script>
             {%else%}
                 <div class='lead text-left'>
+                    {% if starttime%}
+                    <h2>The hunt begins in</h2>
+                    <h1>{{starttime.time|timeuntil}}</h1>
+                    <hr>
+                    {%endif%}
                     A list of the questions you can attempt.
                     <ul class='list-unstyled'>
                         {%for question in questions%}
                             <li><a href={{question.get_absoulte_url}}>Question {{question.number}}</a></li>
                         {%endfor%}
-                    </ul>>
+                    </ul>
                 </div>
             {%endif%}
         {%endblock%}

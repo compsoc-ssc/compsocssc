@@ -19,3 +19,6 @@ class CompMember(models.Model):
             link=link[5:]
             if self.fb_image_url!=link:self.fb_image_url=link
         return self.fb_image_url
+class Variable(models.Model):
+    name=models.CharField(max_length=100)
+    time=models.DateTimeField()

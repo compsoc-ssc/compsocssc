@@ -3,7 +3,7 @@ from orfik import models
 from django.utils import timezone
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import get_user_model
-
+from general import models as generalmodels
 def home(request):
     data={}
     template='orfik/home.html'
@@ -22,8 +22,7 @@ def home(request):
         if request.method=='POST':
             form=models.Nickform(request.POST)
             if form.is_valid():form.save()
-    else:
-        return redirect('login')
+    data['starttime']=generalmodels.Variable.objects.get(name='orfikstart')
     return render(request,template,data)
 def instructions(request):
     return render(request,'orfik/instructions.html')
@@ -49,6 +48,9 @@ def hint(request,q_no):
     return render(request,template,data)
 @login_required
 def question(request,q_no):
+    starttime=generalmodels.Variable.objects.get('orfikstart').time
+    #Check if orfik has started
+    if starttime>timezone.now():return redirect('orfik:home')
     q_no=int(q_no)
     #if player has not reached question
     if player.max_level<q_no:return redirect('orfik:question',q_no=player.max_level)

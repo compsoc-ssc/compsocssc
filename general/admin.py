@@ -7,3 +7,4 @@ class MemberAdmin(admin.ModelAdmin):
     list_display=['name','fb_id']
     list_filter=['alumni']
 admin.site.register(models.CompMember,MemberAdmin)
+admin.site.register(models.Variable)
