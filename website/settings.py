@@ -31,6 +31,8 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = (
     'django.contrib.sites',
+    'django_admin_bootstrapped.bootstrap3',
+    'django_admin_bootstrapped',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -58,6 +60,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'general.middleware.TrackMiddleware',
 )
 
 ROOT_URLCONF = 'website.urls'
