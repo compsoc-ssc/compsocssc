@@ -19,7 +19,8 @@ urlpatterns = patterns('',
     #---------apps
     url(r'^orfik/',include('orfik.urls',namespace='orfik')),
     url(r'^logo/',include('logo.urls',namespace='logo')),
-    #---------event flatpages
-    url(r'^/', include('django.contrib.flatpages.urls')),
-
 )
+#---------event flatpages
+urlpatterns += patterns('django.contrib.flatpages.views',
+    (r'^(?P<url>.*/)$', 'flatpage'),
+    )

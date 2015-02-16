@@ -7,7 +7,7 @@
     <hr>
 
     <h1>Current members</h1>
-    <ul>
+    <ul class='list-unstyled'>
         {% for mem in current %}
         <li><a href={{mem.get_absolute_url}}>{{mem.name}},{{mem.role}}</a></li>
         {% endfor %}
@@ -16,7 +16,7 @@
     <hr>
 
     <h1>Alumni</h1>
-    <ul>
+    <ul class='list-unstyled'>
         {% for mem in alumni %}
         <li><a href={{mem.get_absolute_url}}>{{mem.name}},{{mem.role}}</a></li>
         {% endfor %}
