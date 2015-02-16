@@ -1,6 +1,7 @@
 from django.shortcuts import render,redirect
 from django.contrib.auth.forms import UserCreationForm as NewUser
-from website import models
+
+from general import models
 def home(request):
     """Site homepage for compsoc
     """
