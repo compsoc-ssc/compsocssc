@@ -6,8 +6,12 @@ from .forms import SubmissionForm
 def home(request):
     template = 'logo/home.html'
     return render(request, template)
-
-
+def gallery(request):
+    data={}
+    template='logo/gallery.html'
+    data['pics']=Submission.objects.all().values('logo','name')
+    print(data['pics'])
+    return render(request,template,data)
 def submission(request):
     data = {}
     template = 'logo/submission.html'
