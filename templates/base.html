@@ -5,18 +5,18 @@
         <meta charset="UTF-8">
         <title>CompSoc - SSC</title>
         <!-- favicon and foreign links-->
-        <link async rel='icon' type='image/png' href={%static 'favicon.png'%}>
+        <link async rel="icon" type="image/png" href="{% static 'favicon.png' %}">
+        <link async rel="icon" type="image/vnd.microsoft.icon" href="{% static 'favicon.ico' %}">
         <meta name='viewport' content='width=device-width, initial-scale=1.0'>
         <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
         <link async rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-        <link async href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href='{% static "base.css" %}'></link>
         {% block head %}
         {% endblock %}
         </head>
         <body>
-            <nav class="navbar navbar-inverse navbar-static-top topnav">
-                <div class="container topnav">
+            <nav class="navbar navbar-inverse navbar-static-top">
+                <div class="container">
                     <div class="navbar-header">
                         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                             <span class="sr-only">Toggle navigation</span>
@@ -24,13 +24,13 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
+                        <a class="navbar-brand" href="{%url 'home'%}"><i class="fa fa-home"></i></a>
                     </div>
                     <div class='navbar-collapse collapse' id='navbar'>
                     {%block navigation%}
                         <ul class='nav navbar-nav navbar-left'>
-                            <li><a href={%url 'home'%}>Home</a></li>
-                            <li><a href={%url 'contact'%}>Contact</a></li>
                             <li><a href={%url 'about'%}>About Us</a></li>
+                            <li><a href={%url 'contact'%}>Contact</a></li>
                         </ul>
                     {%endblock%}
                         <ul class='nav navbar-nav navbar-right'>
@@ -42,7 +42,7 @@
                                     {% load flatpages %}
                                     {% get_flatpages as flatpages %}
                                     {% for page in flatpages %}
-                                            <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+                                        <li><a href="{{ page.url }}">{{ page.title }}</a></li>
                                     {% endfor %}
                                 </ul>
                             </li>
@@ -59,14 +59,87 @@
             <div class="container">
                 {% block body %}
                     <div class="header">
-                        <h1><i class="fa fa-desktop" style="margin-right: 40px;"></i>The CompSoc</h1>
+                        <div class="logo">
+                            <img src='{% static "logo.png" %}' class='img-responsive'>
+                        </div>
+                        <h1 class="text-center soc-name">The Computer Science Society</h1>
                         <hr>
                     </div>
-                    <p class="lead">The Computer Science Society is one of the most active student branch of St. Stephen's College. We are a group of individuals from a variety of academic backgrounds with a love for computer science. Computers are a huge part of out lives now and using them efficiently is a skill highly in demand. Unlike most societies/student groups focussed on organizing events; our primary goal is to learn new things together as a group. We organize more workshops in college than actual events and we're proud of this very fact. The CompSoc is a place for anyone with a desire and drive to learn to seek the same.</p>
-                    <p class="lead">2014 has been an amazing year for us. With our goal to develop interest and increase college participation in technology trends, we conducted workshops on Photoshop, Web Development and organized events like TechHunt 1.0, GameFace and a Programming event.</p>
-                    <p class="lead">GameFace is a gaming extravaganza which gained phenomenal response and feedback from participants from different educational institutions, owing to the team-effort of all the members.  This year the games were played on PlayStation 3, which not only was a great success in terms of its level of participation, but also at the level where it enlightened the organizers.</p>
-                    <p class="lead">Following the three events in 2014, our annual tech fest - <strong>'Cybercept'</strong> is around the corner.  </p>
-                    <p class="lead" style="margin-bottom: 80px;">Cybercept 2015 will include one of our best online events Orfik - An Online Treasure Hunt, a logo making competiton, X-Centricity (a quiz revolving around technology) a programming event allowing a variety of programming languages and also an unusual decyphering event called Cryptactic.</p>
+
+                    <div id="carousel-example-generic" class="carousel slide slideshow" data-ride="carousel">
+                      <!-- Wrapper for slides -->
+                      <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                          <img src='{% static "1.jpg" %}'>
+                          <div class="carousel-caption">
+                              <!-- Optional Caption -->
+                          </div>
+                        </div>
+                        <div class="item">
+                          <img src='{% static "2.jpg" %}'>
+                          <div class="carousel-caption">
+                              <!-- Optional Caption -->
+                          </div>
+                        </div>
+                        <div class="item">
+                          <img src='{% static "3.jpg" %}'>
+                          <div class="carousel-caption">
+                              <!-- Optional Caption -->
+                          </div>
+                        </div>
+                        <div class="item">
+                          <img src='{% static "4.jpg" %}'>
+                          <div class="carousel-caption">
+                              <!-- Optional Caption -->
+                          </div>
+                        </div>
+                        <div class="item">
+                          <img src='{% static "5.jpg" %}'>
+                          <div class="carousel-caption">
+                              <!-- Optional Caption -->
+                          </div>
+                        </div>
+                        <div class="item">
+                          <img src='{% static "6.jpg" %}'>
+                          <div class="carousel-caption">
+                              <!-- Optional Caption -->
+                          </div>
+                        </div>
+                        <div class="item">
+                          <img src='{% static "7.jpg" %}'>
+                          <div class="carousel-caption">
+                              <!-- Optional Caption -->
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Controls -->
+                      <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                      </a>
+                      <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                      </a>
+                    </div>
+
+                    <hr>
+
+                    <section class='cybercept'>
+                        <h1 class='text-center txt-large fest-head'><strong>Cybercept 2015</strong> is here!</h1>
+                        <img src="{% static 'cybercept.jpg' %}" class='img-responsive fest-poster'>
+                        <h3>Here is a list of the events at the annual tech fest of St. Stephen's College: </h3><br>
+                        <ul class='list-unstyled event-list'>
+                            <li><a href="{% url 'orfik:home' %}">Orfik 2015</a></li>
+                            <li><a href="{% url 'logo:home' %}">Logo Designing</a></li>
+                            {% load flatpages %}
+                            {% get_flatpages as flatpages %}
+                            {% for page in flatpages %}
+                                <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </section>
                 {% endblock %}
             </div>
 
@@ -76,7 +149,6 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <span class='love-text text-muted'>Made with <i class='fa fa-heart'></i> by CompSoc, SSC</span>
-                            <span class='love-text text-muted'>This website is open-sourced on <a href='http://www.github.com/theSage21/compsocssc.git' target='_blank'>GitHub.</a></span>
                         </div>
                     </div>
                 </div>
