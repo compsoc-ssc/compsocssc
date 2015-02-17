@@ -42,8 +42,6 @@ INSTALLED_APPS = (
     'django.contrib.flatpages',
     #---
     'crispy_forms',
-    'admin_user_stats',
-    'chart_tools',
     #'allauth',
     #'allauth.account',
     #'allauth.socialaccount',
