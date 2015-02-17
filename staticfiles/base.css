@@ -26,6 +26,15 @@ h6 {
     font-weight: 400;
 }
 
+.title {
+    margin-bottom: 0px !important;
+}
+
+.subtitle {
+    margin-top: 5px;
+    font-weight: 300;
+}
+
 .love-text {
     text-align: center;
     display: block;
