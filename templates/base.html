@@ -66,6 +66,20 @@
                         <hr>
                     </div>
 
+                    <section class='cybercept'>
+                        <h1 class='text-center txt-large fest-head'><strong>Cybercept 2015</strong> is here!</h1>
+                        <img src="{% static 'cybercept.jpg' %}" class='img-responsive fest-poster'>
+                        <h3>Here is a list of the events at the annual tech fest of St. Stephen's College: </h3><br>
+                        <ul class='list-unstyled event-list'>
+                            <li><a href="{% url 'orfik:home' %}">Orfik 2015</a></li>
+                            <li><a href="{% url 'logo:home' %}">Logo Designing</a></li>
+                            {% load flatpages %}
+                            {% get_flatpages as flatpages %}
+                            {% for page in flatpages %}
+                                <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </section>
                     <div id="carousel-example-generic" class="carousel slide slideshow" data-ride="carousel">
                       <!-- Wrapper for slides -->
                       <div class="carousel-inner" role="listbox">
@@ -126,20 +140,6 @@
 
                     <hr>
 
-                    <section class='cybercept'>
-                        <h1 class='text-center txt-large fest-head'><strong>Cybercept 2015</strong> is here!</h1>
-                        <img src="{% static 'cybercept.jpg' %}" class='img-responsive fest-poster'>
-                        <h3>Here is a list of the events at the annual tech fest of St. Stephen's College: </h3><br>
-                        <ul class='list-unstyled event-list'>
-                            <li><a href="{% url 'orfik:home' %}">Orfik 2015</a></li>
-                            <li><a href="{% url 'logo:home' %}">Logo Designing</a></li>
-                            {% load flatpages %}
-                            {% get_flatpages as flatpages %}
-                            {% for page in flatpages %}
-                                <li><a href="{{ page.url }}">{{ page.title }}</a></li>
-                            {% endfor %}
-                        </ul>
-                    </section>
                 {% endblock %}
             </div>
 
