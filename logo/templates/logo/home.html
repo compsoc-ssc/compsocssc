@@ -6,7 +6,13 @@
     {% load static %}
     <link rel="stylesheet" href="{% static 'logo/css/home.css' %}"</link>
 {% endblock %}
-
+{%block navigation%}
+    <ul class='nav navbar-nav navbar-left'>
+        <li><a href={%url 'logo:home'%}>Home</a></li>
+        <li><a href={%url 'logo:submission'%}>Submit a logo</a></li>
+        <li><a href={%url 'logo:gallery'%}>Gallery of submissions</a></li>
+    </ul>
+{%endblock%}
 {% block body %}
     <h1 class="logo-title">Logo Designing</h1>
     <hr>
