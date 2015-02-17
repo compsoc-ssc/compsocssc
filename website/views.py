@@ -8,6 +8,7 @@ def home(request):
     """
     data={}
     template='base.html'
+    data['photolist']=list('234567')
     return render(request,template,data)
 @gzip_page
 def contact(request):

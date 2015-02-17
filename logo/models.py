@@ -13,8 +13,8 @@ class Submission(models.Model):
     tagline = models.CharField(max_length=100)
     def __str__(self):return self.name
     def thumbnail(self):
-        if self.picture:
-            addr=self.picture.url
+        if self.logo:
+            addr=self.logo.url
             addr.strip('/')
             return u'<img src="'+addr+'" width=60 height=60 />'
         else:

@@ -89,42 +89,14 @@
                               <!-- Optional Caption -->
                           </div>
                         </div>
+                        {%for number in photolist%}
                         <div class="item">
-                          <img src='{% static "2.jpg" %}'>
+                          <img src='{% static number|join:".jpg" %}' async >
                           <div class="carousel-caption">
                               <!-- Optional Caption -->
                           </div>
                         </div>
-                        <div class="item">
-                          <img src='{% static "3.jpg" %}'>
-                          <div class="carousel-caption">
-                              <!-- Optional Caption -->
-                          </div>
-                        </div>
-                        <div class="item">
-                          <img src='{% static "4.jpg" %}'>
-                          <div class="carousel-caption">
-                              <!-- Optional Caption -->
-                          </div>
-                        </div>
-                        <div class="item">
-                          <img src='{% static "5.jpg" %}'>
-                          <div class="carousel-caption">
-                              <!-- Optional Caption -->
-                          </div>
-                        </div>
-                        <div class="item">
-                          <img src='{% static "6.jpg" %}'>
-                          <div class="carousel-caption">
-                              <!-- Optional Caption -->
-                          </div>
-                        </div>
-                        <div class="item">
-                          <img src='{% static "7.jpg" %}'>
-                          <div class="carousel-caption">
-                              <!-- Optional Caption -->
-                          </div>
-                        </div>
+                        {%endfor%}
                       </div>
 
                       <!-- Controls -->
