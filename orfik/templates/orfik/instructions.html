@@ -1,22 +1,31 @@
-{%extends 'orfik/home.html'%}
-{%block body%}
-    <div class='container lead'>
-        <dl class='dl-horizontal'>
-            <dt>Sign Up</dt>
-            <dd>Signup using Facebook or supplying information</dd>
-            <dt>Login</dt>
-            <dd>Login via Facebook or the ID/Password you supplied</dd>
-            <dt>Play Orfik 15</dt>
-            <dd><ul>
-                <li>Every question has to be answered before you can go to the next one.</li>
-                <li>All answers are in lowercase and without spaces</li>
-                <li>Time is the tie breaker(server time which is displayed on the leaderboard)</li>
-            </ul></dd>
-        </dl>
-    </div>
+{% extends 'orfik/home.html' %}
 
+{% block head %}
+    <style>
+        .instructions {
+            padding: 0 30px;
+            margin-bottom: 100px;
+        }
+    </style>
+{% endblock %}
 
-<ol style="font-size: 1.3em;">
-	<li>Solve :-)</li>
-</ol>
+{% block body %}
+    <h1 class="txt-large">Instructions</h1>
+    <hr>
+    <ol class='lead instructions'>
+        <li>The hunt begins <strong>sharp</strong> at 0000 Hours on February 24, 2015.</li>
+        <li>Each participant can make a single login using a username of their choice.</li>
+        <li>Once the game begins you will be faced by a series of questions.</li>
+        <li>All answers are to be entered in lower case characters with no spaces and special characters.</li>
+        <li>You can only see one question at a time and will only progress when you answer the question correctly.</li>
+        <li>You can have infinite tries on each question untill you get the right answer.</li>
+        <li>All levels are of equal weightage. There is no negative marking.</li>
+        <li>You can also see the leader board at any time to see your progress relative to other.</li>
+        <li>Ranks are based on the time the question is answered; with the team (or individual) answering first placed higher.</li>
+        <li>The CompSoc shall be the sole authority to decide on anything. Any decision made by CompSoc or its representatives are final and irrevocable.</li>
+        <li>Any team (or individual) found to use any unfair means will be disqualified with immediate effect.</li>
+        <li>The use of the internet, searching the source code etc. are all allowed to arrive at the answer.</li>
+        <li>Any queries regarding the questions will be answered at the orfik forum by CompSoc on our facebook page. However, no foul language or other miscreant behaviour will be tolerated.</li>
+    </ol>
+
 {%endblock%}
