@@ -24,13 +24,8 @@
                     <h2>The hunt begins in</h2>
                     <h1>{{starttime.time|timeuntil}}</h1>
                     <hr>
+                    <a class='btn btn-info' href={%url 'orfik:instructions'%}>Instructions</a>
                     {%endif%}
-                    A list of the questions you can attempt.
-                    <ul class='list-unstyled'>
-                        {%for question in questions%}
-                            <li><a href={{question.get_absoulte_url}}>Question {{question.number}}</a></li>
-                        {%endfor%}
-                    </ul>
                 </div>
             {%endif%}
         {%endblock%}

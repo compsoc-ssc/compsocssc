@@ -22,6 +22,7 @@ class CompMember(models.Model):
             if self.fb_image_url!=link:self.fb_image_url=link
         return self.fb_image_url
 class Variable(models.Model):
+    def __str__(self):return self.name
     name=models.CharField(max_length=100)
     time=models.DateTimeField()
 class Track(models.Model):
