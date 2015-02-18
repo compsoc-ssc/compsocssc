@@ -48,7 +48,8 @@ def hint(request,q_no):
     return render(request,template,data)
 @login_required
 def question(request,q_no):
-    starttime=generalmodels.Variable.objects.get('orfikstart').time
+    starttime=generalmodels.Variable.objects.get(name='orfikstart').time
+    player=request.user.player
     #Check if orfik has started
     if starttime>timezone.now():return redirect('orfik:home')
     q_no=int(q_no)
@@ -57,11 +58,10 @@ def question(request,q_no):
     #----------------------
     data={}
     template='orfik/question.html'
-    player=request.user.player
     question=get_object_or_404(models.Question,number=q_no)
+    data['question']=question
     if request.method=='GET':
         data['form']=models.AnswerForm()
-        data['question']=question
     if request.method=='POST':
         form=models.AnswerForm(request.POST)
         if question.number==player.max_level:#This is his first potential
@@ -76,7 +76,8 @@ def question(request,q_no):
                     player.max_level+=1
                     player.save()
                     return redirect('orfik:question',q_no=question.number+1)
+                else:
+                    return redirect('orfik:question',q_no=question.number)
             else:
                 data['form']=form
-                data['question']=question
-        return render(request,template,data)
+    return render(request,template,data)

@@ -18,7 +18,7 @@ class Question(models.Model):
     image=models.ImageField(upload_to='question',blank=True,null=True)
     answer=models.CharField(max_length=100)
     def get_absolute_url(self):
-        return reverse('question',kwargs={'q_no':self.number})
+        return reverse('orfik:question',kwargs={'q_no':self.number})
 class Aid(models.Model):
     question=models.ForeignKey(Question,related_name='aid')
     text=models.TextField(blank=True)
@@ -32,6 +32,7 @@ class Attempt(models.Model):
         if self.correct!=None:return self.correct
         if self.question.answer==self.value:self.correct=True
         else:self.correct=False
+        self.save()
         return self.correct
 #------------forms
 class AnswerForm(forms.ModelForm):
