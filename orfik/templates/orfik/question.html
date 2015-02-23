@@ -5,18 +5,19 @@
         <h2>Question {{question.number}}</h2>
         <hr>
         {%if question.text%}
-        {{question.text}}
-        <hr>
+            <p class="lead">{{question.text}}</p>
+            <hr>
         {%endif%}
         {%if question.image%}
-        <img class='img-responsive' alt='hint image' src={{question.image.url}} />
-        <hr>
+            <img class='img-responsive' alt='hint image' src='{{question.image.url}}' style="margin: 0 auto;"/>
+            <hr>
         {%endif%}
         <!--Form for the answer-->
-        <form role='form' action={%url 'orfik:question' question.number%} method='post'>
-        {%csrf_token%}
-        {%load crispy_forms_tags%}
-        {{form|crispy}}
-        <input type='submit' class='btn btn-success' value='Submit'></input>
+        <form role='form' action={%url 'orfik:question' question.number%} method='POST' style="margi-bottom: 100px;">
+            {%csrf_token%}
+            {% load bootstrap %}
+            {{form | bootstrap}}
+            <input type='submit' class='btn btn-success' value='Submit'></input>
+        </form>
     </div>
 {%endblock%}
