@@ -1,8 +1,11 @@
 from django.shortcuts import render, redirect
 from .models import Submission
 from .forms import SubmissionForm
+from general import models as generalmodels
+from django.utils import timezone
 
-
+def check_end():
+    return generalmodels.Vriable.objects.get(name='logoend')<=timezone.now()
 def home(request):
     template = 'logo/home.html'
     return render(request, template)
@@ -15,6 +18,7 @@ def gallery(request):
 def submission(request):
     data = {}
     template = 'logo/submission.html'
+    data['ended']=check_end()
     if request.method == 'POST':
         form = SubmissionForm(request.POST, request.FILES)
         if form.is_valid():

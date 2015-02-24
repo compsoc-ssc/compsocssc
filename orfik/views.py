@@ -4,38 +4,57 @@ from django.utils import timezone
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import get_user_model
 from general import models as generalmodels
+
+def make_player(request):
+    try:
+        player=request.user.player
+    except:
+        user=request.user
+        p=models.Player()
+        p.nickname=user.username
+        p.user=request.user
+        p.save()
+def check_end():
+    return generalmodels.Variable.objects.get(name='orfikend')<=timezone.now()
 def home(request):
     data={}
     template='orfik/home.html'
     data['starttime']=generalmodels.Variable.objects.get(name='orfikstart')
-    if data['starttime'].time<=timezone.now():return redirect('orfik:question',q_no=0)
+    make_player(request)
     if request.user.is_authenticated():
-        try:
-            player=request.user.player
-        except:
-            user=request.user
-            p=models.Player()
-            p.nickname=user.username
-            p.user=request.user
-            p.save()
-            data['new_nick_form']=models.NickForm()
+        data['new_nick_form']=models.NickForm()
+        ended=check_end()
+        #has orfik ended?
+        if ended:
+            data['endtime']=ended
+            data['winner']=models.Player.objects.all().order_by('-max_level','last_solve')[0]==request.user.player
+            return render(request,template,data)
+        #if it has not ended has it started?
+        if data['starttime'].time<=timezone.now():return redirect('orfik:question',q_no=0)
+        #It has not started
         #get the questions available
         data['questions']=models.Question.objects.filter(number__lte=request.user.player.max_level).order_by('number')
         if request.method=='POST':
             form=models.Nickform(request.POST)
             if form.is_valid():form.save()
     return render(request,template,data)
+
 def instructions(request):
     return render(request,'orfik/instructions.html')
+
 def leader(request):
     data={}
     template='orfik/leader.html'
-    data['players']=models.Player.objects.all().order_by('-max_level','-last_solve')
+    endtime=generalmodels.Variable.objects.get(name='orfikend').time
+    data['players']=models.Player.objects.all().order_by('-max_level','last_solve')
+    if endtime<=timezone.now():
+        data['winner']=data['players'][0]
     return render(request,template,data)
 
 #------------------private things
 @login_required
 def question(request,q_no):
+    make_player(request)
     starttime=generalmodels.Variable.objects.get(name='orfikstart').time
     player=request.user.player
     #Check if orfik has started
