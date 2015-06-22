@@ -1,5 +1,5 @@
 #! /bin/bash
-source env/bin/activate
+source django/bin/activate
 python manage.py test
 python manage.py makemigrations
 python manage.py migrate

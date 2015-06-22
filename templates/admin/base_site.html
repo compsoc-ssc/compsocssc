@@ -3,7 +3,5 @@
 {% block title %}{{ title }} | {{ site_title|default:_('CSSSC admin') }}{% endblock %}
 
 {% block branding %}
-<h1 id="site-name"><a href="{% url 'admin:index' %}">{{ site_header|default:_('CSSSC Admin') }}</a></h1>
+  <h1 id="site-name"><a href="{% url 'admin:index' %}">{{ site_header|default:_('CSSSC Admin') }}</a></h1>
 {% endblock %}
-
-{% block nav-global %}{% endblock %}

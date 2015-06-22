@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html>
     <head>
-        {%load staticfiles%}
+        {% load staticfiles %}
         <meta charset="UTF-8">
         <title>CompSoc - SSC</title>
         <!-- favicon and foreign links-->
-        <link async rel="icon" type="image/png" href="{% static 'favicon.png' %}">
-        <link async rel="icon" type="image/vnd.microsoft.icon" href="{% static 'favicon.ico' %}">
+        <link async rel="icon" type="image/png" href="{% static 'images/favicon.png' %}">
+        <link async rel="icon" type="image/vnd.microsoft.icon" href="{% static 'images/favicon.ico' %}">
         <meta name='viewport' content='width=device-width, initial-scale=1.0'>
         <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
         <link async rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href='{% static "base.css" %}'></link>
+        <link rel="stylesheet" href='{% static "stylesheets/base.css" %}'></link>
         {% block head %}
         {% endblock %}
         </head>
@@ -24,28 +24,16 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="{%url 'home'%}"><i class="fa fa-home" style='margin-right: 10px;'></i>CSSSC</a>
+                        <a class="navbar-brand" href="{% url 'home' %}"><i class="fa fa-home" style='margin-right: 10px;'></i>CSSSC</a>
                     </div>
                     <div class='navbar-collapse collapse' id='navbar'>
-                    {%block navigation%}
+                    {% block navigation %}
                         <ul class='nav navbar-nav navbar-left'>
-                            <li><a href={%url 'about'%}>About Us</a></li>
-                            <li><a href={%url 'contact'%}>Contact</a></li>
+                            <li><a href={% url 'about' %}>About Us</a></li>
+                            <li><a href={% url 'contact' %}>Contact</a></li>
                         </ul>
-                    {%endblock%}
+                    {% endblock %}
                         <ul class='nav navbar-nav navbar-right'>
-                            <li class="dropdown">
-                                <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Cybercept Events<span class="caret"></span></a>
-                                <ul class="dropdown-menu" role="menu">
-                                    <li><a href="{% url 'orfik:home' %}">Orfik 2015</a></li>
-                                    <li><a href="{% url 'logo:home' %}">Logo Designing</a></li>
-                                    {% load flatpages %}
-                                    {% get_flatpages as flatpages %}
-                                    {% for page in flatpages %}
-                                        <li><a href="{{ page.url }}">{{ page.title }}</a></li>
-                                    {% endfor %}
-                                </ul>
-                            </li>
                             {% if user.is_authenticated %}
                                 <li><a href="{% url 'logout' %}">Logout</a></li>
                             {% else %}
@@ -60,7 +48,7 @@
                 {% block body %}
                     <div class="header">
                         <div class="logo">
-                            <img src='{% static "logo.png" %}' class='img-responsive'>
+                            <img src='{% static "images/logo.png" %}' class='img-responsive'>
                         </div>
                         <h1 class="text-center title">The Computer Science Society</h1>
                         <h2 class='text-center subtitle'>St. Stephen's College</h2>
@@ -72,8 +60,6 @@
                         <!--<img src="{% static 'cybercept.jpg' %}" class='img-responsive fest-poster'>-->
                         <h3>Participate in these events at Cybercept 2015: </h3><br>
                         <ul class='list-group list-unstyled'>
-                            <li><a href="{% url 'orfik:home' %}" class='list-group-item list-group-item-success' >Orfik 2015</a></li>
-                            <li><a href="{% url 'logo:home' %}" class='list-group-item list-group-item-info'>Logo Designing</a></li>
                             {% load flatpages %}
                             {% get_flatpages as flatpages %}
                             {% for page in flatpages %}

@@ -1,17 +1,9 @@
-"""
-Django settings for website project.
+import os
+import sys
 
-For more information on this file, see
-https://docs.djangoproject.com/en/1.7/topics/settings/
-
-For the full list of settings and their values, see
-https://docs.djangoproject.com/en/1.7/ref/settings/
-"""
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
@@ -31,8 +23,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = (
     'django.contrib.sites',
-    'django_admin_bootstrapped.bootstrap3',
-    'django_admin_bootstrapped',
+    'flat',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -40,15 +31,9 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.flatpages',
-    #---
+    # ---
     'crispy_forms',
-    #'allauth',
-    #'allauth.account',
-    #'allauth.socialaccount',
-    #'allauth.socialaccount.providers.facebook',
     'general',
-    'orfik',
-    'logo',
     'bootstrapform',
 )
 
@@ -75,7 +60,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        'CONN_MAX_AGE':None,
+        'CONN_MAX_AGE': None,
     },
 
 }
@@ -89,46 +74,27 @@ TIME_ZONE = None
 
 USE_I18N = False
 
-USE_L10N =False
+USE_L10N = False
 
 USE_TZ = False
 
-USE_ETAGS=True
-CONN_MAX_AGE=None
+USE_ETAGS = True
+CONN_MAX_AGE = None
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
 STATIC_URL = '/static/'
-MEDIA_URL='/media/'
-STATIC_ROOT=os.path.join(BASE_DIR,'static_files')
-MEDIA_ROOT=os.path.join(BASE_DIR,'media_files')
+MEDIA_URL = '/media/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static_files')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media_files')
 #-----------
-TEMPLATE_DIRS=[os.path.join(BASE_DIR,'templates')]
-STATICFILES_DIRS=[os.path.join(BASE_DIR,'staticfiles')]
+TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 #-----------
-LOGIN_REDIRECT_URL='/'
-LOGIN_URL='/'
-SITE_ID=1
-#------------------
-#AUTHENTICATION_BACKENDS = (
-#    # Needed to login by username in Django admin, regardless of `allauth`
-#    "django.contrib.auth.backends.ModelBackend",
-#    # `allauth` specific authentication methods, such as login by e-mail
-#    #"allauth.account.auth_backends.AuthenticationBackend",
-#)
-##TEMPLATE_CONTEXT_PROCESSORS = (
-#    #'django.contrib.auth.context_processors.auth',
-#    # Required by allauth template tags
-#    #"django.core.context_processors.request",
-#    # allauth specific context processors
-#    #"allauth.account.context_processors.account",
-#    #"allauth.socialaccount.context_processors.socialaccount",
-#)
-#---------------------Allauth settings
+LOGIN_REDIRECT_URL = '/'
+LOGIN_URL = '/'
+SITE_ID = 1
 
-ACCOUNT_EMAIL_REQUIRED=True
-ACCOUNT_USERNAME_REQUIRED =True
-
-#ACCOUNT_EMAIL_REQUIRED=True
-#ACCOUNT_USERNAME_REQUIRED =True
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_USERNAME_REQUIRED = True
