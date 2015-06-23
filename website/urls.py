@@ -14,7 +14,7 @@ urlpatterns = patterns('',
     url(r'^logout/$', 'django.contrib.auth.views.logout', {'template_name':'logged_out.html'}, name='logout'),
     url(r'^register/$', views.register, name='register'),
     # ----- Events
-    # url(r'^logo/', include('events.logo.urls', namespace='logo')),
+    url(r'^logo/', include('events.logo.urls', namespace='logo')),
     # url(r'^orfik/', include('events.orfik.urls', namespace='orfik')),
 )
 

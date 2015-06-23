@@ -35,6 +35,7 @@ INSTALLED_APPS = (
     'crispy_forms',
     'general',
     'bootstrapform',
+    'events.logo'
 )
 
 MIDDLEWARE_CLASSES = (
