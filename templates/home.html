@@ -11,4 +11,55 @@
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50.2 26.8" enable-background="new 0 0 50.2 26.8"><path stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M48.8 1.7l-23.6 23.5-23.5-23.5" fill="none"/></svg>
     </div>
   </div>
+
+  <section id="about" class="alt-section">
+    <h1 class="section-heading">About</h1>
+    <section id="who">
+      <h1 class="light-space">Who are we?</h1>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+      cillum dolore eu fugiat nulla pariatur.</p>
+    </section>
+    <section id="goals">
+      <h1 class="light-space">Our Goals</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in: <strong>learning</strong>, <strong>teaching</strong>, 
+      <strong>exploring</strong>, <strong>collaborating</strong> and just <strong>having fun
+      </strong>while we're at this all.</p>
+    </section>
+  </section>
+
+  <section id="write" class="section">
+    <!-- Let's do some AJAX to show sent message -->
+    <h1 class="section-heading">Write to us</h1>
+    <form action="" method="POST">
+      <fieldset>
+        <label for="name">Your Name</label>
+        <input type="text" name="name" id="name" placeholer="Name">
+      
+      
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" placeholer="Email">
+      
+        <label for="message">Message</label>
+        <input type="textarea" name="message" id="message" placeholer="Message">          
+      </fieldset>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <section id="sponsors">
+    <h1 class="light-space">Our Sponsors</h1>
+    <ul>
+      {% load static %}
+      <li><img src="{% static 'images/tesla.png' %}"></li>
+      <li><img src="{% static 'images/tesla.png' %}"></li>
+      <li><img src="{% static 'images/tesla.png' %}"></li>
+    </ul>
+  </section>
+
 {% endblock body %}
