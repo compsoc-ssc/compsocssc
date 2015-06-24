@@ -6,22 +6,20 @@ from general import models
 
 @gzip_page
 def home(request):
-    """Site homepage for compsoc"""
-    data = {}
-    template = 'base.html'
-    data['photolist'] = list('234567')
-    return render(request, template, data)
+    '''Site homepage for CompSoc'''
+    template = 'home.html'
+    return render(request, template)
 
 
 @gzip_page
 def contact(request):
-    """Contact page"""
+    '''Contact page'''
     return render(request, 'contact.html')
 
 
 @gzip_page
 def about(request):
-    "About us"
+    '''About us'''
     data = {}
     data['current'] = models.CompMember.objects.filter(alumni=False)
     data['alumni'] = models.CompMember.objects.filter(alumni=True)
@@ -30,9 +28,9 @@ def about(request):
 
 @gzip_page
 def register(request):
-    "Register a user account"
+    '''Register a user account'''
     data = {}
-    template = 'register.html'
+    template = 'auth/register.html'
     if request.method == 'GET':
         data['register_form'] = NewUser()
     if request.method == 'POST':

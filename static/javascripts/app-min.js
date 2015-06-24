@@ -1,0 +1,1 @@
+function setHeroHeight(){var e=$(window).height(),h=$("header").height();$("#hero").height(e-h)}$(document).ready(function(){setHeroHeight()});

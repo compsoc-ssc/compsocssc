@@ -10,11 +10,13 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
     url(r'^contact/$', views.contact, name='contact'),
     url(r'^about/$', views.about, name='about'),
-    url(r'^login/$', 'django.contrib.auth.views.login', {'template_name':'login.html'}, name='login'),
-    url(r'^logout/$', 'django.contrib.auth.views.logout', {'template_name':'logged_out.html'}, name='logout'),
+    url(r'^login/$', 'django.contrib.auth.views.login', 
+        {'template_name' : 'auth/login.html'}, name='login'),
+    url(r'^logout/$', 'django.contrib.auth.views.logout', 
+        {'template_name' : 'auth/ogged_out.html'}, name='logout'),
     url(r'^register/$', views.register, name='register'),
     # ----- Events
-    url(r'^logo/', include('events.logo.urls', namespace='logo')),
+    # url(r'^logo/', include('events.logo.urls', namespace='logo')),
     # url(r'^orfik/', include('events.orfik.urls', namespace='orfik')),
 )
 

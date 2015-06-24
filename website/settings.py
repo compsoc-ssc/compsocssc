@@ -32,10 +32,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django.contrib.flatpages',
     # ---
-    'crispy_forms',
     'general',
-    'bootstrapform',
-    'events.logo'
 )
 
 MIDDLEWARE_CLASSES = (

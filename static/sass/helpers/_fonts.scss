@@ -1,0 +1,16 @@
+// Roboto font
+@import url(//fonts.googleapis.com/css?family=Roboto+Slab:400,100|Roboto+Mono:400,300,500|Roboto+Condensed|Roboto:400,100,300,700,500,900);
+
+// Moon font (light)
+@font-face {
+    font-family: 'Moon Light';
+    font-weight: 300;
+    src: url(/static/fonts/Moon_Light.otf);
+}
+
+// Moon font (bold)
+@font-face {
+    font-family: 'Moon Bold';
+    font-weight: 700;
+    src: url(/static/fonts/Moon_Bold.otf);
+}

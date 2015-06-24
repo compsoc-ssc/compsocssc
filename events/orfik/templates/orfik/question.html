@@ -16,9 +16,7 @@
         {% endif %}
         <!--Form for the answer-->
         <form role='form' action="{%url 'orfik:question' question.number%}" method='POST' style="margi-bottom: 100px;">
-            {%csrf_token%}
-            {% load bootstrap %}
-            {{form | bootstrap}}
+            {%csrf_token%}}
             <input type='submit' class='btn btn-success' value='Submit'></input>
         </form>
     </div>

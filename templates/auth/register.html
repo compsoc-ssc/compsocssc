@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block body %}
+    <form role='form' class='form form-register' action="{%url 'register'%}" method='POST'>
+        {% csrf_token %}
+        <h2 class="form-heading">Please Register</h2>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
+    </form>
+{% endblock %}

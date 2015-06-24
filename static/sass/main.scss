@@ -1,8 +1,8 @@
-// Vendor
-@import 'vendor';
+@import 'vendors/all';
+@import 'helpers/all';
+@import 'base/all';
+@import 'components/all';
+@import 'layout/all';
+@import 'pages/all';
 
-// Base styles
-@import 'site/base';
 
-// Event styles
-@import 'events';

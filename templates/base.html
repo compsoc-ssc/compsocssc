@@ -1,88 +1,40 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        {% load staticfiles %}
-        <meta charset="UTF-8">
-        <title>CompSoc - SSC</title>
-        <!-- favicon and foreign links-->
-        <link async rel="icon" type="image/png" href="{% static 'images/favicon.png' %}">
-        <link async rel="icon" type="image/vnd.microsoft.icon" href="{% static 'images/favicon.ico' %}">
-        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-        <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
-        <link async rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href='{% static "stylesheets/main.css" %}'></link>
-        {% block head %}
-        {% endblock %}
-        </head>
-        <body>
-            <nav class="navbar navbar-inverse navbar-static-top">
-                <div class="container">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <a class="navbar-brand" href="{% url 'home' %}"><i class="fa fa-home" style='margin-right: 10px;'></i>CSSSC</a>
-                    </div>
-                    <div class='navbar-collapse collapse' id='navbar'>
-                    {% block navigation %}
-                        <ul class='nav navbar-nav navbar-left'>
-                            <li><a href={% url 'about' %}>About Us</a></li>
-                            <li><a href={% url 'contact' %}>Contact</a></li>
-                        </ul>
-                    {% endblock %}
-                        <ul class='nav navbar-nav navbar-right'>
-                            {% if user.is_authenticated %}
-                                <li><a href="{% url 'logout' %}">Logout</a></li>
-                            {% else %}
-                                <li><a href="{% url 'login' %}">Login</a></li>
-                            {% endif %}
-                        </ul>
-                    </div>
-                </div>
-            </nav>
+<head>
+  {% load staticfiles %}
+  <meta charset='UTF-8'>
+  <title>CompSoc - SSC</title>
+  <!-- Add favicon later -->
+  <meta name='viewport' content='width=device-width', initial-scale='1.0'>
+  <link rel="stylesheet" href='{% static "stylesheets/main.min.css" %}'>
+</head>
+<body>
+  <header>
+    <!-- Logo -->
+    <div>
+      <h1>The CompSoc</h1>
+      <h3>St. Stephen's College</h3>
+    </div>
+    <nav>
+      <ul>
+        <li>Events</li>
+        <li>Members</li>
+        <li>Contact</li>
+      </ul>
+    </nav>
+  </header>
 
-            <div class="container">
-                {% block body %}
-                    <div class="header">
-                        <div class="logo">
-                            <img src='{% static "images/logo.png" %}' class='img-responsive'>
-                        </div>
-                        <h1 class="text-center title">The Computer Science Society</h1>
-                        <h2 class='text-center subtitle'>St. Stephen's College</h2>
-                        <hr>
-                    </div>
+  <main>
+    {% block body %}
+    {% endblock %}
+  </main>
 
-                    <section class='cybercept'>
-                        <h3 class='text-center txt-large fest-head'><strong>Cybercept 2015</strong> is here!</h3>
-                        <!--<img src="{% static 'cybercept.jpg' %}" class='img-responsive fest-poster'>-->
-                        <h3>Participate in these events at Cybercept 2015: </h3><br>
-                        <ul class='list-group list-unstyled'>
-                            {% load flatpages %}
-                            {% get_flatpages as flatpages %}
-                            {% for page in flatpages %}
-                                <li><a href="{{ page.url }}" class='list-group-item list-group-item-{% cycle "success" "info"%} '>{{ page.title }}</a></li>
-                            {% endfor %}
-                        </ul>
-                    </section>
-                {% endblock %}
-            </div>
+  <footer>
+    <!-- Footer -->
+  </footer>
 
-            <!-- Footer -->
-            <footer>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <span class='love-text text-muted'>Made with <i class='fa fa-heart'></i> by CompSoc, SSC</span>
-                        </div>
-                    </div>
-                </div>
-            </footer>
-
-            <!-- Javascript -->
-            <script async defered src='//code.jquery.com/jquery-1.11.0.min.js'></script>
-            <script async defered src='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js'></script>
-        </body>
-    </html>
+  <!-- jQuery -->
+  <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="{% static 'javascripts/app-min.js' %}"></script>
+</body>
+</html>
