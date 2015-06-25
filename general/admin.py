@@ -2,7 +2,6 @@ from django.contrib import admin
 from general import models
 
 
-# Register your models here.
 class MemberAdmin(admin.ModelAdmin):
     list_display = ['name', 'fb_id']
     list_filter = ['alumni']
@@ -24,7 +23,7 @@ class SiteVisitAdmin(admin.ModelAdmin):
     total_users.short_description = 'Total users from this ip'
     total_users.allow_tags = True
     
-admin.site.register(models.CompMember,MemberAdmin)
-admin.site.register(models.SiteVisit,SiteVisitAdmin)
+admin.site.register(models.CompMember, MemberAdmin)
+admin.site.register(models.SiteVisit, SiteVisitAdmin)
 admin.site.register(models.Variable)
 # admin.site.register(models.Track,TrackAdmin)

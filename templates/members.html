@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block body %}
+    <section id="members">
+      <h1 class="section-heading">Members</h1>
+      <!-- 
+        {{ fb_image_url }} = IMAGE
+        {{ get_absolute_url }} = PROFILE 
+        {{ mem.name }} = NAME 
+        {{ mem.role }} = ROLE 
+        {{ mem.batch_of }} = BATCH_OF
+      -->
+
+      <ul id="member-list">
+        {% for member in current %}
+          <li>
+            <div class="member">
+              <img src="{{ member.fb_image_url }}">
+              <h3><a href="{{ member.get_absolute_url }}">{{ member.name }}</a></h3>
+              <h5>({{ member.role }})</h5>
+            </div>
+          </li>
+        {% endfor %}        
+      </ul>
+
+      <hr>
+
+      {% regroup alumni by batch_of as alumni_list %}
+      {% for members in alumni_list %}
+        <section class="alumni-group">
+        <h1 class="section-heading">{{ members.grouper }}</h1>
+        <hr>
+        <ul class="alumni-list">
+          {% for member in members.list %}
+            <div class="alumni">
+              <img src="{{ member.fb_image_url }}">
+              <h3><a href="{{ member.get_absolute_url }}">{{ member.name }}</a></h3>
+              <h5>({{ member.role }})</h5>
+            </div>
+          {% endfor %}
+        </ul>
+        </section>
+      {% endfor %}
+
+    </section>
+{% endblock body %}

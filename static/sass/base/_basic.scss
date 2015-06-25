@@ -45,6 +45,11 @@ main {
   }
 }
 
+a {
+  text-decoration: none;
+  color: $primary-color;
+}
+
 img {
   max-width: 100%;
 }

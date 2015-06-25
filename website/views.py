@@ -18,12 +18,12 @@ def contact(request):
 
 
 @gzip_page
-def about(request):
-    '''About us'''
+def members(request):
+    '''Members page'''
     data = {}
     data['current'] = models.CompMember.objects.filter(alumni=False)
     data['alumni'] = models.CompMember.objects.filter(alumni=True)
-    return render(request, 'about.html', data)
+    return render(request, 'members.html', data)
 
 
 @gzip_page

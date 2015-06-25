@@ -8,7 +8,12 @@ USER = settings.AUTH_USER_MODEL
 
 class CompMember(models.Model):
     """A member of compsoc"""
-    fb_id = models.CharField(max_length=20, help_text='Facebook id number.')
+
+    class Meta:
+        verbose_name = 'CompSoc Member'
+        verbose_name_plural = 'CompSoc Members'
+
+    fb_id = models.CharField(max_length=20, help_text='Facebook ID:')
     fb_image_url = models.TextField()
     name = models.CharField(max_length=20)
     alumni = models.BooleanField(default=False)
