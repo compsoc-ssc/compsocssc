@@ -8,4 +8,12 @@ function setHeroHeight() {
 
 $(document).ready(function() {
     setHeroHeight();
+
+    // Arrow click listener
+    $('#arrow').on('click', function() {
+        $('html, body').animate({
+            scrollTop: $("#about").offset().top
+        }, 900);
+        $(this).fadeOut("slow");
+    });
 });

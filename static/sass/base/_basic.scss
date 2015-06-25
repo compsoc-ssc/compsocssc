@@ -55,9 +55,7 @@ img {
 }
 
 hr {
-  height: 2px;
-  width: 15%;
-  border: 0;
-  outline: 0;
-  background-color: #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  margin: 0 auto 1.5em;
+  width: 12em;
 }

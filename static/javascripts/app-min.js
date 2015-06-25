@@ -1,1 +1,1 @@
-function setHeroHeight(){var e=$(window).height(),h=$("header").height();$("#hero").height(e-h)}$(document).ready(function(){setHeroHeight()});
+function setHeroHeight(){var t=$(window).height(),e=$("header").height();$("#hero").height(t-e)}$(document).ready(function(){setHeroHeight(),$("#arrow").on("click",function(){$("html, body").animate({scrollTop:$("#about").offset().top},900),$(this).fadeOut("slow")})});
