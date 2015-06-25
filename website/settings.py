@@ -33,6 +33,7 @@ INSTALLED_APPS = (
     'django.contrib.flatpages',
     # ---
     'general',
+    'events',
 )
 
 MIDDLEWARE_CLASSES = (

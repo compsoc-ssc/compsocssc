@@ -19,9 +19,9 @@
     </a>
     <nav>
       <ul>
-        <li><a href="javascript:void(0)">Events</a></li>
+        <li><a href="{% url 'events:home' %}">Events</a></li>
         <li><a href="{% url 'members' %}">Members</a></li>
-        <li><a href="javascript:void(0)">Contact</a></li>
+        <li><a href="{% url 'contact' %}">Contact</a></li>
       </ul>
     </nav>
   </header>
@@ -38,7 +38,7 @@
     <div class="footer-links">
       <ul>
         <li><h3>Navigation</h3></li>
-        <li><a href="javascript:void(0)">Events</a></li>
+        <li><a href="{% url 'events:home' %}">Events</a></li>
         <li><a href="{% url 'members' %}">Members</a></li>
         <li><a href="{% url 'contact' %}">Contact</a></li>        
       </ul>
