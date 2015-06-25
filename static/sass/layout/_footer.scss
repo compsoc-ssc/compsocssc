@@ -16,8 +16,8 @@
     margin-bottom: 2em;
     text-align: center;
 
-    img {
-      height: 3em;
+    svg {
+      @include size(100px);
     }
   } 
 

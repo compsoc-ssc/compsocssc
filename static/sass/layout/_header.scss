@@ -3,21 +3,33 @@ header {
   min-height: 132px;
   background-color: $primary-color;
   color: white;
+  @include clearfix;
 
-  div {
-    float: left;
-    margin: 30px 0 0 80px;
-    color: white;
+  a {
+    div {
+      float: left;
+      margin: 25px 0 0 40px;
+      color: white;
+      @include clearfix;
 
-    h1 {
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-family: 'Moon Light', sans-serif;
-    }
+      svg {
+        float: left;
+        @include size(80px);
+      }
 
-    h3 {
-      font-weight: 100;
-      letter-spacing: 2px;
+      div {
+        margin: 8px 0 0 20px;
+        h1 {
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          font-family: 'Moon Light', sans-serif;
+        }
+
+        h3 {
+          font-weight: 100;
+          letter-spacing: 2px;
+        }
+      }
     }
   }
 
@@ -42,12 +54,16 @@ header {
     }
   }
 
-  @media screen and (max-width: 740px) {
-    min-height: 180px;
-    div {
-      margin: 30px auto;
-      width: 100%;
-      text-align: center;
+  @media screen and (max-width: 796px) {
+    a {
+      @include clearfix;
+      @include display(flex);
+      @include flex-wrap(wrap);
+      @include justify-content(center);
+      @include align-items(center);
+       > div {
+        margin: 30px 0 10px;
+      }
     }
 
     nav {
@@ -58,7 +74,10 @@ header {
 
       ul {
         padding: 0;
-        @include list-inline-around();
+        @include display(flex);
+        @include align-items(center);
+        @include justify-content(space-around);
+        margin: 30px 0 25px;
 
         li {
           margin: 0;
