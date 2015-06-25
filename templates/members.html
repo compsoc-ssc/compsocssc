@@ -2,45 +2,44 @@
 
 {% block body %}
     <section id="members">
-      <h1 class="section-heading">Members</h1>
-      <!-- 
-        {{ fb_image_url }} = IMAGE
-        {{ get_absolute_url }} = PROFILE 
-        {{ mem.name }} = NAME 
-        {{ mem.role }} = ROLE 
-        {{ mem.batch_of }} = BATCH_OF
-      -->
+      <h1 class="section-heading">Current members</h1>
 
       <ul id="member-list">
         {% for member in current %}
           <li>
             <div class="member">
-              <img src="{{ member.fb_image_url }}">
-              <h3><a href="{{ member.get_absolute_url }}">{{ member.name }}</a></h3>
+              <img class="face" src="{{ member.fb_image_url }}">
+              <h4><a href="{{ member.get_absolute_url }}">{{ member.name }}</a></h4>
               <h5>({{ member.role }})</h5>
             </div>
           </li>
         {% endfor %}        
       </ul>
+    </section>
 
-      <hr>
-
+    <section id="alumni">
+      <h1 class="section-heading">Alumni</h1>
       {% regroup alumni by batch_of as alumni_list %}
       {% for members in alumni_list %}
-        <section class="alumni-group">
-        <h1 class="section-heading">{{ members.grouper }}</h1>
-        <hr>
-        <ul class="alumni-list">
-          {% for member in members.list %}
-            <div class="alumni">
-              <img src="{{ member.fb_image_url }}">
-              <h3><a href="{{ member.get_absolute_url }}">{{ member.name }}</a></h3>
-              <h5>({{ member.role }})</h5>
-            </div>
-          {% endfor %}
-        </ul>
+        <section class="alumni-group{% if not forloop.counter0|divisibleby:2 %} alt-section{% endif %}">
+          <h1 class="light-space" style="text-align: center;">Class of {{ members.grouper }}</h1>
+          <ul class="alumni-list">
+            {% for member in members.list %}
+              <li class="alumni">
+                <div>
+                  <img class="face" src="{{ member.fb_image_url }}">
+                  <h3><a href="{{ member.get_absolute_url }}">{{ member.name }}</a></h3>
+                  <h5>({{ member.role }})</h5>
+                </div>
+              </li>
+            {% endfor %}
+          </ul>
         </section>
+        {% with alumni_list|length as len %}
+          {% if forloop.counter1 == len %}
+            <hr>
+          {% endif %}
+        {% endwith %}
       {% endfor %}
-
     </section>
 {% endblock body %}

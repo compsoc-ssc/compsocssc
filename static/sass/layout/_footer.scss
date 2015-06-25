@@ -71,9 +71,9 @@
   }  
 
   hr {
-    border: 1px solid transparentize($footer-disclaimer-color, 0.3);
-    margin: 0 auto $base-spacing;
-    width: 12em;
+    border: 1px solid transparentize($footer-disclaimer-color, 0.3) !important;
+    margin: 0 auto $base-spacing !important;
+    width: 12em !important;
   }
 
   p {
