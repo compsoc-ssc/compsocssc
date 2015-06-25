@@ -7,7 +7,7 @@
   $footer-background: $action-color;
   $footer-color: white;
   $footer-link-color: transparentize($footer-color, 0.6);
-  $footer-disclaimer-color: transparentize($footer-color, 0.6);
+  $footer-disclaimer-color: transparentize($footer-color, 0.7);
 
   background: $footer-background;
   padding: ($base-spacing * 2) $gutter;
@@ -83,5 +83,11 @@
     margin: auto;
     max-width: 35em;
     text-align: center;
+
+    img {
+      display: inline-block;
+      margin-bottom: -10px;
+      width: 30px;
+    }
   }
 }
