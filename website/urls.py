@@ -11,13 +11,7 @@ urlpatterns = patterns('',
     url(r'^contact/$', views.contact, name='contact'),
     url(r'^members/$', views.members, name='members'),
     url(r'^events/$', include('events.urls', namespace='events')),
-
-    # url(r'^login/$', 'django.contrib.auth.views.login', 
-    #     {'template_name' : 'auth/login.html'}, name='login'),
-    # url(r'^logout/$', 'django.contrib.auth.views.logout', 
-    #     {'template_name' : 'auth/ogged_out.html'}, name='logout'),
-    # url(r'^register/$', views.register, name='register'),
-    # ----- Events
+    
 )
 
 # Event Flatpages
