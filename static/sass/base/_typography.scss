@@ -1,3 +1,18 @@
+// Base
+
+p {
+  line-height: 1.6;
+  font-weight: 400;
+  font-size: 1.3em;
+  letter-spacing: 1px;
+
+  @media screen and (min-width: 600px) {
+    font-size: 1.25em;
+  }
+}
+
+// Special classes
+
 h1.gigantic {
   font-weight: 700;
   font-size: 1.8em;
@@ -16,3 +31,27 @@ h1.gigantic {
     font-size: 5em;
   }
 }
+
+.section-heading {
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 500;
+  font-size: 0.95em;
+  color: $primary-color;
+  margin: 30px 0;
+}
+
+.light-space {
+  text-transform: uppercase;
+  font-family: 'AvenirNext UltraLight', Roboto, sans-serif;
+  font-size: 1.5em;
+  font-weight: 100;
+  letter-spacing: 2px;
+
+  @media screen and (min-width: 600px) {
+    letter-spacing: 3px;
+    font-size: 1.85em;
+  }
+}
+
+

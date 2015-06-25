@@ -1,0 +1,11 @@
+@mixin list-inline-around() {
+  @include display(flex);
+  @include align-items(center);
+  @include justify-content(space-around);
+}
+
+@mixin list-inline-between() {
+  @include display(flex);
+  @include align-items(center);
+  @include justify-content(space-between);
+}
