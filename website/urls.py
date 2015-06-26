@@ -8,15 +8,12 @@ from website import views
 urlpatterns = patterns('',
     url(r'^$', views.home, name='home'),
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^contact/$', views.contact, name='contact'),
     url(r'^members/$', views.members, name='members'),
     url(r'^events/$', include('events.urls', namespace='events')),
-    
 )
 
 # Event Flatpages
 urlpatterns += patterns(
     'django.contrib.flatpages.views',
     (r'^(?P<url>.*/)$', 'flatpage'),
-    
 )
