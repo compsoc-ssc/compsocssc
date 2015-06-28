@@ -1,14 +1,14 @@
 main {
   #hero {
     display: none;
-    width: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(/static/images/hero.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center; 
 
     @media screen and (min-width: 818px) {
       display: block;
+      background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(/static/images/hero.jpg);
+      width: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
     }
 
     div {
