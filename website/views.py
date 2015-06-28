@@ -2,12 +2,20 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm as NewUser
 from django.views.decorators.gzip import gzip_page
 from general import models
+from events.models import Event
 
 
 def home(request):
     '''Site homepage for CompSoc'''
     template = 'home.html'
-    return render(request, template)
+
+    upcoming_event = Event.objects.all().order_by('start_time').first
+
+    context = {
+        "event": upcoming_event
+    }
+    
+    return render(request, template, context)
 
 
 def contact(request):

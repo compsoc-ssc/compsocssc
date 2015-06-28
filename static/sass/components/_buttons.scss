@@ -1,4 +1,14 @@
-button {
+// Include sass modules/partials here.
+
+@import "styles";
+
+// Can always be included as it only renders css if the
+// variable $layout-debug is set to "true"
+@import "debug";
+
+
+// Custom
+button.btn-contact {
   border: 0;
   outline: 0;
   padding: 12px 20px;
@@ -11,3 +21,4 @@ button {
     background-color: darken($primary-color, 10%);
   }
 }
+
