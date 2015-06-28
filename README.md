@@ -21,6 +21,10 @@ python manage.py runserver
 6. Create some dummy data if you want to.
 7. Head on to *localhost:8000* to use the website!
 
+## Styling
+
+The project uses Sass for the styles. All the Sass lives in (HA!) /static/sass. If editing the Sass, make sure you only compile main.scss in the Sass folder and nothing else. We recommend either CodeKit to watch for changes to the Sass and JavaScript but the Sass gem's watch method should work as well.
+
 ## License
 
 ```text
