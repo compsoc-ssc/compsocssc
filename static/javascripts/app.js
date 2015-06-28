@@ -1,5 +1,4 @@
 function setHeroHeight() { 
-    // Set height of hero
     var windowHeight = $(window).height();
     var headerHeight = $('header').height();
 
@@ -7,6 +6,7 @@ function setHeroHeight() {
 }
 
 $(document).ready(function() {
+    // Set height of hero
     setHeroHeight();
 
     // Arrow click listener

@@ -48,6 +48,11 @@ main {
 a {
   text-decoration: none;
   color: $primary-color;
+  @include transition(1s);
+
+  &:hover {
+    color: lighten($primary-color, 5%);
+  }
 }
 
 img {
