@@ -12,14 +12,16 @@
     </div>
   </div>
 
-  <section id="upcoming-event">
-    <h1 class="section-heading">Upcoming Event</h1>
-    <div class="content">
-      <h1>{{ event.name }}</h1>
-      <h2>STARTS IN {{ event.start_time|timeuntil }}</h2>
-      <a target="_blank" href="{{ event.fb_event_page }}" class="btn btn--m">Find out more &raquo;</a>
-    </div>
-  </section>
+  {% if event %}
+    <section id="upcoming-event">
+      <h1 class="section-heading">Upcoming Event</h1>
+      <div class="content">
+          <h1>{{ event.name }}</h1>
+          <h2>STARTS IN {{ event.start_time|timeuntil }}</h2>
+          <a target="_blank" href="{{ event.fb_event_page }}" class="btn btn--m">Find out more &raquo;</a>
+      </div>
+    </section>
+  {% endif %}
 
   <section id="about" class="alt-section">
     <h1 class="section-heading">About</h1>

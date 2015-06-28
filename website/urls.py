@@ -11,9 +11,3 @@ urlpatterns = patterns('',
     url(r'^members/$', views.members, name='members'),
     url(r'^events/$', include('events.urls', namespace='events')),
 )
-
-# Event Flatpages
-urlpatterns += patterns(
-    'django.contrib.flatpages.views',
-    (r'^(?P<url>.*/)$', 'flatpage'),
-)
