@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+
+{% block body %}
+    <section id="login">
+    <h1 class="section-heading">Login</h1>
+    <div class="content">
+      <ul style="list-style: none;">
+        {% if user and not user.is_anonymous %}
+          <li>
+            <a>Hello {{ user.get_full_name|default:user.username }}!</a>
+          </li>
+          <li>
+            <a class="btn btn--s" href="{% url 'auth:logout' %}?next={{ request.path }}">Logout</a>
+          </li>
+        {% else %}
+          <li>
+            <a class="btn btn--s" href="{% url 'social:begin' 'facebook' %}?next={{ request.path }}">Login with Facebook</a>
+          </li>
+          <!-- <li>
+            <a class="btn" href="{% url 'social:begin' 'google-oauth2' %}?next={{ request.path }}">Login with Google</a>
+          </li>
+          <li>
+            <a class="btn" href="{% url 'social:begin' 'twitter' %}?next={{ request.path }}">Login with Twitter</a>
+          </li> -->
+        {% endif %}
+      </ul>
+    </div>
+  </section>
+{% endblock body %}

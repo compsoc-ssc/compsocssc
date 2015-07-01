@@ -1,21 +1,20 @@
 {% extends 'base.html' %}
 
-{% block navigation %}
-    <ul class='nav navbar-nav navbar-left'>
-        <li><a href={%url 'orfik:home'%}>Hunt</a></li>
-        <li><a href={%url 'orfik:leader'%}>Leaderboard</a></li>
-        <li><a href={%url 'orfik:instructions'%}>Instructions</a></li>
-        <li><a target='_blank' href="https://www.facebook.com/TheComputerScienceSocietyStStephensCollege">Forum</a></li>
+{% block event_nav %}
+    <ul>
+        <li><a href="">Hunt</a></li>
+        <li><a href="">Leaderboard</a></li>
+        <li><a href="">Instructions</a></li>
+        <li><a target='_blank' href="">Forum</a></li>
     </ul>
 {% endblock %}
 
 {% block body %}
     {% if not user.is_authenticated %}
         <div class='lead text-center'>
-            <h2>The hunt </h2>
+            <h2>The hunt begin in</h2>
             <h1>{{ starttime.time | timeuntil }}</h1>
-            <a href="{% url 'register' %}" class='btn btn-primary'>Register</a>
-            <a href="{% url 'login' %}?next={% url 'orfik:home' %}" class='btn btn-success'>Login</a>
+            <a href="{% url 'login' %}" class="btn btn--s">Login</a>
         </div>
         <script>
             setTimeout('window.location.reload();', 30000);
@@ -26,7 +25,7 @@
                 <h2>The hunt begins in</h2>
                 <h1>{{ starttime.time | timeuntil }}</h1>
                 <hr>
-                <a class='btn btn-info' href="{% url 'orfik:instructions' %}">Instructions</a>
+                <a class='btn btn-info' href="{% url 'events:orfik:instructions' %}">Instructions</a>
             {% endif %}
             {% if winner %}
                 {% load staticfiles %}
@@ -35,4 +34,5 @@
             {%endif%}
         </div>
     {% endif %}
+
 {% endblock %}

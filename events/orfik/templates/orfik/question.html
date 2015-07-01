@@ -1,6 +1,5 @@
 {% extends 'orfik/home.html' %}
 
-
 {% block body %}
     <!-- Answer to level 1 is orfik2015 -->
     <div class='text-center'>
@@ -15,7 +14,7 @@
             <hr>
         {% endif %}
         <!--Form for the answer-->
-        <form role='form' action="{%url 'orfik:question' question.number%}" method='POST' style="margi-bottom: 100px;">
+        <form role='form' action="{%url 'events:orfik:question' question.number%}" method='POST' style="margi-bottom: 100px;">
             {%csrf_token%}}
             <input type='submit' class='btn btn-success' value='Submit'></input>
         </form>

@@ -25,24 +25,24 @@ def home(request):
     data = {}
     template = 'orfik/home.html'
     data['starttime'] = generalmodels.Variable.objects.get(name='orfikstart')
-    make_player(request)
-    if request.user.is_authenticated():
-        data['new_nick_form'] = models.NickForm()
-        ended = check_end()
-        # Has orfik ended?
-        if ended:
-            data['endtime'] = ended
-            data['winner'] = models.Player.objects.all().order_by('-max_level','last_solve')[0] == request.user.player
-            return render(request, template, data)
-        # If it has not ended, has it started?
-        if data['starttime'].time <= timezone.now():
-            return redirect('orfik:question', q_no=0)
-        # It has not started, get the available questions
-        data['questions'] = models.Question.objects.filter(number__lte=request.user.player.max_level).order_by('number')
-        if request.method == 'POST':
-            form = models.Nickform(request.POST)
-            if form.is_valid():
-                form.save()
+    # if request.user.is_authenticated():
+    #     make_player(request)
+    #     data['new_nick_form'] = models.NickForm()
+    #     ended = check_end()
+    #     # Has orfik ended?
+    #     if ended:
+    #         data['endtime'] = ended
+    #         data['winner'] = models.Player.objects.all().order_by('-max_level','last_solve')[0] == request.user.player
+    #         return render(request, template, data)
+    #     # If it has not ended, has it started?
+    #     if data['starttime'].time <= timezone.now():
+    #         return redirect('events:orfik:question', q_no=0)
+    #     # It has not started, get the available questions
+    #     data['questions'] = models.Question.objects.filter(number__lte=request.user.player.max_level).order_by('number')
+    #     if request.method == 'POST':
+    #         form = models.Nickform(request.POST)
+    #         if form.is_valid():
+    #             form.save()
     return render(request, template, data)
 
 
@@ -67,12 +67,12 @@ def question(request, q_no):
     player = request.user.player
     # Check if orfik has started
     if starttime > timezone.now():
-        return redirect('orfik:home')
+        return redirect('events:orfik:home')
     q_no = int(q_no)
     # If player is not on question
     if player.max_level != q_no:
-        return redirect('orfik:question', q_no=player.max_level)
-    
+        return redirect('events:orfik:question', q_no=player.max_level)
+
     data = {}
     template = 'orfik/question.html'
     question = get_object_or_404(models.Question,number=q_no)
@@ -92,9 +92,9 @@ def question(request, q_no):
                     player.last_solve = timezone.now()
                     player.max_level += 1
                     player.save()
-                    return redirect('orfik:question', q_no=question.number+1)
+                    return redirect('events:orfik:question', q_no=question.number+1)
                 else:
-                    return redirect('orfik:question', q_no=question.number)
+                    return redirect('events:orfik:question', q_no=question.number)
             else:
                 data['form'] = form
     return render(request, template, data)
