@@ -4,6 +4,8 @@ from django.conf import settings
 DEBUG = False
 TEMPLATE_DEBUG = False
 
+SECRET_KEY = os.environ['SECRET_KEY']
+
 DATABASES = settings.DATABASES
 
 # Parse database configuration from $DATABASE_URL

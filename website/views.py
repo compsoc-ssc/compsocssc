@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm as NewUser
 from django.views.decorators.gzip import gzip_page
+# from django.contrib import messages
 from general import models
 from events.models import Event
 
@@ -35,7 +36,6 @@ def login(request):
     '''Login view'''
     template = 'auth/login.html'
     context = {}
-
 
 
     return render(request, template, context)
