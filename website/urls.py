@@ -2,6 +2,7 @@ from django.conf.urls import patterns, include, url
 from django.contrib import admin
 from django.conf import settings
 from website import views
+from django.conf.urls.static import static
 
 
 # Site URLS
@@ -15,4 +16,4 @@ urlpatterns = patterns('',
     url(r'^login/$', 'myauth.views.login', name='login'),
     url('', include('social.apps.django_app.urls', namespace='social')),
     url('', include('django.contrib.auth.urls', namespace='auth')),
-)
+) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

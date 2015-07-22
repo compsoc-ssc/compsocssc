@@ -110,13 +110,16 @@ SOCIAL_AUTH_FACEBOOK_SECRET = '94e319f3419258c75737dd52b4914b73'
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
+STATIC_ROOT = 'staticfiles'
 STATIC_URL = '/static/'
-MEDIA_URL = '/media/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static_files')
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media_files')
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
+
 #-----------
 TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+
 #-----------
 LOGIN_REDIRECT_URL = '/'
 LOGIN_URL = '/'
