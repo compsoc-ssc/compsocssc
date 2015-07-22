@@ -4,37 +4,41 @@
     <section id="section-events">
       <h1 class="section-heading">Events</h1>
 
-      <section id="hero-event">
-        <!-- Will be used to highlight things like `orfik` -->
-      </section>
+      {% if events %}
+        <section id="hero-event">
+          <!-- Will be used to highlight things like `orfik` -->
+        </section>
 
-      <section id="upcoming">
-        <div class="content">
-          <h1 class="light-space">Upcoming Events</h1>
-          <ul id="events">
-            {% for event in events %}
-              <li>
-                <div>
-                  <div class="event">
-                    <h3>{{ event.name }}</h3>
-                    <p>{{ event.description }}</p>
-                    <p class="line-reduce"><strong>WHEN:</strong> {{ event.start_time|date:"d M, Y"}} at {{ event.start_time|date:"f A"}}</p>
-                    <p class="line-reduce"><strong>WHERE:</strong> {{ event.location }}</p>
-                    <p class="line-reduce"><strong>Participation:</strong> {{ event.get_participation_method_display }}</p>
-                    <p class="line-reduce" style="margin: 10px 0;">For more information visit the <a target="_blank" href="{{ event.fb_event_page }}">event page.</a></p>
+        <section id="upcoming">
+          <div class="content">
+            <h1 class="light-space">Upcoming Events</h1>
+            <ul id="events">
+              {% for event in events %}
+                <li>
+                  <div>
+                    <div class="event">
+                      <h3>{{ event.name }}</h3>
+                      <p>{{ event.description }}</p>
+                      <p class="line-reduce"><strong>WHEN:</strong> {{ event.start_time|date:"d M, Y"}} at {{ event.start_time|date:"f A"}}</p>
+                      <p class="line-reduce"><strong>WHERE:</strong> {{ event.location }}</p>
+                      <p class="line-reduce"><strong>Participation:</strong> {{ event.get_participation_method_display }}</p>
+                      <p class="line-reduce" style="margin: 10px 0;">For more information visit the <a target="_blank" href="{{ event.fb_event_page }}">event page.</a></p>
+                    </div>
                   </div>
-                </div>
-              </li>
-            {% endfor %}
-          </ul>
-        </div>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </section>
+
+        <!-- <section id="highlights" class="alt-section">
+          <div class="content">
+            <h1 class="light-space">Highlight Reel</h1>
+          </div>
+        </section> -->
+
       </section>
-
-      <!-- <section id="highlights" class="alt-section">
-        <div class="content">
-          <h1 class="light-space">Highlight Reel</h1>
-        </div>
-      </section> -->
-
-    </section>
+    {% else %}
+      <h2 style="text-align: center; margin-bottom: 500px;">No upcoming events right now. Check back later!</h2>
+    {% endif %}
 {% endblock body %}

@@ -1,5 +1,15 @@
 {% extends "base.html" %}
 
+{% block head %}
+  {% if not current and not alumni %}
+    <style type="text/css">
+      .footer {
+        display: none;
+      }
+    </style>
+  {% endif %}
+{% endblock %}
+
 {% block body %}
     {% if current %}
       <section id="members">
@@ -14,7 +24,7 @@
                 <h5>({{ member.role }})</h5>
               </div>
             </li>
-          {% endfor %}        
+          {% endfor %}
         </ul>
       </section>
     {% endif %}

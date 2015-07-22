@@ -7,6 +7,9 @@
   <!-- Add favicon later -->
   <meta name='viewport' content='width=device-width', initial-scale='1.0'>
   <link rel="stylesheet" href='{% static "stylesheets/main.min.css" %}'>
+  {% block head %}
+    <!-- USE VERY CAREFULLY. NO CLUTTER PLS. -->
+  {% endblock head %}
 </head>
 <body>
   <header>
