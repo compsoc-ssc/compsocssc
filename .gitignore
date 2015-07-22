@@ -51,8 +51,8 @@ coverage.xml
 db.sqlite3
 local.py
 logo/migrations/
-media_files/
-static_files/
+mediafiles/
+staticfiles/
 
 # Sphinx documentation
 docs/_build/
