@@ -13,7 +13,5 @@ urlpatterns = patterns('',
     url(r'^members/$', views.members, name='members'),
     url(r'^events/', include('events.urls', namespace='events')),
     # Auth
-    url(r'^login/$', 'myauth.views.login', name='login'),
-    url('', include('social.apps.django_app.urls', namespace='social')),
-    url('', include('django.contrib.auth.urls', namespace='auth')),
+
 ) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

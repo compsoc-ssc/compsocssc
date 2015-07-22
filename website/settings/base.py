@@ -31,10 +31,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # ---
-    'social.apps.django_app.default',
-    # ---
     'general',
-    'myauth',
     'events',
     'events.orfik',
 )
@@ -101,12 +98,6 @@ USE_TZ = False
 USE_ETAGS = True
 CONN_MAX_AGE = None
 
-# PYTHON SOCIAL AUTH SETTINGS
-LOGIN_REDIRECT_URL = '/'
-
-SOCIAL_AUTH_FACEBOOK_KEY = '1027448760613354'
-SOCIAL_AUTH_FACEBOOK_SECRET = '94e319f3419258c75737dd52b4914b73'
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
@@ -117,13 +108,9 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 
-#-----------
-TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
-
-#-----------
-LOGIN_REDIRECT_URL = '/'
-LOGIN_URL = '/'
-SITE_ID = 1
+TEMPLATE_DIRS = (
+  os.path.join(BASE_DIR, 'templates'),
+)
 
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_USERNAME_REQUIRED = True
