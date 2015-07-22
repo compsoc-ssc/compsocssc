@@ -2,7 +2,7 @@ import os
 from django.conf import settings
 
 DEBUG = False
-TEMPLATE_DEBUG = True
+TEMPLATE_DEBUG = False
 
 DATABASES = settings.DATABASES
 
