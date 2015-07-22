@@ -2,10 +2,12 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm as NewUser
 from django.views.decorators.gzip import gzip_page
 # from django.contrib import messages
+from django.views.decorators import gzip
 from general import models
 from events.models import Event
 
 
+@gzip_page
 def home(request):
     '''Site homepage for CompSoc'''
     template = 'home.html'
@@ -19,11 +21,13 @@ def home(request):
     return render(request, template, context)
 
 
+@gzip_page
 def contact(request):
     '''Contact page'''
     return render(request, 'contact.html')
 
 
+@gzip_page
 def members(request):
     '''Members page'''
     data = {}
@@ -32,6 +36,7 @@ def members(request):
     return render(request, 'members.html', data)
 
 # Auth Views
+@gzip_page
 def login(request):
     '''Login view'''
     template = 'auth/login.html'
@@ -40,6 +45,7 @@ def login(request):
     return render(request, template, context)
 
 
+@gzip_page
 def signup(request):
     '''Signup view'''
     template = 'auth/signup.html'
@@ -50,6 +56,7 @@ def signup(request):
     return render(request, template, context)
 
 
+@gzip_page
 def password_reset(request):
     '''Password reset view'''
     template = 'auth/password_reset.html'

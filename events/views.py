@@ -1,9 +1,11 @@
 from django.shortcuts import redirect
 from django.shortcuts import render
+from django.views.decorators import gzip
 
 from events.models import Event
 
 
+@gzip_page
 def home(request):
     '''
     View for the Events home page
