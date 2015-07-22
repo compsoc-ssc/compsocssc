@@ -4,6 +4,7 @@ from django.views.decorators.gzip import gzip_page
 # from django.contrib import messages
 from general import models
 from events.models import Event
+from website.settings import SECRET_KEY
 
 
 def home(request):
@@ -35,7 +36,7 @@ def members(request):
 def login(request):
     '''Login view'''
     template = 'auth/login.html'
-    context = {}
+    context = {'key': SECRET_KEY}
 
 
     return render(request, template, context)
