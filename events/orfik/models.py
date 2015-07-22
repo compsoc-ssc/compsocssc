@@ -6,7 +6,8 @@ from django.core.urlresolvers import reverse
 
 
 class Player(models.Model):
-    def __str__(self):return self.nickname
+    def __str__(self):
+        return self.nickname
     nickname = models.CharField(max_length=20)
     user = models.OneToOneField(settings.AUTH_USER_MODEL)
     max_level = models.SmallIntegerField(default=0)

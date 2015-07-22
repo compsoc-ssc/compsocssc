@@ -29,3 +29,33 @@ def members(request):
     data['current'] = models.CompMember.objects.filter(alumni=False)
     data['alumni'] = models.CompMember.objects.filter(alumni=True)
     return render(request, 'members.html', data)
+
+# Auth Views
+def login(request):
+    '''Login view'''
+    template = 'auth/login.html'
+    context = {}
+
+
+
+    return render(request, template, context)
+
+
+def signup(request):
+    '''Signup view'''
+    template = 'auth/signup.html'
+    context = {}
+
+
+
+    return render(request, template, context)
+
+
+def password_reset(request):
+    '''Password reset view'''
+    template = 'auth/password_reset.html'
+    context = {}
+
+
+
+    return render(request, template, context)

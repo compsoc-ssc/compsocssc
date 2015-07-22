@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block body %}
+  <section class="section-auth">
+    <form method="GET" action="" class="auth-form">
+      <h1 class="auth-heading light-space">Signup</h1>
+      <fieldset class="inline">
+        <label>
+          <span>Firstname</span>
+          <input type="text" name="firstname" placeholder="Enter first name">
+        </label>
+
+        <label>
+          <span>Lastname</span>
+          <input type="text" name="lastname" placeholder="Enter last name">
+        </label>
+      </fieldset>
+
+      <fieldset class="inline">
+        <label>
+          <span>Username</span>
+          <input class="auth-field" type="text" name="username" placeholder="Enter username">
+        </label>
+
+        <label>
+          <span>Email</span>
+          <input class="auth-field" type="email" name="email" placeholder="Enter email">
+        </label>
+      </fieldset>
+
+      <fieldset class="inline">
+        <label>
+          <span>Password</span>
+          <input class="auth-field" type="password" name="password" placeholder="Enter password">
+        </label>
+
+        <label>
+          <span>Confirm Password</span>
+          <input class="auth-field" type="password" name="password2" placeholder="Confirm password">
+        </label>
+      </fieldset>
+
+      <button class="btn-form-action / btn btn-m">Signup</a>
+    </form>
+  </section>
+{% endblock body %}

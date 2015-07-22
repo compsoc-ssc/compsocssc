@@ -22,7 +22,6 @@ $mobile: new-breakpoint(max-width 640px 4) !default;
         @include transition(500ms ease-in);
 
         @media screen and (min-width: 660px) {
-          
           &:hover {
             background-color: darken(white, 5%);
           }

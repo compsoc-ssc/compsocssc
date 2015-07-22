@@ -16,6 +16,8 @@ DEBUG = True
 
 TEMPLATE_DEBUG = DEBUG
 
+SITE_ID = 1
+
 # Allow all host headers
 ALLOWED_HOSTS = []
 

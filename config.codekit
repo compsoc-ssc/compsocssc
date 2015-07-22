@@ -2,33 +2,6 @@
 "CodeKitInfo": "This is a CodeKit 2.x project configuration file. It is designed to sync project settings across multiple machines. MODIFYING THE CONTENTS OF THIS FILE IS A POOR LIFE DECISION. If you do so, you will likely cause CodeKit to crash. This file is not useful unless accompanied by the project that created it in CodeKit 2. This file is not backwards-compatible with CodeKit 1.x. For more information, see: http:\/\/incident57.com\/codekit",
 "creatorBuild": "18268",
 "files": {
-	"\/django\/lib\/python3.4\/site-packages\/bootstrapform\/templates\/bootstrapform\/field.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/bootstrapform\/templates\/bootstrapform\/field.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/django\/lib\/python3.4\/site-packages\/bootstrapform\/templates\/bootstrapform\/form.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/bootstrapform\/templates\/bootstrapform\/form.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/django\/lib\/python3.4\/site-packages\/bootstrapform\/templates\/bootstrapform\/formset.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/bootstrapform\/templates\/bootstrapform\/formset.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
 	"\/django\/lib\/python3.4\/site-packages\/compressor\/templates\/compressor\/css_file.html": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -1107,726 +1080,6 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/compressor\/tests\/test_templates_jinja2\/test_with_context\/test_compressor_offline.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap\/accordion-group.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap\/accordion-group.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap\/accordion.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap\/accordion.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap\/betterform.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap\/betterform.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap\/display_form.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap\/display_form.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap\/errors.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap\/errors.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap\/errors_formset.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap\/errors_formset.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap\/field.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap\/field.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap\/layout\/alert.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap\/layout\/alert.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap\/layout\/baseinput.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap\/layout\/baseinput.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap\/layout\/button.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap\/layout\/button.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap\/layout\/checkboxselectmultiple.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap\/layout\/checkboxselectmultiple.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap\/layout\/checkboxselectmultiple_inline.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap\/layout\/checkboxselectmultiple_inline.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap\/layout\/field_errors.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap\/layout\/field_errors.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap\/layout\/field_errors_block.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap\/layout\/field_errors_block.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap\/layout\/field_with_buttons.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap\/layout\/field_with_buttons.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap\/layout\/formactions.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap\/layout\/formactions.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap\/layout\/help_text.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap\/layout\/help_text.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap\/layout\/help_text_and_errors.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap\/layout\/help_text_and_errors.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap\/layout\/multifield.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap\/layout\/multifield.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap\/layout\/prepended_appended_text.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap\/layout\/prepended_appended_text.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap\/layout\/radioselect.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap\/layout\/radioselect.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap\/layout\/radioselect_inline.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap\/layout\/radioselect_inline.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap\/layout\/tab-link.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap\/layout\/tab-link.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap\/layout\/tab.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap\/layout\/tab.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap\/layout\/uneditable_input.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap\/layout\/uneditable_input.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap\/table_inline_formset.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap\/table_inline_formset.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap\/uni_form.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap\/uni_form.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap\/uni_formset.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap\/uni_formset.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap\/whole_uni_form.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap\/whole_uni_form.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap\/whole_uni_formset.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap\/whole_uni_formset.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap3\/accordion-group.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap3\/accordion-group.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap3\/accordion.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap3\/accordion.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap3\/betterform.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap3\/betterform.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap3\/display_form.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap3\/display_form.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap3\/errors.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap3\/errors.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap3\/errors_formset.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap3\/errors_formset.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap3\/field.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap3\/field.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap3\/field.strict.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap3\/field.strict.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap3\/layout\/baseinput.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap3\/layout\/baseinput.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap3\/layout\/button.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap3\/layout\/button.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap3\/layout\/checkboxselectmultiple.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap3\/layout\/checkboxselectmultiple.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap3\/layout\/checkboxselectmultiple_inline.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap3\/layout\/checkboxselectmultiple_inline.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap3\/layout\/field_errors.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap3\/layout\/field_errors.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap3\/layout\/field_errors_block.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap3\/layout\/field_errors_block.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap3\/layout\/field_with_buttons.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap3\/layout\/field_with_buttons.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap3\/layout\/formactions.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap3\/layout\/formactions.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap3\/layout\/help_text.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap3\/layout\/help_text.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap3\/layout\/help_text_and_errors.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap3\/layout\/help_text_and_errors.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap3\/layout\/inline_field.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap3\/layout\/inline_field.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap3\/layout\/multifield.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap3\/layout\/multifield.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap3\/layout\/prepended_appended_text.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap3\/layout\/prepended_appended_text.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap3\/layout\/radioselect.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap3\/layout\/radioselect.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap3\/layout\/radioselect_inline.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap3\/layout\/radioselect_inline.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap3\/layout\/tab-link.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap3\/layout\/tab-link.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap3\/layout\/tab.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap3\/layout\/tab.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap3\/layout\/uneditable_input.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap3\/layout\/uneditable_input.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap3\/table_inline_formset.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap3\/table_inline_formset.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap3\/uni_form.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap3\/uni_form.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap3\/uni_formset.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap3\/uni_formset.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap3\/whole_uni_form.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap3\/whole_uni_form.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap3\/whole_uni_formset.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/bootstrap3\/whole_uni_formset.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/uni_form\/betterform.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/uni_form\/betterform.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/uni_form\/display_form.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/uni_form\/display_form.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/uni_form\/errors.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/uni_form\/errors.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/uni_form\/errors_formset.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/uni_form\/errors_formset.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/uni_form\/field.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/uni_form\/field.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/uni_form\/field.strict.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/uni_form\/field.strict.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/uni_form\/layout\/baseinput.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/uni_form\/layout\/baseinput.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/uni_form\/layout\/buttonholder.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/uni_form\/layout\/buttonholder.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/uni_form\/layout\/div.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/uni_form\/layout\/div.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/uni_form\/layout\/fieldset.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/uni_form\/layout\/fieldset.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/uni_form\/layout\/multifield.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/uni_form\/layout\/multifield.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/uni_form\/multifield.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/uni_form\/multifield.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/uni_form\/uni_form.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/uni_form\/uni_form.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/uni_form\/uni_formset.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/uni_form\/uni_formset.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/uni_form\/whole_uni_form.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/uni_form\/whole_uni_form.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/uni_form\/whole_uni_formset.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/crispy_forms\/templates\/uni_form\/whole_uni_formset.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/django\/lib\/python3.4\/site-packages\/crispy_forms\/tests\/templates\/crispy_render_template.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/crispy_forms\/tests\/templates\/crispy_render_template.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/django\/lib\/python3.4\/site-packages\/crispy_forms\/tests\/templates\/custom_field_template.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/crispy_forms\/tests\/templates\/custom_field_template.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/django\/lib\/python3.4\/site-packages\/crispy_forms\/tests\/templates\/custom_form_template.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/crispy_forms\/tests\/templates\/custom_form_template.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -3266,15 +2519,6 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/events\/orfik\/templates\/orfik\/hint.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/events\/orfik\/templates\/orfik\/hint.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
 	"\/events\/orfik\/templates\/orfik\/home.html": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -3317,6 +2561,30 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/events\/templates\/events\/home.html",
 		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/LICENSE.md": {
+		"enableFootnoteSupport": 0,
+		"enableSmartyPants": 1,
+		"expandTabs": 1,
+		"fileType": 4096,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/LICENSE.md",
+		"outputAbbreviatedPath": "\/LICENSE.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/README.md": {
+		"enableFootnoteSupport": 0,
+		"enableSmartyPants": 1,
+		"expandTabs": 1,
+		"fileType": 4096,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/README.md",
+		"outputAbbreviatedPath": "\/README.html",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
@@ -3512,22 +2780,6 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/static\/sass\/components\/_styles.scss",
 		"outputAbbreviatedPath": "\/static\/sass\/css\/_styles.css",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 0,
-		"shouldRunAutoprefixer": 0,
-		"shouldRunBless": 0,
-		"useLibsass": 0
-		},
-	"\/static\/sass\/components\/btns.scss": {
-		"createSourceMap": 0,
-		"debugStyle": 0,
-		"decimalPrecision": 10,
-		"fileType": 4,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/sass\/components\/btns.scss",
-		"outputAbbreviatedPath": "\/static\/sass\/css\/btns.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
@@ -3736,6 +2988,22 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/static\/sass\/pages\/_home.scss",
 		"outputAbbreviatedPath": "\/static\/sass\/css\/_home.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 0
+		},
+	"\/static\/sass\/pages\/_login.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 10,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/static\/sass\/pages\/_login.scss",
+		"outputAbbreviatedPath": "\/static\/sass\/css\/_login.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
@@ -5462,6 +4730,33 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/templates\/admin\/base_site.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/templates\/auth\/login.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/templates\/auth\/login.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/templates\/auth\/password_reset.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/templates\/auth\/password_reset.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/templates\/auth\/signup.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/templates\/auth\/signup.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0

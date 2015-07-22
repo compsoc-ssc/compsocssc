@@ -1,0 +1,32 @@
+.section-auth {
+  display: table;
+  max-width: 660px;
+  margin: 80px auto;
+  padding: 10px;
+}
+
+.auth-form {
+  display: table-cell;
+  vertical-align: middle;
+  margin: 0 auto 75px;
+  @include clearfix;
+  padding: 20px;
+  .auth-heading {
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .btn-form-action {
+    width: 100%;
+    margin: 10px 0;
+    background-color: $primary-color;
+    color: white;
+    border: none;
+
+    &:hover {
+      background-color: #2D87B7;
+      border: none;
+    }
+  }
+}
+

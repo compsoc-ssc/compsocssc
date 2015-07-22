@@ -1,6 +1,42 @@
 form {
+  .inline {
+    label {
+      width: 50%;
+      float: left;
+
+      &:nth-child(1) {
+        padding-right: 10px;
+      }
+
+      &:nth-child(2) {
+        padding-left: 10px;
+      }
+
+      @media (max-width: 541px) {
+        width: 100%;
+        clear: both;
+        display: block;
+        margin: 0 auto 10px;
+
+        &:nth-child(1),
+        &:nth-child(2) {
+          padding: 0;
+        }
+      }
+    }
+  }
+
+  button {
+    float: right;
+  }
+
   fieldset {
     border: none;
+
+    @media (max-width: 541px) {
+      padding: 0;
+      margin: 0;
+    }
   }
 
   label {
@@ -13,6 +49,7 @@ form {
 
   input[type="text"],
   input[type="email"],
+  input[type="password"],
   textarea {
     border: 3px solid $primary-color;
     padding: 3px 8px;
@@ -23,6 +60,8 @@ form {
     appearance: none;
     font-size: 1em;
     margin-top: 5px;
+    color: black;
+    font-weight: normal;
 
     &:focus {
       outline: 0;

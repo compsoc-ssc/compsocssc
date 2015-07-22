@@ -13,5 +13,8 @@ urlpatterns = patterns('',
     url(r'^members/$', views.members, name='members'),
     url(r'^events/', include('events.urls', namespace='events')),
     # Auth
+    url(r'^login/$', views.login, name='login'),
+    url(r'^signup/$', views.signup, name='signup'),
+    url(r'^password_reset/$', views.password_reset, name='password_reset'),
 
 ) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
