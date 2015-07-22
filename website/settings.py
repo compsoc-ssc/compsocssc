@@ -12,12 +12,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 SECRET_KEY = '&00qubg6jjbl_f8nh%r3ex$@(h_5uhk4j7$shs&__jc66sn#_u'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 TEMPLATE_DEBUG = DEBUG
 
 # Allow all host headers
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['compsocssc.herokuapp.com']
 
 # Application definition
 
