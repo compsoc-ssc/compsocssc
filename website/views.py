@@ -14,7 +14,7 @@ def home(request):
     context = {
         "event": upcoming_event
     }
-    
+
     return render(request, template, context)
 
 
