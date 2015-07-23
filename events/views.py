@@ -1,6 +1,6 @@
 from django.shortcuts import redirect
 from django.shortcuts import render
-from django.views.decorators import gzip
+from django.views.decorators.gzip import gzip_page
 
 from events.models import Event
 
