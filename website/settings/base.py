@@ -43,8 +43,6 @@ TEMPLATE_CONTEXT_PROCESSORS = (
    'django.core.context_processors.static',
    'django.core.context_processors.tz',
    'django.contrib.messages.context_processors.messages',
-   'social.apps.django_app.context_processors.backends',
-   'social.apps.django_app.context_processors.login_redirect',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -102,6 +100,8 @@ STATICFILES_DIRS = (
 TEMPLATE_DIRS = (
   os.path.join(BASE_DIR, 'templates'),
 )
+
+LOGIN_URL = '/login'
 
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_USERNAME_REQUIRED = True

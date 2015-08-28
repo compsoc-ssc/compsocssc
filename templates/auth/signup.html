@@ -2,7 +2,8 @@
 
 {% block body %}
   <section class="section-auth">
-    <form method="GET" action="" class="auth-form">
+    <form method="POST" action="/signup/" class="auth-form">
+      {% csrf_token %}
       <h1 class="auth-heading light-space">Signup</h1>
       <fieldset class="inline">
         <label>

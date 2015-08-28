@@ -2,9 +2,10 @@
 
 {% block body %}
     <section class="section-auth">
-      <form method="GET" action="" class="auth-form">
+      <form method="POST" action="/login/" class="auth-form">
+        {% csrf_token %}
         <h1 class="auth-heading light-space">Login</h1>
-        <input class="auth-field" type="email" name="email" placeholder="Enter Email">
+        <input class="auth-field" type="text" name="username" placeholder="Enter Username">
         <input class="auth-field" type="password" name="password" placeholder="Enter Password">
         <button class="btn-form-action / btn btn--m">Login</a>
       </form>
