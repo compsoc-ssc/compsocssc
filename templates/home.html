@@ -50,7 +50,8 @@
   <section id="write">
     <h1 class="section-heading">Contact Us</h1>
     <div class="content">
-      <form action="" method="POST">
+      <form action="/" method="POST">
+        {% csrf_token %}
         <fieldset class="inline">
           <label>
             <span>Name</span>
@@ -65,8 +66,15 @@
 
         <fieldset>
           <label>
+            <span>Subject</span>
+            <input type="text" name="subject" id="subject" placeholer="Subject">
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <label>
             <span>Message</span>
-            <textarea name="email" id="message" placeholer="Message"></textarea>
+            <textarea name="message" id="message" placeholer="Message"></textarea>
           </label>
         </fieldset>
 
