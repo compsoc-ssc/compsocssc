@@ -2471,6 +2471,55 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/django\/lib\/python3.4\/site-packages\/messages_ui\/jstemplates\/message.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/messages_ui\/jstemplates\/message.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/django\/lib\/python3.4\/site-packages\/messages_ui\/static\/messages_ui\/django-messages-ui.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/messages_ui\/static\/messages_ui\/django-messages-ui.js",
+		"outputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/messages_ui\/static\/messages_ui\/min\/django-messages-ui-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/django\/lib\/python3.4\/site-packages\/messages_ui\/static\/messages_ui\/message.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/messages_ui\/static\/messages_ui\/message.js",
+		"outputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/messages_ui\/static\/messages_ui\/min\/message-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/django\/lib\/python3.4\/site-packages\/messages_ui\/templates\/messages_ui\/_messages.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/messages_ui\/templates\/messages_ui\/_messages.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/django\/lib\/python3.4\/site-packages\/messages_ui\/templates\/messages_ui\/_messages_ich.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/messages_ui\/templates\/messages_ui\/_messages_ich.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/django\/lib\/python3.4\/site-packages\/PIL\/OleFileIO-README.md": {
 		"enableFootnoteSupport": 0,
 		"enableSmartyPants": 1,
@@ -2564,6 +2613,17 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/handlebars-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/handlebars-min.js",
+		"outputAbbreviatedPath": "\/min\/handlebars-min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
 	"\/LICENSE.md": {
 		"enableFootnoteSupport": 0,
 		"enableSmartyPants": 1,
@@ -2634,14 +2694,14 @@
 		},
 	"\/static\/javascripts\/app.js": {
 		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
+		"ignore": 1,
+		"ignoreWasSetByUser": 1,
 		"inputAbbreviatedPath": "\/static\/javascripts\/app.js",
 		"outputAbbreviatedPath": "\/static\/javascripts\/app-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 1,
 		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
+		"syntaxCheckerStyle": 0
 		},
 	"\/static\/sass\/base\/_all.scss": {
 		"createSourceMap": 0,
@@ -2963,6 +3023,22 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
+	"\/static\/sass\/pages\/_auth.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 10,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/static\/sass\/pages\/_auth.scss",
+		"outputAbbreviatedPath": "\/static\/sass\/css\/_auth.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 0
+		},
 	"\/static\/sass\/pages\/_events.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
@@ -2988,22 +3064,6 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/static\/sass\/pages\/_home.scss",
 		"outputAbbreviatedPath": "\/static\/sass\/css\/_home.css",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 0,
-		"shouldRunAutoprefixer": 0,
-		"shouldRunBless": 0,
-		"useLibsass": 0
-		},
-	"\/static\/sass\/pages\/_login.scss": {
-		"createSourceMap": 0,
-		"debugStyle": 0,
-		"decimalPrecision": 10,
-		"fileType": 4,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/sass\/pages\/_login.scss",
-		"outputAbbreviatedPath": "\/static\/sass\/css\/_login.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,

@@ -19,15 +19,45 @@ h6 {
 body {
   font-family: Roboto, sans-serif;
   font-weight: 500;
+  position: relative;
 }
 
-.messages {
-  z-index: 999;
-  background-color: tomato;
-  color: white;
-  width: 75%;
-  display: block;
-  margin: 0 auto;
+// Site-wide messages
+#messages-container {
+  position: fixed;
+  bottom: 30px;
+  left: 20px;
+  z-index: 99999;
+  background-color: #323232;
+  color: #fff;
+  padding: 15px;
+  font-size: 0.9em;
+  font-weight: light;
+  cursor: pointer;
+
+  display: none;
+
+   .message {
+    overflow: hidden;
+    clear: both;
+    min-width: 288px;
+    max-width: 568px;
+  }
+
+  &.is-open {
+    display: block;
+  }
+
+  @media (max-width: 767px) {
+    left: 0px !important;
+    right: 0px;
+    bottom: 0px;
+    width: 100%;
+
+    .message {
+      min-width: 100%;
+    }
+  }
 }
 
 main {

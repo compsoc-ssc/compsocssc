@@ -38,9 +38,23 @@ function setHeroHeight() {
     $('#hero').height(windowHeight - headerHeight);
 }
 
+function messagesAmaze() {
+  var $messages = $('#messages-container');
+  console.log($messages);
+  if ($messages !== '') {
+    // We have messages on the page, start timer
+    setTimeout(function() {
+      $messages.toggleClass('is-open');
+    }, 2000);
+  }
+}
+
 $(document).ready(function() {
     // Set height of hero
     setHeroHeight();
+
+    // Start messages check
+    // messagesAmaze();
 
     // FitText for upcoming events section
     $('#upcoming-event .content h1').fitText();
@@ -53,4 +67,6 @@ $(document).ready(function() {
         'height': '18px'
       });
     }
+
+    $('#messages').messages();
 });

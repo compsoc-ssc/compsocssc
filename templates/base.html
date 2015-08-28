@@ -33,14 +33,6 @@
   {% block event_nav %}
   {% endblock event_nav %}
 
-  <!-- {% if messages %}
-    <ul class="messages">
-      {% for message in messages %}
-        <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
-      {% endfor %}
-    </ul>
-  {% endif %} -->
-
   <main>
     {% block body %}
     {% endblock %}
@@ -77,4 +69,25 @@
   {% block scripts %}
   {% endblock scripts %}
 
+  {% if messages %}
+    <div id="messages-container" class="is-open">
+      <script>
+        var TIMEOUT = 3000;
+        var $messages = $('#messages-container');
+        console.log($messages);
+        if ($messages !== '') {
+          // We have messages on the page, start timer
+          setTimeout(function() {
+            console.log("TIME");
+            $messages.toggleClass('is-open');
+          }, TIMEOUT);
+        }
+      </script>
+      {% for message in messages %}
+        <div class="message">
+          <span class="content">{{ message }}</span>
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
 </html>

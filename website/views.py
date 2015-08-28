@@ -9,6 +9,8 @@ from django.contrib.auth import login as auth_login
 from django.contrib.auth import logout as auth_logout
 from django.contrib.auth.models import User
 
+from django.contrib import messages
+
 from django.db import IntegrityError
 
 
@@ -65,15 +67,15 @@ def signup(request):
                                                 password=password)
                 user.save()
             except IntegrityError:
-                # Message: Username is taken
+                messages.error(request, 'Sorry! The username is already taken. Try again!')
                 return redirect(signup)
-            # Message: please login
+            messages.info(request, 'Now, please login!')
             return redirect(login)
         else:
-            # failure message
+            # Passwords don't match. Handle with JS
             return redirect(signup)
     elif request.user.is_authenticated():
-        # Message: you're already logged in
+        messages.info(request, "You're already logged in!")
         return redirect(home)
     else:
         return render(request, template, context)
@@ -92,19 +94,17 @@ def login(request):
         user = authenticate(username=username, password=password)
         if user is not None:
             if user.is_active:
-                print ("yay")
                 auth_login(request, user)
+                messages.success(request, 'You have logged in successfully!')
                 return redirect(home)
             else:
-                # Show failure message
-                print ("fail")
+                messages.error(request, 'Something went wrong. Try again!')
                 return redirect(login)
         else:
-            # Show wrong credentials message
-            print ("wrong")
+            messages.error(request, 'You entered the wrong username or password. Try again!')
             return redirect(login)
     elif request.user.is_authenticated():
-        # Message: you're already logged in
+        messages.info(request, "You're already logged in!")
         return redirect(home)
     else:
         return render(request, template, context)
@@ -114,7 +114,7 @@ def login(request):
 def logout(request):
     '''Logout view'''
     auth_logout(request)
-    # Success message
+    messages.info(request, "Logged out!")
     return redirect(home)
 
 
