@@ -25,7 +25,7 @@
     display: none;
     margin-top: 230px;
     cursor: pointer;
-    
+
     svg {
       display: table;
       margin: 0 auto;
@@ -40,7 +40,7 @@
 #upcoming-event {
   .content {
     max-width: 900px;
-    @include clearfix;    
+    @include clearfix;
 
     h1,
     h2 {

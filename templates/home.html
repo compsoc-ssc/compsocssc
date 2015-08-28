@@ -79,7 +79,7 @@
 
   <section id="sponsors" class="alt-section">
     <h1 class="light-space">Our Sponsors</h1> 
-    <div class="content">  
+    <div class="content">
       <ul>
         {% load static %}
         <!-- TESLA -->
@@ -94,3 +94,25 @@
   </section>
 
 {% endblock body %}
+
+{% block scripts %}
+  <script>
+    {% if event %}
+      // Arrow click listener
+      $('#arrow').on('click', function() {
+          $('html, body').animate({
+              scrollTop: $("#upcoming-event").offset().top
+          }, 900);
+          $(this).fadeOut("slow");
+      });
+    {% else %}
+      // Arrow click listener
+      $('#arrow').on('click', function() {
+          $('html, body').animate({
+              scrollTop: $("#about").offset().top
+          }, 900);
+          $(this).fadeOut("slow");
+      });
+    {% endif %}
+  </script>
+{% endblock scripts %}

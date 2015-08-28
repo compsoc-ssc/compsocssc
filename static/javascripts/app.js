@@ -26,7 +26,12 @@
   };
 })(jQuery);
 
-function setHeroHeight() { 
+// Helpers
+function isSafari() {
+  return /^((?!chrome).)*safari/i.test(navigator.userAgent);
+}
+
+function setHeroHeight() {
     var windowHeight = $(window).height();
     var headerHeight = $('header').height();
 
@@ -37,15 +42,15 @@ $(document).ready(function() {
     // Set height of hero
     setHeroHeight();
 
-    // Arrow click listener
-    $('#arrow').on('click', function() {
-        $('html, body').animate({
-            scrollTop: $("#upcoming-event").offset().top
-        }, 900);
-        $(this).fadeOut("slow");
-    });
-
     // FitText for upcoming events section
     $('#upcoming-event .content h1').fitText();
     $('#upcoming-event .content h2').fitText({ maxFontSize: '5em' });
+
+    // Tweaks for safari
+    if (isSafari()) {
+      $('#hero #arrow svg').css({
+        'width': '100%',
+        'height': '18px'
+      });
+    }
 });

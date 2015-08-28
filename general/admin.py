@@ -24,7 +24,7 @@ class SiteVisitAdmin(admin.ModelAdmin):
 
     total_users.short_description = 'Total users from this ip'
     total_users.allow_tags = True
-    
+
 admin.site.register(models.CompMember, MemberAdmin)
 admin.site.register(models.SiteVisit, SiteVisitAdmin)
 admin.site.register(models.Variable)
