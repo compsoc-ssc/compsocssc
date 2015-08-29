@@ -2471,54 +2471,76 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/django\/lib\/python3.4\/site-packages\/messages_ui\/jstemplates\/message.html": {
-		"fileType": 8192,
+	"\/django\/lib\/python3.4\/site-packages\/image_cropping\/static\/image_cropping\/css\/image_cropping.css": {
+		"fileType": 16,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/messages_ui\/jstemplates\/message.html",
+		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/image_cropping\/static\/image_cropping\/css\/image_cropping.css",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/django\/lib\/python3.4\/site-packages\/messages_ui\/static\/messages_ui\/django-messages-ui.js": {
+	"\/django\/lib\/python3.4\/site-packages\/image_cropping\/static\/image_cropping\/css\/jquery.Jcrop.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/image_cropping\/static\/image_cropping\/css\/jquery.Jcrop.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/django\/lib\/python3.4\/site-packages\/image_cropping\/static\/image_cropping\/css\/jquery.Jcrop.min.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/image_cropping\/static\/image_cropping\/css\/jquery.Jcrop.min.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/django\/lib\/python3.4\/site-packages\/image_cropping\/static\/image_cropping\/image_cropping.js": {
 		"fileType": 64,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/messages_ui\/static\/messages_ui\/django-messages-ui.js",
-		"outputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/messages_ui\/static\/messages_ui\/min\/django-messages-ui-min.js",
+		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/image_cropping\/static\/image_cropping\/image_cropping.js",
+		"outputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/image_cropping\/static\/image_cropping\/min\/image_cropping-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/django\/lib\/python3.4\/site-packages\/messages_ui\/static\/messages_ui\/message.js": {
+	"\/django\/lib\/python3.4\/site-packages\/image_cropping\/static\/image_cropping\/js\/jquery.color.js": {
 		"fileType": 64,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/messages_ui\/static\/messages_ui\/message.js",
-		"outputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/messages_ui\/static\/messages_ui\/min\/message-min.js",
+		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/image_cropping\/static\/image_cropping\/js\/jquery.color.js",
+		"outputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/image_cropping\/static\/image_cropping\/js\/min\/jquery.color-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/django\/lib\/python3.4\/site-packages\/messages_ui\/templates\/messages_ui\/_messages.html": {
-		"fileType": 8192,
+	"\/django\/lib\/python3.4\/site-packages\/image_cropping\/static\/image_cropping\/js\/jquery.Jcrop.js": {
+		"fileType": 64,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/messages_ui\/templates\/messages_ui\/_messages.html",
-		"outputAbbreviatedPath": "No Output Path",
+		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/image_cropping\/static\/image_cropping\/js\/jquery.Jcrop.js",
+		"outputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/image_cropping\/static\/image_cropping\/js\/min\/jquery.Jcrop-min.js",
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
 		},
-	"\/django\/lib\/python3.4\/site-packages\/messages_ui\/templates\/messages_ui\/_messages_ich.html": {
-		"fileType": 8192,
+	"\/django\/lib\/python3.4\/site-packages\/image_cropping\/static\/image_cropping\/js\/jquery.Jcrop.min.js": {
+		"fileType": 64,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/messages_ui\/templates\/messages_ui\/_messages_ich.html",
-		"outputAbbreviatedPath": "No Output Path",
+		"inputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/image_cropping\/static\/image_cropping\/js\/jquery.Jcrop.min.js",
+		"outputAbbreviatedPath": "\/django\/lib\/python3.4\/site-packages\/image_cropping\/static\/image_cropping\/js\/min\/jquery.Jcrop.min-min.js",
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
 		},
 	"\/django\/lib\/python3.4\/site-packages\/PIL\/OleFileIO-README.md": {
 		"enableFootnoteSupport": 0,
@@ -2613,17 +2635,6 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/handlebars-min.js": {
-		"fileType": 64,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/handlebars-min.js",
-		"outputAbbreviatedPath": "\/min\/handlebars-min-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
 	"\/LICENSE.md": {
 		"enableFootnoteSupport": 0,
 		"enableSmartyPants": 1,
@@ -2635,6 +2646,17 @@
 		"outputAbbreviatedPath": "\/LICENSE.html",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
+		},
+	"\/media\/member_images\/moi_deux.jpg.500x500_q85_box-0,32,3392,3424_crop_detail.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 39717,
+		"inputAbbreviatedPath": "\/media\/member_images\/moi_deux.jpg.500x500_q85_box-0,32,3392,3424_crop_detail.jpg",
+		"outputAbbreviatedPath": "\/media\/member_images\/moi_deux.jpg.500x500_q85_box-0,32,3392,3424_crop_detail.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
 		},
 	"\/README.md": {
 		"enableFootnoteSupport": 0,
@@ -2702,6 +2724,17 @@
 		"outputPathIsSetByUser": 1,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 0
+		},
+	"\/static\/javascripts\/jquery.min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 1,
+		"inputAbbreviatedPath": "\/static\/javascripts\/jquery.min.js",
+		"outputAbbreviatedPath": "\/static\/javascripts\/min\/jquery.min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
 		},
 	"\/static\/sass\/base\/_all.scss": {
 		"createSourceMap": 0,

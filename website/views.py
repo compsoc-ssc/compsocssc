@@ -55,10 +55,10 @@ def contact(request):
 @gzip_page
 def members(request):
     '''Members page'''
-    data = {}
-    data['current'] = models.CompMember.objects.filter(alumni=False)
-    data['alumni'] = models.CompMember.objects.filter(alumni=True)
-    return render(request, 'members.html', data)
+    context = {}
+    context['current'] = models.CompMember.objects.filter(alumni=False)
+    context['alumni'] = models.CompMember.objects.filter(alumni=True)
+    return render(request, 'members.html', context)
 
 
 @gzip_page

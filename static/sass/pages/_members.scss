@@ -12,8 +12,8 @@ $mobile: new-breakpoint(max-width 640px 4) !default;
         @include size(130px);
         border-radius: 100%;
       }
-      h4 { 
-        margin: 10px 0 0 5px; 
+      h4 {
+        margin: 10px 0 0 5px;
         a {
           color: black;
           font-weight: 400;
@@ -22,7 +22,7 @@ $mobile: new-breakpoint(max-width 640px 4) !default;
         }
       }
 
-      h5 { 
+      h5 {
         color: black;
         font-weight: 300;
         text-transform: lowercase;

@@ -10,6 +10,8 @@
   {% endif %}
 {% endblock %}
 
+{% load thumbnail %}
+
 {% block body %}
     {% if current %}
       <section id="members">
@@ -18,11 +20,13 @@
         <ul id="member-list">
           {% for member in current %}
             <li>
-              <div class="member">
-                <img class="face" src="{{ member.fb_image_url }}">
-                <h4><a href="{{ member.get_absolute_url }}">{{ member.name }}</a></h4>
-                <h5>({{ member.role }})</h5>
-              </div>
+              <a href="{{ member.get_social_link }}" target="_blank">
+                <div class="member">
+                  <img class="face" src="{% thumbnail member.image 500x500 box=member.cropping crop detail %}">
+                  <h4>{{ member.name }}</h4>
+                  <h5>({{ member.role }})</h5>
+                </div>
+              </a>
             </li>
           {% endfor %}
         </ul>
@@ -39,11 +43,13 @@
             <ul class="alumni-list">
               {% for member in members.list %}
                 <li class="alumni">
-                  <div>
-                    <img class="face" src="{{ member.fb_image_url }}">
-                    <h3><a href="{{ member.get_absolute_url }}">{{ member.name }}</a></h3>
-                    <h5>({{ member.role }})</h5>
-                  </div>
+                  <a href="{{ member.get_social_link }}" target="_blank">
+                    <div>
+                      <img class="face" src="{% thumbnail member.image 500x500 box=member.cropping crop detail %}">
+                      <h3>{{ member.name }}</h3>
+                      <h5>({{ member.role }})</h5>
+                    </div>
+                  </a>
                 </li>
               {% endfor %}
             </ul>

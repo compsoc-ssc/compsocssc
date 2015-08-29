@@ -18,4 +18,7 @@ urlpatterns = patterns('',
     # url(r'^password_reset/$', views.password_reset, name='password_reset'),
     # url(r'^logout/$', views.logout, name='logout'),
 
-) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+)
+
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

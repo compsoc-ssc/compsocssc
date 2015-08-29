@@ -19,6 +19,8 @@ TEMPLATE_DEBUG = DEBUG
 # Allow all host headers
 ALLOWED_HOSTS = []
 
+SITE_ID = 1
+
 # Application definition
 
 INSTALLED_APPS = (
@@ -29,6 +31,8 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'easy_thumbnails',
+    'image_cropping',
     # ---
     'general',
     'events',
@@ -59,6 +63,17 @@ ROOT_URLCONF = 'website.urls'
 
 WSGI_APPLICATION = 'website.wsgi.application'
 
+# Image cropping for admin
+# https://github.com/jonasundderwolf/django-image-cropping
+from easy_thumbnails.conf import Settings as thumbnail_settings
+THUMBNAIL_PROCESSORS = (
+    'image_cropping.thumbnail_processors.crop_corners',
+) + thumbnail_settings.THUMBNAIL_PROCESSORS
+
+IMAGE_CROPPING_THUMB_SIZE = (500, 500)
+IMAGE_CROPPING_JQUERY_URL = 'javascripts/jquery.min.js'
+THUMBNAIL_DEBUG = True
+HEADLESS = True
 
 # Database
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
@@ -93,6 +108,9 @@ CONN_MAX_AGE = None
 STATIC_ROOT = 'staticfiles'
 STATIC_URL = '/static/'
 
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
+
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
@@ -102,6 +120,3 @@ TEMPLATE_DIRS = (
 )
 
 LOGIN_URL = '/login'
-
-ACCOUNT_EMAIL_REQUIRED = True
-ACCOUNT_USERNAME_REQUIRED = True

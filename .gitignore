@@ -116,3 +116,6 @@ config.codekit
 [Ss]cripts
 pyvenv.cfg
 pip-selfcheck.json
+
+### Development Uploads ###
+media/

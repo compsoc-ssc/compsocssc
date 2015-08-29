@@ -1,11 +1,13 @@
 from django.contrib import admin
 from general import models
 
+from image_cropping import ImageCroppingMixin
+
 from django.contrib.auth.models import Group
 
 
-class MemberAdmin(admin.ModelAdmin):
-    list_display = ['name', 'fb_id']
+class MemberAdmin(ImageCroppingMixin, admin.ModelAdmin):
+    list_display = ['name']
     list_filter = ['alumni']
 
 admin.site.register(models.CompMember, MemberAdmin)
