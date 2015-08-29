@@ -50,8 +50,7 @@
   <section id="write">
     <h1 class="section-heading">Contact Us</h1>
     <div class="content">
-      <form action="/" method="POST">
-        {% csrf_token %}
+      <form action="http://formspree.io/computer.society.ssc@gmail.com" method="POST">
         <fieldset class="inline">
           <label>
             <span>Name</span>
@@ -60,14 +59,14 @@
 
           <label>
             <span>Email</span>
-            <input type="email" name="email" id="email" placeholer="Email">
+            <input type="email" name="_replyto" id="email" placeholer="Email">
           </label>
         </fieldset>
 
         <fieldset>
           <label>
             <span>Subject</span>
-            <input type="text" name="subject" id="subject" placeholer="Subject">
+            <input type="text" name="_subject" id="subject" placeholer="Subject">
           </label>
         </fieldset>
 
@@ -81,12 +80,15 @@
         <fieldset>
           <button type="submit" class="btn-contact">Send</button>
         </fieldset>
+
+        <input type="hidden" name="_next" value="/">
+
       </form>
     </div>
   </section>
 
   <section id="sponsors" class="alt-section">
-    <h1 class="light-space">Our Sponsors</h1> 
+    <h1 class="light-space">Our Sponsors</h1>
     <div class="content">
       <ul>
         {% load static %}

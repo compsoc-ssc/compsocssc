@@ -14,13 +14,6 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 # Allow all host headers
 ALLOWED_HOSTS = ['*']
 
-# Setup for contact form
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = os.environ['EMAIL']
-EMAIL_HOST_PASSWORD = os.environ['EMAIL_PASS']
-EMAIL_POST = 587
-EMAIL_TLS = True
-
 # Static asset configuration
 # BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 # STATIC_ROOT = 'staticfiles'

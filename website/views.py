@@ -15,9 +15,6 @@ from django.contrib import messages
 
 from django.db import IntegrityError
 
-from django.core.mail import send_mail
-
-
 @gzip_page
 def home(request):
     '''Site homepage for CompSoc'''
@@ -30,16 +27,6 @@ def home(request):
     }
 
     if request.method == 'POST':
-        # Someone wants to write to CompSoc
-        name = request.POST['name'].title()
-        from_email = request.POST['email']
-        subject = request.POST['subject']
-        message = request.POST.get('message')
-
-        to_email = [settings.EMAIL_HOST_USER,]
-
-        send_mail(subject, message, from_email, to_email, fail_silently=True)
-
         messages.info(request, "Your email has been sent. We will get back to you shortly!")
         return redirect(home)
 
