@@ -47,12 +47,6 @@ def home(request):
 
 
 @gzip_page
-def contact(request):
-    '''Contact page'''
-    return render(request, 'contact.html')
-
-
-@gzip_page
 def members(request):
     '''Members page'''
     context = {}
