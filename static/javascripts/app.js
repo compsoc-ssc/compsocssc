@@ -43,7 +43,9 @@ function validateContactForm() {
 function emailIsSending() {
   var message = "<div id='messages-container' class='is-open'> <script>var TIMEOUT=3000; var $messages=$('#messages-container'); console.log($messages); if ($messages !==''){ setTimeout(function(){$messages.toggleClass('is-open');}, TIMEOUT);}</script> <div class='message'> <span class='content'>Your email has been sent. We will get back to you shortly!</span> </div></div>";
 
-  $(document.body).append(message);
+  setTimeout(function(){
+    $(document.body).append(message);
+  }, 3000);
 }
 
 function setHeroHeight() {
