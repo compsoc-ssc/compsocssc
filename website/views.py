@@ -26,10 +26,6 @@ def home(request):
         "event": upcoming_event
     }
 
-    if request.method == 'POST':
-        messages.info(request, "Your email has been sent. We will get back to you shortly!")
-        return redirect(home)
-
     return render(request, template, context)
 
 

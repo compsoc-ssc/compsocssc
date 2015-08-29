@@ -31,6 +31,21 @@ function isSafari() {
   return /^((?!chrome).)*safari/i.test(navigator.userAgent);
 }
 
+function validateContactForm() {
+  if ($('#write #name').val() === '' || $('#write #email').val() === '' || $('#write #subject').val() === '' || $('#write #message').val() === '') {
+    alert('Please fill in the details in the form!');
+    return false;
+  }
+  emailIsSending();
+  return true;
+}
+
+function emailIsSending() {
+  var message = "<div id='messages-container' class='is-open'> <script>var TIMEOUT=3000; var $messages=$('#messages-container'); console.log($messages); if ($messages !==''){ setTimeout(function(){$messages.toggleClass('is-open');}, TIMEOUT);}</script> <div class='message'> <span class='content'>Your email has been sent. We will get back to you shortly!</span> </div></div>";
+
+  $(document.body).append(message);
+}
+
 function setHeroHeight() {
     var windowHeight = $(window).height();
     var headerHeight = $('header').height();
@@ -38,23 +53,9 @@ function setHeroHeight() {
     $('#hero').height(windowHeight - headerHeight);
 }
 
-function messagesAmaze() {
-  var $messages = $('#messages-container');
-  console.log($messages);
-  if ($messages !== '') {
-    // We have messages on the page, start timer
-    setTimeout(function() {
-      $messages.toggleClass('is-open');
-    }, 2000);
-  }
-}
-
 $(document).ready(function() {
     // Set height of hero
     setHeroHeight();
-
-    // Start messages check
-    // messagesAmaze();
 
     // FitText for upcoming events section
     $('#upcoming-event .content h1').fitText();
@@ -67,6 +68,4 @@ $(document).ready(function() {
         'height': '18px'
       });
     }
-
-    $('#messages').messages();
 });

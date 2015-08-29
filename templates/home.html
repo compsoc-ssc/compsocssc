@@ -50,7 +50,7 @@
   <section id="write">
     <h1 class="section-heading">Contact Us</h1>
     <div class="content">
-      <form action="http://formspree.io/computer.society.ssc@gmail.com" method="POST">
+      <form action="http://formspree.io/computer.society.ssc@gmail.com" method="POST" onsubmit="return validateContactForm();">
         <fieldset class="inline">
           <label>
             <span>Name</span>
@@ -78,7 +78,7 @@
         </fieldset>
 
         <fieldset>
-          <button type="submit" class="btn-contact">Send</button>
+          <button type="submit" class="btn-contact" id="email-send">Send</button>
         </fieldset>
 
         <input type="hidden" name="_next" value="/">
