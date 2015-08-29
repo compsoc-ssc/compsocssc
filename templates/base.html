@@ -2,10 +2,17 @@
 <html>
 <head>
   {% load staticfiles %}
+  <!-- Meta -->
   <meta charset='UTF-8'>
+  <meta name="theme-color" content="#5bbaeb">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="description" content="CompSoc SSC's website!">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CompSoc - SSC</title>
-  <!-- Add favicon later -->
-  <meta name='viewport' content='width=device-width', initial-scale='1.0'>
+  <!-- Favicon -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{% static 'images/apple-touch-icon-precomposed.png' %}">
+  <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}">
+  <!-- CSS -->
   <link rel="stylesheet" href='{% static "stylesheets/main.min.css" %}'>
   {% block head %}
     <!-- USE VERY CAREFULLY. NO CLUTTER PLS. -->
