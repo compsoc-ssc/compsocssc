@@ -55,9 +55,18 @@ function setHeroHeight() {
     $('#hero').height(windowHeight - headerHeight);
 }
 
+function hideArrowOnScroll() {
+  $(document).scroll(function(){
+    $('#arrow').fadeOut("slow");
+  });
+}
+
 $(document).ready(function() {
     // Set height of hero
     setHeroHeight();
+
+    // Arrow hide listener
+    hideArrowOnScroll();
 
     // FitText for upcoming events section
     $('#upcoming-event .content h1').fitText();
