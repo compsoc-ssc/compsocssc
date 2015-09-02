@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.views.decorators.gzip import gzip_page
 from django.contrib import messages
+from django.utils import timezone
 from general import models
 from events.models import Event
 
@@ -120,4 +121,15 @@ def password_reset(request):
     template = 'auth/password_reset.html'
     context = {}
 
+    return render(request, template, context)
+
+
+def time(request):
+    '''Time'''
+    template = 'time.html'
+    context = {}
+    now = timezone.now()
+    context['hour'] = bin(now.hour)
+    context['minute'] = bin(now.minute)
+    context['second'] = bin(now.second)
     return render(request, template, context)
