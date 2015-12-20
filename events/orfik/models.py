@@ -27,21 +27,17 @@ class Question(models.Model):
         return reverse('orfik:question', kwargs={'q_no': self.number})
 
 
-class Aid(models.Model):
-    question = models.ForeignKey(Question, related_name='aid')
-    text = models.TextField(blank=True)
-    image = models.ImageField(upload_to='question/aid', blank=True, null=True)
-
-
 class Attempt(models.Model):
     player = models.ForeignKey(Player, related_name='player_attempt')
     question = models.ForeignKey(Question, related_name='attempt')
     value = models.CharField(max_length=100)
     correct = models.NullBooleanField(default=None)
+
+
     def is_correct(self):
         if self.correct != None:
             return self.correct
-        if self.question.answer == self.value:
+        if self.question.answer.lower() == self.value.lower():
             self.correct = True
         else:
             self.correct = False
@@ -50,6 +46,7 @@ class Attempt(models.Model):
 
 
 class AnswerForm(forms.ModelForm):
+    value = forms.CharField(widget=forms.TextInput(attrs={'placeholder': 'Answer'}), label='')
     class Meta:
         model = Attempt
         exclude = ['player', 'question', 'correct']

@@ -4,6 +4,7 @@ from django.utils import timezone
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import get_user_model
 from general import models as generalmodels
+from django.contrib import messages
 
 
 def make_player(request):
@@ -81,7 +82,7 @@ def question(request, q_no):
         data['form'] = models.AnswerForm()
     if request.method == 'POST':
         form = models.AnswerForm(request.POST)
-        if question.number == player.max_level:  #This is his first potential
+        if question.number == player.max_level:  # This is his first potential
             # Correct answer
             if form.is_valid():
                 attempt = form.save(commit=False)
@@ -94,6 +95,7 @@ def question(request, q_no):
                     player.save()
                     return redirect('events:orfik:question', q_no=question.number+1)
                 else:
+                    messages.info(request, 'Wrong answer. Try again!')
                     return redirect('events:orfik:question', q_no=question.number)
             else:
                 data['form'] = form

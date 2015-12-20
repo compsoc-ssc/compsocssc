@@ -12,12 +12,8 @@ def graph(green, total):
             '' + str(percentage_passed) + 'px; height: 10px; '
             'background: green"></div></div>')
 
-class AidAdmin(admin.TabularInline):
-    model = models.Aid
-
 
 class QuestionAdmin(admin.ModelAdmin):
-    inlines = [AidAdmin]
     list_display = ['number', '__str__']
 
 

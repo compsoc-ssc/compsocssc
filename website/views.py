@@ -12,9 +12,8 @@ from django.contrib.auth import login as auth_login
 from django.contrib.auth import logout as auth_logout
 from django.contrib.auth.models import User
 
-from django.contrib import messages
-
 from django.db import IntegrityError
+
 
 @gzip_page
 def home(request):
@@ -68,7 +67,7 @@ def signup(request):
             messages.info(request, 'Now, please login!')
             return redirect(login)
         else:
-            # Passwords don't match. Handle with JS
+            messages.error(request, "Sorry, your passwords didn't match. Try again!")
             return redirect(signup)
     elif request.user.is_authenticated():
         messages.info(request, "You're already logged in!")
@@ -92,6 +91,9 @@ def login(request):
             if user.is_active:
                 auth_login(request, user)
                 messages.success(request, 'You have logged in successfully!')
+                if 'events.orfik' in settings.INSTALLED_APPS:
+                    messages.info(request, 'Read the instructions and then play!')
+                    return redirect('/events/orfik/instructions')
                 return redirect(home)
             else:
                 messages.error(request, 'Something went wrong. Try again!')
@@ -101,6 +103,9 @@ def login(request):
             return redirect(login)
     elif request.user.is_authenticated():
         messages.info(request, "You're already logged in!")
+        if 'events.orfik' in settings.INSTALLED_APPS:
+            messages.info(request, 'Read the instructions and then play!')
+            return redirect('/events/orfik/instructions')
         return redirect(home)
     else:
         return render(request, template, context)
@@ -112,16 +117,6 @@ def logout(request):
     auth_logout(request)
     messages.info(request, "Logged out!")
     return redirect(home)
-
-
-# Later
-@gzip_page
-def password_reset(request):
-    '''Password reset view'''
-    template = 'auth/password_reset.html'
-    context = {}
-
-    return render(request, template, context)
 
 
 def time(request):

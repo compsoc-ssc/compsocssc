@@ -1,18 +1,18 @@
 {% extends 'orfik/home.html' %}
 
 {% block body %}
-  <section id="orf-container">
+  <section id="orf-container" style="margin: 60px auto 300px;">
     <h2 class="light-space">Question {{ question.number }}</h2>
     {% if question.text %}
       <p class="lead">{{ question.text }}</p>
     {% endif %}
     {% if question.image %}
-      <img class='img-responsive' alt='hint image' src='{{ question.image.url }}' style="margin: 0 auto;"/>
+      <img class='img-responsive img-hint' src='{{ question.image.url }}' style="margin: 0 auto;"/>
     {% endif %}
     <!-- Form for the answer -->
     <form role='form' class="answer-form" action="{% url 'events:orfik:question' question.number %}" method='POST' style="margi-bottom: 100px;">
       {% csrf_token %}
-      <input type="text" placeholder="Answer">
+      {{ form }}
       <button type='submit' class='btn-contact'>Submit</button>
     </form>
   </section>
