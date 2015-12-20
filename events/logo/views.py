@@ -6,7 +6,7 @@ from django.utils import timezone
 
 
 def check_end():
-    return generalmodels.Variable.objects.get(name='logoend') <= timezone.now()
+    return generalmodels.Variable.objects.get(name='logoend').time <= timezone.now()
 
 
 def home(request):
@@ -29,7 +29,7 @@ def submission(request):
         form = SubmissionForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-            return redirect('logo:success')
+            return redirect('events:logo:success')
         else:
             print(form.is_valid())
     else:

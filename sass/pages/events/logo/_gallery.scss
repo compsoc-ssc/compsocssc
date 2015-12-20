@@ -1,0 +1,9 @@
+.gallery {
+  @include outer-container;
+}
+
+.gallery img {
+  margin-bottom: 15px;
+  @include span-columns(4);
+  @include omega(3n);
+}

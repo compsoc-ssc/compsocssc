@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block event_nav %}
-  <ul class="event-nav">
+  <ul class="events-nav">
     <li><a href="{% url 'events:orfik:home' %}">Play</a></li>
     {% if not starttime %}
     <li><a href="{% url 'events:orfik:leader' %}">Leaderboard</a></li>
@@ -12,7 +12,7 @@
 {% endblock %}
 
 {% block body %}
-  <section id="orf-container">
+  <section id="events-container">
     {% if not user.is_authenticated and not starttime %}
       <h2 class="light-space">The hunt has begun!</h2>
       <br />

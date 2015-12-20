@@ -1,19 +1,34 @@
 {% extends 'logo/home.html' %}
 
 {% block head %}
-    {% load bootstrap %}
+  <style>
+    input[type="file"] {
+      margin: 20px 0;
+    }
+    label:before {
+      content: "\a";
+      white-space: pre;
+    }
+  </style>
 {% endblock %}
 
-
 {% block body %}
+  <section id="events-container">
     {% if not ended %}
-    <h3 class='form-guide'><a href='{% url "logo:home" %}'><i class="fa fa-arrow-left btn-back"></i></a>Please fill the form below to submit an entry</h3>
-    <form role='form' class='submit-form' action='{% url "logo:submission" %}' method='POST' enctype="multipart/form-data">
-        {% csrf_token %}
-        {{ form | bootstrap }}
-        <button type='submit' class='btn btn-success pull-right'>Submit</button>
-    </form>
+      <h3 class="section-heading" style="color: black;">Please fill the form below to submit an entry</h3>
+      <form role='form' class='submit-form' action='{% url "events:logo:submission" %}' method='POST' enctype="multipart/form-data">
+          {% csrf_token %}
+          {{ form }}
+          <button type='submit' class='btn-contact'>Submit</button>
+      </form>
     {% else %}
-    <h1>The competition has ended</h1>
+      <h1>The competition has ended</h1>
     {% endif %}
+  </section>
+{% endblock %}
+
+{% block scripts %}
+  <script>
+
+  </script>
 {% endblock %}
