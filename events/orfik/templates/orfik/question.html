@@ -1,22 +1,19 @@
 {% extends 'orfik/home.html' %}
 
 {% block body %}
-    <!-- Answer to level 1 is orfik2015 -->
-    <div class='text-center'>
-        <h2>Question {{ question.number }}</h2>
-        <hr>
-        {% if question.text %}
-            <p class="lead">{{ question.text }}</p>
-            <hr>
-        {% endif %}
-        {% if question.image %}
-            <img class='img-responsive' alt='hint image' src='{{ question.image.url }}' style="margin: 0 auto;"/>
-            <hr>
-        {% endif %}
-        <!--Form for the answer-->
-        <form role='form' action="{%url 'events:orfik:question' question.number%}" method='POST' style="margi-bottom: 100px;">
-            {%csrf_token%}}
-            <input type='submit' class='btn btn-success' value='Submit'></input>
-        </form>
-    </div>
+  <section id="orf-container">
+    <h2 class="light-space">Question {{ question.number }}</h2>
+    {% if question.text %}
+      <p class="lead">{{ question.text }}</p>
+    {% endif %}
+    {% if question.image %}
+      <img class='img-responsive' alt='hint image' src='{{ question.image.url }}' style="margin: 0 auto;"/>
+    {% endif %}
+    <!-- Form for the answer -->
+    <form role='form' class="answer-form" action="{% url 'events:orfik:question' question.number %}" method='POST' style="margi-bottom: 100px;">
+      {% csrf_token %}
+      <input type="text" placeholder="Answer">
+      <button type='submit' class='btn-contact'>Submit</button>
+    </form>
+  </section>
 {% endblock %}

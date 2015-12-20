@@ -13,10 +13,10 @@ urlpatterns = patterns('',
     url(r'^members/$', views.members, name='members'),
     url(r'^events/', include('events.urls', namespace='events')),
     # Auth
-    # url(r'^login/$', views.login, name='login'),
-    # url(r'^signup/$', views.signup, name='signup'),
-    # url(r'^password_reset/$', views.password_reset, name='password_reset'),
-    # url(r'^logout/$', views.logout, name='logout'),
+    url(r'^login/$', views.login, name='login'),
+    url(r'^signup/$', views.signup, name='signup'),
+    url(r'^password_reset/$', views.password_reset, name='password_reset'),
+    url(r'^logout/$', views.logout, name='logout'),
 
 )
 

@@ -102,3 +102,25 @@ hr {
   margin: 0 auto 1.5em;
   width: 12em;
 }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Zebra striping */
+tr:nth-of-type(even) {
+  background: #eee;
+}
+
+th {
+  background: $secondary-color;
+  color: white;
+  font-weight: bold;
+}
+
+td, th {
+  padding: 6px;
+  border: 1px solid #ccc;
+  text-align: left;
+}

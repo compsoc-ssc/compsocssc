@@ -36,7 +36,7 @@ INSTALLED_APPS = (
     # ---
     'general',
     'events',
-    # 'events.orfik',
+    'events.orfik',
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (

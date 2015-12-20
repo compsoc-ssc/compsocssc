@@ -1,38 +1,36 @@
 {% extends 'base.html' %}
 
 {% block event_nav %}
-    <ul>
-        <li><a href="">Hunt</a></li>
-        <li><a href="">Leaderboard</a></li>
-        <li><a href="">Instructions</a></li>
-        <li><a target='_blank' href="">Forum</a></li>
-    </ul>
+  <ul class="event-nav">
+    <li><a href="{% url 'events:orfik:home' %}">Hunt</a></li>
+    <li><a href="{% url 'events:orfik:leader' %}">Leaderboard</a></li>
+    <li><a href="{% url 'events:orfik:instructions' %}">Instructions</a></li>
+    <li><a target='_blank' href="#">Forum</a></li>
+  </ul>
 {% endblock %}
 
 {% block body %}
-    {% if not user.is_authenticated %}
-        <div class='lead text-center'>
-            <h2>The hunt begin in</h2>
-            <h1>{{ starttime.time | timeuntil }}</h1>
-            <a href="{% url 'login' %}" class="btn btn--s">Login</a>
-        </div>
-        <script>
-            setTimeout('window.location.reload();', 30000);
-        </script>
-    {% else %}
-        <div class='lead text-left'>
-            {% if starttime %}
-                <h2>The hunt begins in</h2>
-                <h1>{{ starttime.time | timeuntil }}</h1>
-                <hr>
-                <a class='btn btn-info' href="{% url 'events:orfik:instructions' %}">Instructions</a>
-            {% endif %}
-            {% if winner %}
-                {% load staticfiles %}
-                <h1>You won!!!!!!! k bye.</h1>
-                <h2>On a serious note get in touch with us on the facebook page. Send in your username and password so we can verify it's you</h2>
-            {%endif%}
-        </div>
-    {% endif %}
-
+  {% if not user.is_authenticated %}
+    <div class='lead text-center'>
+      <h2>The hunt begin in</h2>
+      <h1>{{ starttime.time | timeuntil }}</h1>
+      <a href="{% url 'login' %}" class="btn btn--s">Login</a>
+    </div>
+    <script>
+      setTimeout('window.location.reload();', 30000);
+    </script>
+  {% else %}
+    <div class='lead text-left'>
+      {% if starttime %}
+          <h2>The hunt begins in</h2>
+          <h1>{{ starttime.time | timeuntil }}</h1>
+          <a class='btn btn-info' href="{% url 'events:orfik:instructions' %}">Instructions</a>
+      {% endif %}
+      {% if winner %}
+          {% load staticfiles %}
+          <h1>You won!!!!!!! k bye.</h1>
+          <h2>On a serious note get in touch with us on the facebook page. Send in your username and password so we can verify it's you!</h2>
+      {% endif %}
+    </div>
+  {% endif %}
 {% endblock %}
