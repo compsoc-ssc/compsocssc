@@ -2,9 +2,9 @@
 
 {% block event_nav %}
   <ul class='events-nav'>
-    <li><a href="{% url 'events:logo:home' %}">Home</a></li>
-    <li><a href="{% url 'events:logo:submission' %}">Submit a logo</a></li>
-    <li><a href="{% url 'events:logo:gallery' %}">Gallery of submissions</a></li>
+    <a href="{% url 'events:logo:home' %}"><li>Home</li></a>
+    <a href="{% url 'events:logo:submission' %}"><li>Submit a logo</li></a>
+    <a href="{% url 'events:logo:gallery' %}"><li>Gallery of submissions</li></a>
   </ul>
 {% endblock %}
 

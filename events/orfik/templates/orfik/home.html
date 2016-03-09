@@ -2,12 +2,12 @@
 
 {% block event_nav %}
   <ul class="events-nav">
-    <li><a href="{% url 'events:orfik:home' %}">Play</a></li>
+    <a href="{% url 'events:orfik:home' %}"><li>Play</li></a>
     {% if not starttime %}
-    <li><a href="{% url 'events:orfik:leader' %}">Leaderboard</a></li>
+    <a href="{% url 'events:orfik:leader' %}"><li>Leaderboard</li></a>
     {% endif %}
-    <li><a href="{% url 'events:orfik:instructions' %}">Instructions</a></li>
-    <li><a target='_blank' href="#">Forum</a></li>
+    <a href="{% url 'events:orfik:instructions' %}"><li>Instructions</li></a>
+    <a target='_blank' href="#"><li>Forum</li></a>
   </ul>
 {% endblock %}
 

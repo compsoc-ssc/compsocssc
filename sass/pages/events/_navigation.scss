@@ -7,13 +7,26 @@
   justify-content: space-around;
   margin: 30px auto 10px;
   max-width: 660px;
+
+  @media screen and (max-width: 538px) {
+    display: block;
+  }
 }
 
 .events-nav li {
   font-size: 1.2em;
   margin: 0;
 
-  a:hover {
-    text-decoration: underline;
+  @media screen and (max-width: 538px) {
+    background-color: $primary-color;
+    transition: all 200ms ease-in-out;
+    padding: 15px;
+    margin: 10px 15px;
+    text-align: center;
+    color: white;
+
+    &:hover {
+      background-color: $secondary-color;
+    }
   }
 }
