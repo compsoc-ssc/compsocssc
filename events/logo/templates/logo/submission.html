@@ -22,7 +22,8 @@
           <button type='submit' class='btn-contact'>Submit</button>
       </form>
     {% else %}
-      <h1>The competition has ended</h1>
+      <p>Sadly, the competition has ended. You can checkout the submissions <a href='{% url "events:logo:gallery" %}'>here</a> or head over to our <a href="http://facebook.com/TheComputerScienceSocietyStStephensCollege" target="_blank">facebook</a> page for the results :)</p>
+  </section>
     {% endif %}
   </section>
 {% endblock %}
