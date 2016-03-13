@@ -1,13 +1,14 @@
 {% extends "base.html" %}
 
 {% block body %}
-    <section class="section-auth">
-      <form method="POST" action="/login/" class="auth-form">
-        {% csrf_token %}
-        <h1 class="auth-heading light-space">Login</h1>
-        <input class="auth-field" type="text" name="username" placeholder="Enter Username">
-        <input class="auth-field" type="password" name="password" placeholder="Enter Password">
-        <button class="btn-form-action / btn btn--m">Login</a>
-      </form>
-    </section>
+  <section class="section-auth">
+    <form method="POST" action="/login/" class="auth-form">
+      {% csrf_token %}
+      <h1 class="auth-heading light-space">Login</h1>
+      <input class="auth-field" type="text" name="username" placeholder="Enter Username">
+      <input class="auth-field" type="password" name="password" placeholder="Enter Password">
+      <button class="btn-form-action / btn btn--m">Login</button>
+      <center><p>Don't have an account? <a href="{% url 'signup' %}">Register</a></p></center>
+    </form>
+  </section>
 {% endblock body %}

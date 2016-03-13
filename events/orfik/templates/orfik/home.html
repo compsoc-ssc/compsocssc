@@ -3,37 +3,33 @@
 {% block event_nav %}
   <ul class="events-nav">
     <a href="{% url 'events:orfik:home' %}"><li>Play</li></a>
-    {% if not starttime %}
     <a href="{% url 'events:orfik:leader' %}"><li>Leaderboard</li></a>
-    {% endif %}
     <a href="{% url 'events:orfik:instructions' %}"><li>Instructions</li></a>
-    <a target='_blank' href="#"><li>Forum</li></a>
+    <a target='_blank' href="https://www.facebook.com/TheComputerScienceSocietyStStephensCollege/"><li>Forum</li></a>
   </ul>
 {% endblock %}
 
 {% block body %}
   <section id="events-container">
-    {% if not user.is_authenticated and not starttime %}
-      <h2 class="light-space">The hunt has begun!</h2>
-      <br />
-      <a href="{% url 'login' %}" class="btn btn--m btn--full">Login</a>
-      <script>
-        setTimeout('window.location.reload();', 30000);
-      </script>
-    {% elif not user.is_authenticated and starttime %}
-      <h2 class="light-space">The hunt has begun!</h2>
-      <br />
-      <a href="{% url 'signup' %}" class="btn btn--m btn--full">Signup</a>
+    {% if winner %}
+      <h1 style="text-align: center;">You won!!!!! k bye.</h1>
+      <h2 style="text-align: center;">On a more serious note, get in touch with us on the facebook page. Send in your username and password so we can verify it's you who has won!</h2>
     {% else %}
-      {% if starttime %}
-        <h2 class="light-space">The hunt begins in</h2>
-        <h1 style="text-align: center;">{{ starttime.time | timeuntil }}</h1>
-        <br />
-        <a class='btn btn--full' href="{% url 'events:orfik:instructions' %}">Instructions</a>
-      {% endif %}
-      {% if winner %}
-          <h1>You won!!!!! k bye.</h1>
-          <h2>On a serious note get in touch with us on the facebook page. Send in your username and password so we can verify it's you!</h2>
+      {% if started %}
+        {% if user.is_authenticated %}
+          <p>Started + authenticated</p>
+        {% else %}
+          <h2 class="light-space" style="text-align: center;">The hunt has begun!</h2>
+          <br />
+          <a href="{% url 'login' %}" class="btn btn--m btn--full">Login</a>
+        {% endif %}
+      {% else %}
+          <h2 class="light-space" style="text-align: center;">The hunt begins in</h2>
+          <h1 style="text-align: center; margin-bottom: 40px;">{{ starttime | timeuntil }}</h1>
+          <a class='btn btn--full' href="{% url 'events:orfik:instructions' %}">Instructions</a>
+          <script>
+            setTimeout('window.location.reload();', 30000);
+          </script>
       {% endif %}
     {% endif %}
   </section>

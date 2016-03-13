@@ -22,10 +22,15 @@ def check_end():
     return generalmodels.Variable.objects.get(name='orfikend').time <= timezone.now()
 
 
+def check_start():
+    return generalmodels.Variable.objects.get(name='orfikstart').time <= timezone.now()
+
+
 def home(request):
     data = {}
     template = 'orfik/home.html'
-    data['starttime'] = generalmodels.Variable.objects.get(name='orfikstart')
+    data['starttime'] = generalmodels.Variable.objects.get(name='orfikstart').time
+    data['started'] = check_start()
     if request.user.is_authenticated():
         make_player(request)
         data['new_nick_form'] = models.NickForm()
@@ -36,7 +41,7 @@ def home(request):
             data['winner'] = models.Player.objects.all().order_by('-max_level','last_solve')[0] == request.user.player
             return render(request, template, data)
         # If it has not ended, has it started?
-        if data['starttime'].time <= timezone.now():
+        if data['started']:
             return redirect('events:orfik:question', q_no=0)
         # It has not started, get the available questions
         data['questions'] = models.Question.objects.filter(number__lte=request.user.player.max_level).order_by('number')
