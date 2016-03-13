@@ -18,12 +18,12 @@ $mobile: new-breakpoint(max-width 640px 4) !default;
 
       > div {
         border-radius: 5px;
-        padding: 0;
-        @include transition(500ms ease-in);
+        padding: 15px;
+        @include transition(200ms ease-in);
 
         @media screen and (min-width: 660px) {
           &:hover {
-            background-color: darken(white, 5%);
+            background-color: darken(white, 3%);
           }
         }
       }

@@ -17,7 +17,13 @@
       <h1 class="section-heading">Upcoming Event</h1>
       <div class="content">
           <h1>{{ event.name }}</h1>
-          <h2>STARTS IN {{ event.start_time|timeuntil }}</h2>
+          {% with time_left=event.start_time|timeuntil %}
+            {% if time_left > 0 %}
+              <h2>STARTS IN {{ time_left }}</h2>
+            {% else %}
+              <h2>is currently happening!</h2>
+            {% endif %}
+          {% endwith %}
           <a target="_blank" href="{{ event.fb_event_page }}" class="btn btn--m">Find out more &raquo;</a>
       </div>
     </section>
