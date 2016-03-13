@@ -20,7 +20,7 @@ def home(request):
     '''Site homepage for CompSoc'''
     template = 'home.html'
 
-    upcoming_event = Event.objects.all().order_by('start_time').first
+    upcoming_event = Event.objects.all().filter(ongoing_event=False).order_by('start_time').first
 
     context = {
         "event": upcoming_event

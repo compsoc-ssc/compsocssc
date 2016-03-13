@@ -11,10 +11,12 @@ class Event(models.Model):
     start_time = models.DateTimeField()
     end_time = models.DateTimeField()
     location = models.CharField(max_length=30)
+    ongoing_event = models.BooleanField(default=False, help_text="Check this if this event spans over multiple days")
 
     PARTICIPATION_METHODS = (
         ('IN', 'Individual'),
-        ('TEAMS2', 'Teams of 2'), 
+        ('INORTEAMS2', 'Individual or Teams of 2'),
+        ('TEAMS2', 'Teams of 2'),
         ('TEAMS2PLUS', 'Teams of 2 or more')
     )
     participation_method = models.CharField(max_length=20,

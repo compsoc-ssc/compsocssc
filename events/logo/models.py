@@ -25,4 +25,4 @@ class Submission(models.Model):
 
     thumbnail.short_description = 'Thumbnail'
     thumbnail.allow_tags = True
-        
+
