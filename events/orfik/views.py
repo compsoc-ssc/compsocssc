@@ -98,6 +98,7 @@ def question(request, q_no):
                     player.last_solve = timezone.now()
                     player.max_level += 1
                     player.save()
+                    messages.info(request, 'Corrent answer!')
                     return redirect('events:orfik:question', q_no=question.number+1)
                 else:
                     messages.info(request, 'Wrong answer. Try again!')
