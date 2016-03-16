@@ -16,7 +16,7 @@ class Player(models.Model):
 
 class Question(models.Model):
     number = models.SmallIntegerField()
-    text = models.TextField()
+    text = models.TextField(blank=True, null=True)
     image = models.ImageField(upload_to='question', blank=True, null=True)
     answer = models.CharField(max_length=100)
 
