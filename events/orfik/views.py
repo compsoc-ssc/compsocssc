@@ -86,6 +86,8 @@ def question(request, q_no):
     if request.method == 'GET':
         data['form'] = models.AnswerForm()
     if request.method == 'POST':
+        if check_end():
+            return redirect('events:orfik:home')
         form = models.AnswerForm(request.POST)
         if question.number == player.max_level:  # This is his first potential
             # Correct answer

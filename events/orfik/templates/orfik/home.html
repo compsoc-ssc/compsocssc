@@ -12,12 +12,13 @@
 {% block body %}
   <section id="events-container">
     {% if winner %}
-      <h1 style="text-align: center;">You won!!!!! k bye.</h1>
-      <h2 style="text-align: center;">On a more serious note, get in touch with us on the facebook page. Send in your username and password so we can verify it's you who has won!</h2>
+      <h1 class="light-space" style="text-align: center; margin-bottom: 10px;">You won! k bye.</h1>
+      <p style="text-align: center;">On a more serious note, get in touch with us on the facebook page. Send in your username and password so we can verify it's you who has won!</p>
     {% else %}
       {% if started %}
         {% if user.is_authenticated %}
-          <p>Started + authenticated</p>
+          <h1 class="light-space" style="text-align: center; margin-bottom: 10px;">The Hunt has ended.</h1>
+          <p style="text-align: center;">Thanks for playing! If you liked orfik, do tell us about your experience on our facebook page. Until next time, stay curious!</p>
         {% else %}
           <h2 class="light-space" style="text-align: center;">The hunt has begun!</h2>
           <br />
