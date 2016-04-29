@@ -38,7 +38,7 @@
         <h1 class="section-heading">Alumni</h1>
         {% regroup alumni by batch_of as alumni_list %}
         {% for members in alumni_list %}
-          <section class="alumni-group{% if not forloop.counter0|divisibleby:2 %} alt-section{% endif %}">
+          <section class="alumni-group{% if forloop.counter0|divisibleby:2 %} alt-section{% endif %}">
             <h1 class="light-space" style="text-align: center;">Class of {{ members.grouper }}</h1>
             <ul class="alumni-list">
               {% for member in members.list %}
