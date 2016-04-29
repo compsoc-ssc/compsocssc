@@ -34,7 +34,7 @@ def members(request):
     '''Members page'''
     context = {}
     context['current'] = models.CompMember.objects.filter(alumni=False)
-    context['alumni'] = models.CompMember.objects.filter(alumni=True)
+    context['alumni'] = models.CompMember.objects.filter(alumni=True).order_by('-batch_of')
     return render(request, 'members.html', context)
 
 

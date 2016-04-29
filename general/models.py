@@ -30,6 +30,9 @@ class CompMember(models.Model):
         else:
             return self.social_link
 
+    def __str__(self):
+        return self.name
+
 
 class Variable(models.Model):
     def __str__(self):
