@@ -9,7 +9,7 @@ You can try out the latest build using the following method:
 1. Clone the repo to a suitable location using ```bash git clone <url>```.
 2. Set up a virtualenv by running ```bash virtualenv -p python3 <env_name>```.
 3. After activing the virtualenv, install the dependancies using ```bash pip install -r requirements.txt```.
-4. Navigate to website/settings and add a file called ```bash local.py```.
+4. Navigate to website/settings and add a file called 'local.py'.
 5. **cd** to the root of the project (where manage.py lives) and run the following commands :
 
 ```bash
