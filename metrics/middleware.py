@@ -10,8 +10,9 @@ def get_ip(request):
 
 
 class HitRecorder:
-    def process_request(request):
+    def process_request(self, request):
         hit = models.Hit()
         hit.ip = get_ip(request)
         hit.ua = request.META.get('HTTP_USER_AGENT')
+        hit.url = request.get_full_path()
         hit.save()
