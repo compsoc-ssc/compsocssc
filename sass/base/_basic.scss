@@ -124,3 +124,9 @@ td, th {
   border: 1px solid #ccc;
   text-align: left;
 }
+
+.clearfix {
+  content: "";
+  display: table;
+  clear: both;
+}

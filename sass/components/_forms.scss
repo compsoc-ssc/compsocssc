@@ -73,4 +73,15 @@ form {
     height: 10em;
     resize: none;
   }
+
+  select {
+    border: solid 3px $primary-color;
+    background: none;
+    width: 100%;
+    height: 40px;
+    display: block;
+    margin: auto;
+    font-size: 18px;
+    padding: 10px;
+  }
 }

@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block body %}
+  <section id="section-join">
+    <h1 class="section-heading">Fill up the following form to join the Computer Science Society</h1>
+    <form method="POST" action="" enctype="multipart/form-data" class="join-form">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit" class="btn-contact" style="float: none;">Submit</button>
+    </form>
+  </section>
+{% endblock body %}
