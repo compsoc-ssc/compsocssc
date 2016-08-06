@@ -6,6 +6,6 @@ from .views import (
 )
 
 urlpatterns = [
-    url(r'^$', new_member_form),
+    url(r'^$', new_member_form, name='home'),
     url(r'^success/$', join_success, name="success")
 ]
