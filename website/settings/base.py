@@ -40,6 +40,7 @@ INSTALLED_APPS = (
     # 'events.orfik',
     'metrics',
     'join',
+    'import_export',
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (
