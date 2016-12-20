@@ -3,10 +3,10 @@ printf "#################################\n"
 printf "\nCreating and activating a virtual environment\n"
 printf "#################################\n"
 virtualenv -p python3 django
-source django/bin/activate
+source ./django/bin/activate
 printf "\nInstalling dependencies\n"
 printf "#################################\n"
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 printf "\nSetting up the database\n"
 printf "#################################\n"
 touch website/settings/local.py
