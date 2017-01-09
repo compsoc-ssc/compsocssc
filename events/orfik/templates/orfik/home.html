@@ -5,7 +5,7 @@
     <a href="{% url 'events:orfik:home' %}"><li>Play</li></a>
     <a href="{% url 'events:orfik:leader' %}"><li>Leaderboard</li></a>
     <a href="{% url 'events:orfik:instructions' %}"><li>Instructions</li></a>
-    <a target='_blank' href="https://www.facebook.com/TheComputerScienceSocietyStStephensCollege/"><li>Forum</li></a>
+    <a target='_blank' href="https://www.facebook.com/TheCompSoc/"><li>Help</li></a>
   </ul>
 {% endblock %}
 
@@ -20,7 +20,7 @@
           <h1 class="light-space" style="text-align: center; margin-bottom: 10px;">The Hunt has ended.</h1>
           <p style="text-align: center;">Thanks for playing! If you liked orfik, do tell us about your experience on our facebook page. Until next time, stay curious!</p>
         {% else %}
-          <h2 class="light-space" style="text-align: center;">The hunt has begun!</h2>
+          <h2 class="light-space" style="text-align: center;">Orfik has started!</h2>
           <br />
           <a href="{% url 'login' %}" class="btn btn--m btn--full">Login</a>
         {% endif %}

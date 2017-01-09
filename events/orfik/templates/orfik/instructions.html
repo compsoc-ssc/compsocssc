@@ -11,7 +11,7 @@
 {% block body %}
   <section id="events-container">
     <h1 class="light-space">Instructions</h1>
-    <ol class='instructions'>
+    <ol class='instructions' style="margin-bottom: 50px;">
       <li>The hunt begins <strong>sharp</strong> at 0000 Hours on March 17, 2016 and ends on March 18 at 23:59 Hours.</li>
       <li>Each participant can make a single login using a username of their choice.</li>
       <li>Once the game begins you will be faced by a series of questions.</li>
@@ -26,7 +26,6 @@
       <li>The use of the internet, searching the source code etc. are all allowed to arrive at the answer.</li>
       <li>Any queries regarding the questions will be answered at the orfik forum by CompSoc on our facebook page. However, no foul language or other miscreant behaviour will be tolerated.</li>
     </ol>
-
-    <h3>Good luck!</h3>
+    <a class='btn btn--full btn--black' href="{% url 'events:orfik:home' %}">Start playing!</a>
   </section>
 {% endblock %}
