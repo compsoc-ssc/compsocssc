@@ -18,6 +18,7 @@ You can try out the latest build using the following method:
 This is the level-up branch, the main branch for new features. The features currently under development are:
 
 * Orfik Calendar event ( add_to_calendar branch)
+* Leaderboard time-evolution visualization (fix_events branch)
 
 ## Styling
 
