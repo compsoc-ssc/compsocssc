@@ -15,7 +15,15 @@ You can try out the latest build using the following method:
 
 ## Contribute
 
-This is the level-up branch, the main branch for new features. The features currently under development are:
+This is the level-up branch, the main branch for new features. 
+Below is the procedure to contribute to compsocssc
+
+1. Create a new branch for the new feature or bugfix.
+2. Develop the feature on it's own branch until complete and stable.
+3. Create a pull request to merge into level_up.
+4. level_up will be mergerd into master at regular intervals. 
+
+The features currently under development are:
 
 * Orfik Calendar event ( add_to_calendar branch)
 * Leaderboard time-evolution visualization (fix_events branch)
