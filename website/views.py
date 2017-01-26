@@ -33,8 +33,8 @@ def home(request):
 def members(request):
     '''Members page'''
     context = {}
-    context['current'] = models.CompMember.objects.filter(alumni=False).order_by('name')
-    context['alumni'] = models.CompMember.objects.filter(alumni=True).order_by('-batch_of', 'name')
+    context['current'] = models.CompMember.objects.filter(alumni=False).order_by('-index')
+    context['alumni'] = models.CompMember.objects.filter(alumni=True).order_by('-batch_of', '-index')
     return render(request, 'members.html', context)
 
 
