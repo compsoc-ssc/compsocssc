@@ -11,6 +11,7 @@ class CompMember(models.Model):
         verbose_name = 'CompSoc Member'
         verbose_name_plural = 'CompSoc Members'
 
+    index = models.IntegerField(blank=False, help_text="This field is present just for ordering members based on their posts. President = 2, VPs = 1, Gen. Sec. = 0, Everyone else = -1", default=-1)
     name = models.CharField(max_length=50, help_text='Enter your full name')
 
     image = models.ImageField(blank=False, upload_to='member_images/', help_text='Please select a display image for yourself. This is necessary.')
