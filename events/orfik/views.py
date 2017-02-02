@@ -1,10 +1,26 @@
 from django.shortcuts import render, redirect, get_object_or_404
+from django.http import HttpResponseBadRequest,HttpResponseRedirect
 from events.orfik import models
 from django.utils import timezone
 from django.contrib.auth.decorators import login_required
-from django.contrib.auth import get_user_model
+from django.contrib.auth import authenticate,login
 from general import models as generalmodels
+from .models import CredentialsModel
 from django.contrib import messages
+from oauth2client import client
+from apiclient import discovery
+from django.core.urlresolvers import reverse
+import httplib2
+from website.settings.base import GOOGLE_OAUTH2_CLIENT_SECRETS_JSON,SECRET_KEY
+from oauth2client.contrib.django_util.storage import DjangoORMStorage
+from oauth2client.contrib import xsrfutil
+
+
+FLOW = client.flow_from_clientsecrets(
+    GOOGLE_OAUTH2_CLIENT_SECRETS_JSON,
+    scope = 'https://www.googleapis.com/auth/calendar',
+    redirect_uri='http://compsocssc.pythonanywhere.com/events/orfik/auth'
+)
 
 
 def make_player(request):
@@ -108,3 +124,47 @@ def question(request, q_no):
             else:
                 data['form'] = form
     return render(request, template, data)
+
+
+
+@login_required()
+def authorize(request):
+    store = DjangoORMStorage(CredentialsModel,'id',request.user,'credential')
+    credential = store.locked_get()
+    if credential is None or credential.invalid == True:
+        authorize_url = FLOW.step1_get_authorize_url()
+        return HttpResponseRedirect(authorize_url)
+    else:
+        http = httplib2.Http()
+        http = credential.authorize(http)
+        calendar_service = discovery.build('calendar', 'v3', http=http)
+        event = {
+            'summary': 'Orfik 2017',
+            'description': 'Orfik is Compsoc\'s online tech hunt.',
+            'start': {
+                'date': '2017-02-10',
+                'timeZone': 'Asia/Kolkata',
+            },
+            'end': {
+                'date': '2017-02-11',
+                'timeZone': 'Asia/Kolkata',
+            },
+            'reminders': {
+                'useDefault': False,
+                'overrides': [
+                    {'method': 'email', 'minutes': 24 * 60},
+                    {'method': 'popup', 'minutes': 10},
+                ],
+            },
+        }
+        event = calendar_service.events().insert(calendarId='primary', body=event).execute()
+
+        messages.info(request, "Added to Calendar")
+        return redirect(reverse('events:orfik:home'))
+
+@login_required()
+def add_event(request):
+    credential = FLOW.step2_exchange(request.GET['code'])
+    storage = DjangoORMStorage(CredentialsModel, 'id', request.user, 'credential')
+    storage.put(credentials=credential)
+    return authorize(request)

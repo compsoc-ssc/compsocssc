@@ -3,7 +3,9 @@
 {% block event_nav %}
   <ul class="events-nav">
     <a href="{% url 'events:orfik:home' %}"><li>Play</li></a>
-    <a href="{% url 'events:orfik:leader' %}"><li>Leaderboard</li></a>
+    {% if started %}
+      <a href="{% url 'events:orfik:leader' %}"><li>Leaderboard</li></a>
+    {% endif %}
     <a href="{% url 'events:orfik:instructions' %}"><li>Instructions</li></a>
     <a target='_blank' href="https://www.facebook.com/TheCompSoc/"><li>Help</li></a>
   </ul>
@@ -27,7 +29,11 @@
       {% else %}
           <h2 class="light-space" style="text-align: center;">The hunt begins in</h2>
           <h1 style="text-align: center; margin-bottom: 40px;">{{ starttime | timeuntil }}</h1>
-          <a class='btn btn--full' href="{% url 'events:orfik:instructions' %}">Instructions</a>
+          {% if user.is_authenticated %}
+            <a class='btn btn--full' href="{% url 'events:orfik:authorize' %}">Set Google Calendar Reminder</a>
+          {% else %}
+            <a class='btn btn--full' href="{% url 'signup' %}">Register Now</a>
+          {% endif %}
           <script>
             setTimeout('window.location.reload();', 30000);
           </script>

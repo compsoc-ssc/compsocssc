@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from django.core.urlresolvers import reverse
 from django.views.decorators.gzip import gzip_page
 from django.contrib import messages
 from django.utils import timezone
@@ -93,7 +94,7 @@ def login(request):
                 messages.success(request, 'You have logged in successfully!')
                 if 'events.orfik' in settings.INSTALLED_APPS:
                     messages.info(request, 'Read the instructions and then play!')
-                    return redirect('/events/orfik/instructions')
+                    return redirect(reverse('events:orfik:home'))
                 return redirect(home)
             else:
                 messages.error(request, 'Something went wrong. Try again!')
@@ -105,7 +106,7 @@ def login(request):
         messages.info(request, "You're already logged in!")
         if 'events.orfik' in settings.INSTALLED_APPS:
             messages.info(request, 'Read the instructions and then play!')
-            return redirect('/events/orfik/instructions')
+            return redirect(reverse('events:orfik:home'))
         return redirect(home)
     else:
         return render(request, template, context)
