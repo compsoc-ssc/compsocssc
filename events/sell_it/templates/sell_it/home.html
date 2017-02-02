@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block event_nav %}
+  <ul class='events-nav'>
+    <a href="{% url 'events:sell_it:home' %}"><li>Home</li></a>
+    <a href="{% url 'events:sell_it:submission' %}"><li>Submit a Design</li></a>
+  </ul>
+{% endblock %}
+
+{% block body %}
+  <section id="events-container" style="margin-top: 40px;">
+    <center><h1 class="light-space">Welcome Designers!</h1></center>
+    <p>CompSoc is organising <strong>"Sell It!"</strong>, a website designing competition for our Annual Tech Fest - Cybercept. Cybercept has various fun events like TechHunt, orfik - an Online Treasure Hunt, and "import this", our annual programming event.</p>
+    <p>For "Sell It!", we would like you to design the front page of a website for (Product). The best entry will win <strong>Rs 1000!</strong></p>
+    <p>Check <a target="_blank" href="https://dribbble.com/shots/2042501-Potato-landing-page/attachments/363345">this</a> out for some inspiration ;)</p>
+    <h3>Rules</h3>
+    <p>The comptetiton is open from 10th Feb (midnight) to 17th Feb (11:59 PM). To participate, kindly adhere to the following instructions:</p>
+    <ol>
+      <li>Design the front page of a website for (Product).</li>
+      <li>Only one entry is allowed per person. Multiple entries will lead to disqualification.</li>
+      <li>Please submit a JPG or PNG file.</li>
+      <li>Have fun and learn something along the way!</li>
+    </ol>
+    <p>For more information regarding prizes or just general FAQ, head over to the <a href="https://www.facebook.com/TheCompSoc/" target="_blank">facebook</a> page.</p>
+    <div class="sec-submit">
+      <a class="btn btn--full" href='{% url "events:sell_it:submission" %}'>Head to the submission form</a>
+    </div>
+  </section>
+{% endblock %}

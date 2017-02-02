@@ -11,7 +11,7 @@
 
         <section id="upcoming">
           <div class="content">
-            <h1 class="light-space">Upcoming Events</h1>
+            <!-- <h1 class="light-space">Upcoming Events</h1> -->
             <ul id="events">
               {% for event in events %}
                 <li>
@@ -22,7 +22,7 @@
                       <p class="line-reduce"><strong>WHEN:</strong> {{ event.start_time|date:"d M, Y"}} at {{ event.start_time|date:"f A"}}</p>
                       <p class="line-reduce"><strong>WHERE:</strong> {{ event.location }}</p>
                       <p class="line-reduce"><strong>Participation:</strong> {{ event.get_participation_method_display }}</p>
-                      <p class="line-reduce" style="margin: 10px 0;">For more information visit the <a target="_blank" href="{{ event.fb_event_page }}">event page.</a></p>
+                      <p class="line-reduce" style="margin: 10px 0;">For more information visit the <a href="{{ event.fb_event_page }}">event page.</a></p>
                     </div>
                   </div>
                 </li>

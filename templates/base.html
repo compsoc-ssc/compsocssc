@@ -31,7 +31,8 @@
     </a>
     <nav>
       <ul>
-        <li><a href="{% url 'events:home' %}">Events</a></li>
+        {% url 'home' as home_url %}
+        <li {% if request.get_full_path == home_url %}class="animated bounce"{% endif %}><a href="{% url 'events:home' %}">Events</a></li>
         <li><a href="{% url 'members' %}">Members</a></li>
       </ul>
     </nav>
