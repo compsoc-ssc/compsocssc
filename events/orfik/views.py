@@ -1,9 +1,12 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from django.http import HttpResponseBadRequest,HttpResponseRedirect
+from django.http import HttpResponseBadRequest, HttpResponseRedirect
 from events.orfik import models
 from django.utils import timezone
 from django.contrib.auth.decorators import login_required
-from django.contrib.auth import authenticate,login
+from django.contrib.auth import get_user_model
+from django.contrib import messages
+from events import models as event_models
+from django.contrib.auth import authenticate, login
 from general import models as generalmodels
 from .models import CredentialsModel
 from django.contrib import messages
@@ -11,7 +14,7 @@ from oauth2client import client
 from apiclient import discovery
 from django.core.urlresolvers import reverse
 import httplib2
-from website.settings.base import GOOGLE_OAUTH2_CLIENT_SECRETS_JSON,SECRET_KEY
+from website.settings.base import GOOGLE_OAUTH2_CLIENT_SECRETS_JSON, SECRET_KEY
 from oauth2client.contrib.django_util.storage import DjangoORMStorage
 from oauth2client.contrib import xsrfutil
 
@@ -34,23 +37,24 @@ def make_player(request):
         p.save()
 
 
-def check_end():
-    return generalmodels.Variable.objects.get(name='orfikend').time <= timezone.now()
+def check_end(event):
+    return event.end_time <= timezone.now()
 
 
-def check_start():
-    return generalmodels.Variable.objects.get(name='orfikstart').time <= timezone.now()
+def check_start(event):
+    return event.start_time <= timezone.now()
 
 
 def home(request):
     data = {}
     template = 'orfik/home.html'
-    data['starttime'] = generalmodels.Variable.objects.get(name='orfikstart').time
-    data['started'] = check_start()
+    orfik = event_models.Event.objects.filter(appname='orfik').order_by('start_time').last()
+    data['starttime'] = orfik.start_time
+    data['started'] = check_start(orfik)
     if request.user.is_authenticated():
         make_player(request)
         data['new_nick_form'] = models.NickForm()
-        ended = check_end()
+        ended = check_end(orfik)
         # Has orfik ended?
         if ended:
             data['endtime'] = ended
@@ -75,7 +79,8 @@ def instructions(request):
 def leader(request):
     data = {}
     template = 'orfik/leader.html'
-    endtime = generalmodels.Variable.objects.get(name='orfikend').time
+    orfik = event_models.Event.objects.filter(appname='orfik').order_by('start_time').last()
+    endtime = orfik.end_time
     data['players'] = models.Player.objects.all().order_by('-max_level','last_solve')
     if endtime <= timezone.now():
         data['winner'] = data['players'][0]
@@ -85,7 +90,8 @@ def leader(request):
 @login_required
 def question(request, q_no):
     make_player(request)
-    starttime = generalmodels.Variable.objects.get(name='orfikstart').time
+    orfik = event_models.Event.objects.filter(appname='orfik').order_by('start_time').last()
+    starttime = orfik.start_time
     player = request.user.player
     # Check if orfik has started
     if starttime > timezone.now():
@@ -102,7 +108,7 @@ def question(request, q_no):
     if request.method == 'GET':
         data['form'] = models.AnswerForm()
     if request.method == 'POST':
-        if check_end():
+        if check_end(orfik):
             return redirect('events:orfik:home')
         form = models.AnswerForm(request.POST)
         if question.number == player.max_level:  # This is his first potential

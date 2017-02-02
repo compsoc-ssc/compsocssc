@@ -9,7 +9,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
 # See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-GOOGLE_OAUTH2_CLIENT_SECRETS_JSON = os.path.join(BASE_DIR,'client_secret.json')
+GOOGLE_OAUTH2_CLIENT_SECRETS_JSON = os.path.join(BASE_DIR, 'client_secret.json')
 SECRET_KEY = 'ssshhhhhhsecretkey'
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -34,10 +34,9 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'easy_thumbnails',
     'image_cropping',
-    # ---
     'general',
     'events',
-    # 'events.logo',
+    'events.logo',
     'events.orfik',
     'metrics',
     # 'join',

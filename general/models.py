@@ -1,4 +1,5 @@
 from django.db import models
+import warnings
 from django.utils import timezone
 import requests
 
@@ -35,8 +36,15 @@ class CompMember(models.Model):
         return self.name
 
 
-class Variable(models.Model):
+class Variable(models.Model): ##NOTE: This should not be used anymore
     def __str__(self):
+        warnings.warn('''You are using a "General Variable".
+        Stop doing that.
+        This is bad design on Arjoonn's part so don't fall into the same trap.
+        If you are using this for Orfik, that has already been fixed. If you are using this for logos, same thing.
+
+        Over a few cycles this entire table will be removed.
+        '''
         return self.name
     name = models.CharField(max_length=100)
     time = models.DateTimeField()

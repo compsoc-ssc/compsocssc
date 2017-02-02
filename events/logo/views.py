@@ -3,10 +3,11 @@ from events.logo.models import Submission
 from events.logo.forms import SubmissionForm
 from general import models as generalmodels
 from django.utils import timezone
+from events import models as event_models
 
 
-def check_end():
-    return generalmodels.Variable.objects.get(name='logoend').time <= timezone.now()
+def check_end(event):
+    return event.end_time <= timezone.now()
 
 
 def home(request):
@@ -24,7 +25,8 @@ def gallery(request):
 def submission(request):
     data = {}
     template = 'logo/submission.html'
-    data['ended'] = check_end()
+    logo = event_models.Event.objects.filter(appname='logo').order_by('start_time').last()
+    data['ended'] = check_end(logo)
     if request.method == 'POST':
         form = SubmissionForm(request.POST, request.FILES)
         if form.is_valid():

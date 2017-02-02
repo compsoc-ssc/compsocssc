@@ -5,7 +5,9 @@ class Event(models.Model):
     """
     Description: Model for a CompSoc Event
     """
-    name = models.CharField(max_length=120)
+    name = models.CharField(max_length=120, help_text='This is the public name of the app. For exmaple Orfik 2055')
+    appname = models.CharField(max_length=120, help_text='The name must be known to the app which handles this event. For example orfik',
+            default='orfik')
     description = models.TextField()
     fb_event_page = models.CharField(max_length=200)
     start_time = models.DateTimeField()
