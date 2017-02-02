@@ -44,7 +44,7 @@ class Variable(models.Model): ##NOTE: This should not be used anymore
         If you are using this for Orfik, that has already been fixed. If you are using this for logos, same thing.
 
         Over a few cycles this entire table will be removed.
-        '''
+        ''')
         return self.name
     name = models.CharField(max_length=100)
     time = models.DateTimeField()
