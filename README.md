@@ -1,32 +1,32 @@
 # CompSoc, SSC
 
-Code for The CompSoc, St. Stephen's College's website. *Still under development...*
+Code for The CompSoc, St. Stephen's College's website.
 
-## Try
+## Usage
 
 You can try out the latest build using the following method:
 
 1. Clone the repo to a suitable location using ```bash git clone <url>```.
 2. Change permissions for setup.sh using ```bash chmod +x setup.sh```.
 3. Run setup.sh ```bash ./setup.sh```.
-4. Navigate to *localhost:8000/admin* and login with the credentials you set up.
-5. Create some dummy data if you want to.
-6. Head on to *localhost:8000* to use the website!
+4. You'll need to grab a client_secrets file from [here](console.developers.google.com) using the CompSoc Google login and place it in the root of the project.
+5. Navigate to *localhost:8000/admin* and login with the credentials you set up.
+6. Create some dummy data if you want to.
+7. Head on to *localhost:8000* to use the website!
 
 ## Contribute
 
-This is the level-up branch, the main branch for new features. 
-Below is the procedure to contribute to compsocssc
+Below are the instructions for contributing to the compsocssc repo.
 
-1. Create a new branch for the new feature or bugfix.
+1. Create a new branch for the new feature or bugfix. Branch out from master.
 2. Develop the feature on it's own branch until complete and stable.
-3. Create a pull request to merge into level_up.
-4. level_up will be mergerd into master at regular intervals. 
+3. Create a pull request to merge into the level_up. Think of this as a beta branch.
+4. level_up will be merged into master at regular intervals.
 
 The features currently under development are:
 
-* Orfik Calendar event ( add_to_calendar branch)
-* Leaderboard time-evolution visualization (fix_events branch)
+* Orfik Calendar event (add_to_calendar branch)
+* Events overhaul (fix_events branch)
 
 ## Styling
 
