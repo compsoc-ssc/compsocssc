@@ -119,7 +119,3 @@ pip-selfcheck.json
 
 ### Development Uploads ###
 media/
-.idea/compsocssc.iml
-.idea/workspace.xml
-*.xml
-client_secret.json
