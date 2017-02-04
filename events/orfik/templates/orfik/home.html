@@ -3,9 +3,7 @@
 {% block event_nav %}
   <ul class="events-nav">
     <a href="{% url 'events:orfik:home' %}"><li>Play</li></a>
-    {% if started %}
-      <a href="{% url 'events:orfik:leader' %}"><li>Leaderboard</li></a>
-    {% endif %}
+    <a href="{% url 'events:orfik:leader' %}"><li>Leaderboard</li></a>
     <a href="{% url 'events:orfik:instructions' %}"><li>Instructions</li></a>
     <a target='_blank' href="https://www.facebook.com/TheCompSoc/"><li>Help</li></a>
   </ul>

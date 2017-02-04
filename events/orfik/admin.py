@@ -36,12 +36,7 @@ class PlayerAdmin(admin.ModelAdmin):
     error_rate.short_description = 'Correct/Wrong attempts'
     error_rate.allow_tags = True
 
-class CredentailsAdmin(admin.ModelAdmin):
-    pass
-
-
 
 admin.site.register(models.Attempt)
-admin.site.register(models.Player,PlayerAdmin)
-admin.site.register(models.Question,QuestionAdmin)
-admin.site.register(models.CredentialsModel,CredentailsAdmin)
+admin.site.register(models.Player, PlayerAdmin)
+admin.site.register(models.Question, QuestionAdmin)
