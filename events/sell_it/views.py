@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
-from events.logo.models import Submission
-from events.logo.forms import SubmissionForm
+from events.sell_it.models import Submission
+from events.sell_it.forms import SubmissionForm
 from general import models as generalmodels
 from django.utils import timezone
 from events import models as event_models
@@ -11,27 +11,27 @@ def check_end(event):
 
 
 def home(request):
-    template = 'logo/home.html'
+    template = 'sell_it/home.html'
     return render(request, template)
 
 
-def gallery(request):
-    data = {}
-    template = 'logo/gallery.html'
-    data['pics'] = Submission.objects.all().values('logo', 'name')
-    return render(request, template, data)
+# def gallery(request):
+#     data = {}
+#     template = 'sell_it/gallery.html'
+#     data['pics'] = Submission.objects.all().values('design', 'name')
+#     return render(request, template, data)
 
 
 def submission(request):
     data = {}
-    template = 'logo/submission.html'
-    logo = event_models.Event.objects.filter(appname='logo').order_by('start_time').last()
-    data['ended'] = check_end(logo)
+    template = 'sell_it/submission.html'
+    sell_it = event_models.Event.objects.filter(appname='sell_it').order_by('start_time').last()
+    data['ended'] = check_end(sell_it)
     if request.method == 'POST':
         form = SubmissionForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-            return redirect('events:logo:success')
+            return redirect('events:sell_it:success')
         else:
             print(form.is_valid())
     else:
@@ -41,5 +41,5 @@ def submission(request):
 
 
 def success(request):
-    template = 'logo/success.html'
+    template = 'sell_it/success.html'
     return render(request, template)

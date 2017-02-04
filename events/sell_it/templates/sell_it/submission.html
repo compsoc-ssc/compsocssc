@@ -1,4 +1,4 @@
-{% extends 'logo/home.html' %}
+{% extends 'sell_it/home.html' %}
 
 {% block head %}
   <style>
@@ -16,14 +16,20 @@
   <section id="events-container">
     {% if not ended %}
       <h3 class="section-heading" style="color: black;">Please fill the form below to submit an entry</h3>
-      <form role='form' class='submit-form' action='{% url "events:logo:submission" %}' method='POST' enctype="multipart/form-data">
+      <form role='form' class='submit-form' action='{% url "events:sell_it:submission" %}' method='POST' enctype="multipart/form-data">
           {% csrf_token %}
           {{ form }}
           <button type='submit' class='btn-contact'>Submit</button>
       </form>
     {% else %}
-      <p>Sadly, the competition has ended. You can checkout the submissions <a href='{% url "events:logo:gallery" %}'>here</a> or head over to our <a href="http://facebook.com/TheCompSoc" target="_blank">facebook</a> page for the results :)</p>
+      <p>Sadly, the competition has ended. You can checkout the submissions <a href='{% url "events:sell_it:gallery" %}'>here</a> or head over to our <a href="http://facebook.com/TheCompSoc" target="_blank">facebook</a> page for the results :)</p>
   </section>
     {% endif %}
   </section>
+{% endblock %}
+
+{% block scripts %}
+  <script>
+
+  </script>
 {% endblock %}

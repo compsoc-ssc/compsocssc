@@ -119,3 +119,6 @@ pip-selfcheck.json
 
 ### Development Uploads ###
 media/
+
+### API for Google Calendar
+client_secret.json

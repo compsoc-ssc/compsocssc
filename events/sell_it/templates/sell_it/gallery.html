@@ -1,0 +1,18 @@
+{% extends 'sell_it/home.html' %}
+
+{% block body %}
+  <section id="events-container" style="max-width: 800px;">
+  {% if pics %}
+    <center><h1 class="light-space" style="margin-bottom: 20px;">Submissions</h1></center>
+    <br />
+    <div class="gallery">
+      {% for pic in pics %}
+        <img class="img-responsive" src="/media/{{ pic.logo }}" alt="{{ pic.name }}">
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p style="text-align: center;">There are no submissions yet. Check back later!</p>
+  {% endif %}
+  </section>
+
+{% endblock %}

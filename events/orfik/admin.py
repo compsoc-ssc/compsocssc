@@ -38,5 +38,5 @@ class PlayerAdmin(admin.ModelAdmin):
 
 
 admin.site.register(models.Attempt)
-admin.site.register(models.Player,PlayerAdmin)
-admin.site.register(models.Question,QuestionAdmin)
+admin.site.register(models.Player, PlayerAdmin)
+admin.site.register(models.Question, QuestionAdmin)

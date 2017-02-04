@@ -1,4 +1,5 @@
 from django.db import models
+import warnings
 from django.utils import timezone
 import requests
 
@@ -11,6 +12,7 @@ class CompMember(models.Model):
         verbose_name = 'CompSoc Member'
         verbose_name_plural = 'CompSoc Members'
 
+    index = models.IntegerField(blank=False, help_text="This field is present just for ordering members based on their posts. President = 2, VPs = 1, Gen. Sec. = 0, Everyone else = -1", default=-1)
     name = models.CharField(max_length=50, help_text='Enter your full name')
 
     image = models.ImageField(blank=False, upload_to='member_images/', help_text='Please select a display image for yourself. This is necessary.')
@@ -34,8 +36,15 @@ class CompMember(models.Model):
         return self.name
 
 
-class Variable(models.Model):
+class Variable(models.Model): ##NOTE: This should not be used anymore
     def __str__(self):
+        warnings.warn('''You are using a "General Variable".
+        Stop doing that.
+        This is bad design on Arjoonn's part so don't fall into the same trap.
+        If you are using this for Orfik, that has already been fixed. If you are using this for logos, same thing.
+
+        Over a few cycles this entire table will be removed.
+        ''')
         return self.name
     name = models.CharField(max_length=100)
     time = models.DateTimeField()
