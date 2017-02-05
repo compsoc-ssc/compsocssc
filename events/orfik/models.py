@@ -1,16 +1,10 @@
-from django import forms
 from django.conf import settings
+from django.core.urlresolvers import reverse
 from django.db import models
 from django.utils import timezone
-from django.core.urlresolvers import reverse
+
+from django import forms
 from events import models as event_models
-from django.contrib.auth.models import User
-from oauth2client.contrib.django_util.models import CredentialsField
-
-
-class CredentialsModel(models.Model):
-    id = models.OneToOneField(User, primary_key=True)
-    credential = CredentialsField()
 
 
 class Player(models.Model):

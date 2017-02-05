@@ -28,7 +28,7 @@
           <h2 class="light-space" style="text-align: center;">The hunt begins in</h2>
           <h1 style="text-align: center; margin-bottom: 40px;">{{ starttime | timeuntil }}</h1>
           {% if user.is_authenticated %}
-            <a class='btn btn--full' href="{% url 'events:orfik:authorize' %}">Set Google Calendar Reminder</a>
+            <a class='btn btn--full' target="_blank" href="https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=N282NG5tbjgyZjl1NzliZDc0ZXZnNnBvYnMgc2cyZDY0dWs1N2ozaHQ1amI0djU2YWkwbTRAZw&tmsrc=sg2d64uk57j3ht5jb4v56ai0m4%40group.calendar.google.com">Set Google Calendar Reminder</a>
           {% else %}
             <a class='btn btn--full' href="{% url 'signup' %}">Register Now</a>
           {% endif %}
