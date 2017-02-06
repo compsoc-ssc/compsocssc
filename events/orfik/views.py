@@ -2,9 +2,12 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect, get_object_or_404
 from django.utils import timezone
+from django.db.models import Max
+
 
 from events import models as event_models
-from events.orfik import models
+from events.orfik import models, utils
+
 
 
 def make_player(request):
@@ -61,10 +64,13 @@ def leader(request):
     data = {}
     template = 'orfik/leader.html'
     orfik = event_models.Event.objects.filter(appname='orfik').order_by('start_time').last()
-    endtime = orfik.end_time
+    max_question = models.Question.objects.filter(event=orfik).aggregate(Max('number'))
+    max_question = max_question['number__max']
     data['players'] = models.Player.objects.all().order_by('-max_level','last_solve')
-    if endtime <= timezone.now():
+    if orfik.end_time <= timezone.now():
         data['winner'] = data['players'][0]
+    attempts = models.Attempt.objects.filter(question__event=orfik, correct=True).order_by('stamp')
+    data['image'] = utils.get_plot_string(attempts, orfik, max_question)
     return render(request, template, data)
 
 
