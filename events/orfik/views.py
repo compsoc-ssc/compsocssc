@@ -31,7 +31,6 @@ def home(request):
     data = {}
     template = 'orfik/home.html'
     orfik = event_models.Event.objects.filter(appname='orfik').order_by('start_time').last()
-    data['nowtime'] = datetime.datetime.now
     data['starttime'] = orfik.start_time
     data['started'] = check_start(orfik)
     if request.user.is_authenticated():
