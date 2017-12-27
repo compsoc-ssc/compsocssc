@@ -14,6 +14,16 @@ You can try out the latest build using the following method:
 6. Create some dummy data if you want to.
 7. Head on to *localhost:8000* to use the website!
 
+For Windows:
+
+1. Use commandline git ```bash git clone <url>``` or clone into your [Github Desktop](https://desktop.github.com/).
+2. Allow execution of the script by punching ```Set-ExecutionPolicy Unrestricted``` in Powershell(Admin).
+3. Open the project's root folder in Explorer, right click setup.ps1, click "Run with Powershell".
+5. Navigate to *localhost:8000/admin* and login with the credentials you set up.
+6. Create some dummy data if you want to.
+7. Head on to *localhost:8000* to use the website!
+
+
 ## Contribute
 
 Below are the instructions for contributing to the compsocssc repo.
